@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    android:orientation="vertical"
+    android:layout_marginEnd="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UseCompoundDrawables,UselessParent"
+        android:id="@+id/ll_root">
+
+
+        <ImageView
+            android:id="@+id/cv_serviceimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/images_avatar"
+            tools:ignore="ContentDescription"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/txt_petlover_servicesname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|bottom"
+            android:layout_gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/sub_services"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:fontFamily="@font/futuramediumbt"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

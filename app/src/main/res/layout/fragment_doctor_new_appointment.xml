@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -12,37 +13,43 @@
         android:orientation="horizontal">
     </LinearLayout>
 
+
+
     <LinearLayout
-            android:id="@+id/content"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/footerView"
+        android:layout_below="@+id/headerView">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_above="@+id/footerView"
-            android:layout_below="@+id/headerView">
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
-            <RelativeLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_newappointment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_margin="5dp" />
 
-                <TextView
-                    android:id="@+id/txt_no_records"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/norecordsfound"
-                    android:textColor="@color/color"
-                    android:textSize="16sp"
-                    android:layout_centerInParent="true"
-                    android:visibility="gone" />
+            <TextView
+                android:id="@+id/txt_no_records"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_newappointment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp" />
-            </RelativeLayout>
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/norecordsfound"
+                android:textColor="@color/color"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </RelativeLayout>
 
-        </LinearLayout>
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/footerView"
@@ -50,27 +57,27 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="20dp">
 
         <Button
             android:id="@+id/btn_load_more"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/green_bgm_border"
+            android:background="@drawable/rounded_curve"
             android:fontFamily="@font/futuramediumbt"
             android:gravity="center"
             android:text="@string/load_more"
             android:textAllCaps="false"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:layout_marginBottom="30dp"/>
 
         <Button
             android:id="@+id/btn_filter"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_gravity="end"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:background="@drawable/orange_background_button"
             android:drawableEnd="@drawable/ic_baseline_filter_alt_24"
             android:drawableRight="@drawable/filter"
@@ -79,7 +86,7 @@
             android:text="@string/filter"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:visibility="gone" />
+            android:visibility="gone"/>
 
     </LinearLayout>
 

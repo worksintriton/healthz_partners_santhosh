@@ -112,7 +112,7 @@
                    android:fontFamily="@font/futuramediumbt"
                    android:hint="@string/amount"
                    android:inputType="numberPassword"
-                   android:maxLength="4"
+                   android:maxLength="6"
                    android:padding="15dp"
                    android:textColor="@color/new_light_green"
                    android:textColorHint="@color/dark_gray"

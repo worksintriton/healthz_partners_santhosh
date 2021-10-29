@@ -19,7 +19,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="15dp"
-            android:background="@drawable/back_arrow_white"
+            android:background="@drawable/left_arrow"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/futuramediumbt"
             android:text="@string/registeryourpet"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/big_txt_size"
             android:layout_marginStart="10dp"
             android:textStyle="bold"/>
@@ -40,7 +40,7 @@
             android:fontFamily="@font/futuramediumbt"
             android:gravity="end"
             android:text="@string/skip"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/big_txt_size"
             android:textStyle="bold"/>
 

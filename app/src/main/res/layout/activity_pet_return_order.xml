@@ -96,7 +96,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/futuramediumbt"
                     android:maxLines="1"
-                    android:text="\u20B9 0"
+                    android:text="INR 0"
                     android:textColor="@color/new_txt_color"
                     android:textSize="16sp" />
 

@@ -59,7 +59,6 @@
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
             android:background="@drawable/green_bgm_border"
             android:fontFamily="@font/futuramediumbt"
             android:gravity="center"

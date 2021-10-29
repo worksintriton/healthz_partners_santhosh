@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/new_topcorner_radius"
         android:orientation="vertical"
-        tools:ignore="UselessParent">
+        tools:ignore="UselessParent"
+        android:layout_marginBottom="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,7 +86,7 @@
                     android:fontFamily="@font/futuramediumbt"
                     android:maxLines="2"
                     android:text="@string/dr_nancy_david"
-                    android:textColor="@color/new_light_black"
+                    android:textColor="#E8571E"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -277,27 +278,32 @@
                                     android:layout_height="match_parent"
                                     android:ellipsize="end"
                                     android:gravity="center"
-                                    android:maxLines="1"
+                                    android:maxLines="2"
                                     android:text="@string/_1"
                                     android:textColor="@color/white"
                                     android:textSize="14sp"
                                     android:textStyle="bold"
-                                    android:fontFamily="@font/futuramediumbt"/>
+                                    android:fontFamily="@font/futuramediumbt"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"/>
 
                                 <TextView
                                     android:id="@+id/txt_sp_loctnvaluekm"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
                                     android:ellipsize="end"
                                     android:fontFamily="@font/futuramediumbt"
                                     android:gravity="center"
-                                    android:maxLines="1"
+                                    android:maxLines="2"
                                     android:text="@string/km"
                                     android:textColor="@color/white"
                                     android:textSize="10sp"
                                     android:textStyle="bold"
-                                    tools:ignore="SmallSp" />
+                                    tools:ignore="SmallSp"
+                                    android:visibility="gone"
+                                    />
 
                             </LinearLayout>
 
@@ -343,7 +349,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="20dp"
                     android:fontFamily="@font/futuramediumbt"
-                    android:text="@string/specialization"
+                    android:text="@string/services"
                     android:textColor="@color/new_light_black"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -451,7 +457,8 @@
                     android:id="@+id/ll_map"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginBottom="30dp">
 
                     <fragment
                         android:id="@+id/map"

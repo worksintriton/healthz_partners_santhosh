@@ -126,7 +126,7 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="Relation Type"
+                        android:text="@string/pet_type"
                         android:textColor="@color/new_sec_txt_color"
                         android:textSize="12sp" />
 

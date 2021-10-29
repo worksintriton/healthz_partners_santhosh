@@ -90,7 +90,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/futuramediumbt"
                             android:maxLines="1"
-                            android:text="@string/doctor_name"
+                            android:text="@string/clinic_name"
                             android:textColor="@color/coolGrey"
                             android:textSize="12sp"
                             android:textStyle="normal"
@@ -151,7 +151,7 @@
                                     android:layout_width="16dp"
                                     android:layout_height="16dp"
                                     android:layout_gravity="center_vertical"
-                                    android:src="@drawable/star_icon_filled"
+                                    android:src="@drawable/yellow_star"
                                     tools:ignore="ContentDescription" />
 
                                 <TextView

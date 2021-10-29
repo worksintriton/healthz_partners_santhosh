@@ -52,10 +52,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
                     android:gravity="end"
-                    android:orientation="horizontal">
-
+                    android:layout_marginTop="5dp">
                     <ImageView
                         android:id="@+id/img_emergency_appointment"
                         android:layout_width="20dp"
@@ -65,7 +64,6 @@
                         android:layout_marginEnd="20dp"
                         android:src="@drawable/emergency_call"
                         tools:ignore="ContentDescription" />
-
                     <ImageView
                         android:id="@+id/img_videocall"
                         android:layout_width="24dp"
@@ -76,7 +74,6 @@
                         tools:ignore="ContentDescription" />
 
                 </LinearLayout>
-
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cv_user"
@@ -143,15 +140,14 @@
                     android:textSize="14sp" />
 
                 <LinearLayout
-                    android:id="@+id/ll_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/cv_user"
-                    android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:orientation="horizontal">
-
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_btn"
+                    android:layout_marginStart="10dp">
                     <Button
                         android:id="@+id/btn_complete"
                         android:layout_width="110dp"
@@ -165,7 +161,6 @@
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         tools:ignore="ButtonStyle" />
-
                     <Button
                         android:id="@+id/btn_cancel"
                         android:layout_width="110dp"
@@ -179,8 +174,8 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="12sp"
-                        tools:ignore="ButtonStyle" />
-
+                        tools:ignore="ButtonStyle"
+                       />
                     <Button
                         android:id="@+id/btn_prescriptiondetails"
                         android:layout_width="110dp"
@@ -209,9 +204,10 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/futuramediumbt"
                 android:maxLines="1"
-                android:text="@string/patient_details"
+                android:text="@string/pet_details"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:id="@+id/linear1"
@@ -231,7 +227,6 @@
                         android:id="@+id/cv_pet"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:visibility="gone"
                         app:cardPreventCornerOverlap="false"
                         app:cardUseCompatPadding="false">
 
@@ -282,7 +277,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/pet_name_details"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_pet_name"
@@ -291,10 +287,10 @@
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -305,9 +301,10 @@
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="wrap_content"
-                    android:text="@string/relation"
+                    android:text="@string/pet_type_details"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_pet_type"
@@ -316,24 +313,24 @@
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="wrap_content"
                     android:text="@string/breed"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_breed"
@@ -342,10 +339,10 @@
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -358,7 +355,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/gender"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_gender"
@@ -367,10 +365,36 @@
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="@dimen/width_appoitmentdetails"
+                    android:layout_height="wrap_content"
+                    android:text="@string/colour"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
+
+                <TextView
+                    android:id="@+id/txt_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/new_sec_txt_color"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
+
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -383,42 +407,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/weight"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="@dimen/width_appoitmentdetails"
-                    android:layout_height="wrap_content"
-                    android:text="Height"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/txt_color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -431,17 +431,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/age"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -452,27 +453,29 @@
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="wrap_content"
-                    android:text="Medical Information"
+                    android:text="@string/vaccinated_details"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_vaccinated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/ll_petlastvacinateddate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:orientation="horizontal"
-                android:visibility="gone">
+                android:id="@+id/ll_petlastvacinateddate">
 
                 <TextView
                     android:id="@+id/txt_lbl_petlastvaccinated"
@@ -480,7 +483,8 @@
                     android:layout_height="match_parent"
                     android:text="@string/lastvaccinateddate"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
 
                 <TextView
@@ -488,24 +492,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"
+                    />
 
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/ll_allergies"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/ll_allergies">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="match_parent"
                     android:text="@string/allergies"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
 
                 <TextView
@@ -513,24 +521,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/ll_comments"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/ll_comments">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="match_parent"
                     android:text="Comments"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
 
                 <TextView
@@ -538,122 +549,97 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/ll_diagnosis"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/ll_diagnosis">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/futuramediumbt"
                     android:text="Diagnosis"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
 
                 <TextView
                     android:id="@+id/txt_diagnosis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/futuramediumbt"
-                    android:maxLines="1"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/ll_sub_diagnosis"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/ll_sub_diagnosis">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/futuramediumbt"
                     android:text="Sub diagnosis "
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
 
                 <TextView
                     android:id="@+id/txt_sub_diagnosis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/futuramediumbt"
-                    android:maxLines="1"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_doctor_comment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/ll_doctor_comment">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/futuramediumbt"
                     android:text="Doctor comments"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
 
                 <TextView
                     android:id="@+id/txt_doctor_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/futuramediumbt"
-                    android:maxLines="3"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
-
-            <TextView
-                android:id="@+id/txt_pets_handled_details"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/futuramediumbt"
-                android:maxLines="1"
-                android:text="@string/pets_handled"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:visibility="gone" />
-
-
-            <TextView
-                android:id="@+id/txt_dr_pets_handled"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="2dp"
-                android:fontFamily="@font/futuramediumbt"
-                android:text=""
-                android:textColor="@color/new_sec_txt_color"
-                android:textSize="14sp"
-                android:visibility="gone" />
 
             <View
                 android:layout_width="match_parent"
@@ -661,48 +647,47 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/vertical_dotted_line"
                 android:layerType="software" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 tools:ignore="UseCompoundDrawables">
-
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_baseline_access_time_24" />
+                    android:src="@drawable/ic_baseline_access_time_24"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
+                    android:layout_marginStart="10dp"
                     android:id="@+id/txt_search_history"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
                     android:text="@string/appointmentdateandtime"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    tools:ignore="UseCompatTextViewDrawableXml" />
+                    tools:ignore="UseCompatTextViewDrawableXml"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
-
             <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="34dp"
                 android:id="@+id/txt_appointment_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="34dp"
-                android:layout_marginTop="5dp"
-                android:text="@string/appointmentdateandtime"
                 android:textColor="@color/new_green_btn"
-                android:textSize="14sp" />
-
+                android:textSize="14sp"
+                android:text="@string/appointmentdateandtime"
+                android:fontFamily="@font/futuramediumbt"
+                />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/vertical_dotted_line"
                 android:layerType="software" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -715,14 +700,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/bookingdate"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_order_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
 
@@ -738,14 +725,16 @@
                     android:layout_height="match_parent"
                     android:text="@string/bookingid"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_booking_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
 
@@ -761,14 +750,16 @@
                     android:layout_height="wrap_content"
                     android:text="@string/payment_method"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_payment_method"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
 
@@ -784,19 +775,20 @@
                     android:layout_height="wrap_content"
                     android:text="@string/consultation_fees"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_order_cost"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_visit_type"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
@@ -804,19 +796,20 @@
                 android:orientation="horizontal">
 
                 <TextView
-
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="wrap_content"
                     android:text="@string/visittype"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
                 <TextView
                     android:id="@+id/txt_visit_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/futuramediumbt"/>
 
             </LinearLayout>
 
@@ -835,26 +828,27 @@
                 android:drawablePadding="10dp"
                 android:text="@string/address"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
-
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/futuramediumbt"/>
             <TextView
                 android:id="@+id/txt_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
-                android:maxLines="2"
+                android:maxLines="3"
                 android:text="@string/desc_dummy"
                 android:textColor="@color/new_sec_txt_color"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:fontFamily="@font/futuramediumbt"/>
 
             <LinearLayout
-                android:id="@+id/ll_home_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
+                android:orientation="vertical"
+                android:id="@+id/ll_home_address">
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
@@ -870,37 +864,22 @@
                     android:text="@string/home_address"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
-
+                    android:textStyle="bold"
+                    android:fontFamily="@font/futuramediumbt"/>
                 <TextView
                     android:id="@+id/txt_home_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:drawablePadding="10dp"
                     android:ellipsize="end"
                     android:maxLines="3"
                     android:text="@string/desc_dummy"
                     android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/futuramediumbt"/>
             </LinearLayout>
-
-
-            <Button
-                android:id="@+id/btn_reschedule_appointment"
-                android:layout_width="160dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/new_rounded_corner_btn"
-                android:fontFamily="@font/futuramediumbt"
-                android:text="Reschedule Appointment"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:visibility="gone" />
 
         </LinearLayout>
     </ScrollView>

@@ -17,7 +17,9 @@
         android:textSize="12sp"
         android:layout_marginEnd="5dp"
         android:background="@drawable/button_rounded_corner"
-        android:layout_marginRight="5dp" />
+        android:padding="10dp"
+
+        />
 
 
 

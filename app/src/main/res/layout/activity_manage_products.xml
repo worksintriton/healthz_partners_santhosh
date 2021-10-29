@@ -55,7 +55,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_notifications"
+                     android:src="@drawable/ic_notification_new"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
@@ -63,7 +63,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_user"
+                    android:src="@drawable/new_user"
                     tools:ignore="ContentDescription" />
             </LinearLayout>
 
@@ -109,45 +109,49 @@
 
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
-            android:id="@+id/content"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/avi_indicator"
+        android:layout_below="@+id/headerView"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="10dp"
+                android:padding="3dp"
+                android:text="@string/filter"
+                android:textAllCaps="false"
+                android:textColor="@color/new_txt_color"
+                android:textSize="16sp"
+                app:drawableEndCompat="@drawable/ic_baseline_filter_alt_24"
+                app:drawableRightCompat="@drawable/ic_baseline_filter_alt_24" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_above="@+id/footerView"
-            android:layout_below="@+id/headerView"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone">
+            android:layout_marginTop="10dp">
 
-                <TextView
-                    android:id="@+id/txt_filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:drawablePadding="10dp"
-                    android:padding="3dp"
-                    android:text="@string/filter"
-                    android:textAllCaps="false"
-                    android:textColor="@color/new_txt_color"
-                    android:textSize="16sp"
-                    app:drawableEndCompat="@drawable/ic_baseline_filter_alt_24"
-                    app:drawableRightCompat="@drawable/ic_baseline_filter_alt_24" />
-
-            </RelativeLayout>
-            <RelativeLayout
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refresh_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp">
-
-                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                    android:id="@+id/refresh_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:ignore="MissingClass">
+                android:layout_marginBottom="80dp"
+                tools:ignore="MissingClass">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_manage_productlist"
@@ -155,125 +159,141 @@
                     android:layout_height="match_parent"
                     android:visibility="visible" />
 
-                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-                <TextView
-                    android:id="@+id/txt_no_records"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/norecordsfound"
-                    android:textColor="@color/color"
-                    android:textSize="16sp"
-                    android:visibility="gone" />
-            </RelativeLayout>
+            <TextView
+                android:id="@+id/txt_no_records"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/norecordsfound"
+                android:textColor="@color/color"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </RelativeLayout>
 
-        </LinearLayout>
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/footerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp">
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/user_bgm_trans"
                 android:gravity="end"
-                android:layout_marginBottom="10dp">
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/txt_add_deal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/futuramediumbt"
                     android:text="Apply Deal"
                     android:textColor="@color/new_txt_color"
-                    android:textSize="@dimen/big_txt_size"
-                    android:fontFamily="@font/futuramediumbt"
-                    android:layout_gravity="center"/>
+                    android:textSize="@dimen/big_txt_size" />
+
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab_add_deal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:fabSize="normal"
+                    android:background="@color/bg_white"
                     android:src="@drawable/ic_baseline_check_24"
-                    app:backgroundTint="@color/new_green_btn"
+                    app:backgroundTint="@color/medium_green"
+                    app:fabSize="normal"
                     tools:ignore="ContentDescription" />
 
 
-
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/ll_discard_deal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end"
                 android:layout_marginBottom="10dp"
-                android:id="@+id/ll_discard_deal">
+                android:background="@drawable/user_bgm_trans"
+                android:gravity="end"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/txt_discard_deal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/futuramediumbt"
                     android:text="Discard"
                     android:textColor="@color/new_txt_color"
-                    android:textSize="@dimen/big_txt_size"
-                    android:fontFamily="@font/futuramediumbt"
-                    android:layout_gravity="center"/>
+                    android:textSize="@dimen/big_txt_size" />
+
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/fab_discard_deal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:fabSize="normal"
+                    android:background="@color/bg_white"
                     android:src="@drawable/ic_baseline_close_white24"
-                    app:backgroundTint="@color/new_green_btn"
+                    app:backgroundTint="@color/red_back"
+                    app:fabSize="normal"
                     tools:ignore="ContentDescription" />
 
 
-
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/ll_add_deal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end"
                 android:layout_marginBottom="10dp"
-                android:id="@+id/ll_add_deal">
+                android:gravity="end"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/add_deal_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
+                    android:background="@drawable/rectangle_corner_bgm_white"
+                    android:fontFamily="@font/futuramediumbt"
                     android:text="Add Deal"
                     android:textColor="@color/new_txt_color"
-                    android:textSize="@dimen/big_txt_size"
-                    android:fontFamily="@font/futuramediumbt"
-                    android:layout_gravity="center"/>
+                    android:textSize="@dimen/big_txt_size" />
+
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/add_deal_fab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:fabSize="normal"
+                    android:background="@color/bg_white"
                     android:src="@drawable/ic_baseline_add_24"
                     app:backgroundTint="@color/new_green_btn"
+                    app:fabSize="normal"
+                    android:elevation="0dp"
+                    app:elevation="0dp"
                     tools:ignore="ContentDescription" />
 
 
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="15dp"
+                android:background="@color/white"
                 android:orientation="horizontal"
                 android:visibility="gone"
                 tools:ignore="DisableBaselineAlignment">
@@ -313,7 +333,6 @@
                     android:visibility="visible">
 
 
-
                     <TextView
                         android:id="@+id/txt_applydeal"
                         android:layout_width="wrap_content"
@@ -332,14 +351,11 @@
         </LinearLayout>
 
 
-
-
-
         <include
             android:id="@+id/include_vendor_footer"
+            layout="@layout/toolbar_layout_vendor_footer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/toolbar_layout_vendor_footer" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

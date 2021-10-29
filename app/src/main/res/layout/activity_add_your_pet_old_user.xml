@@ -69,6 +69,7 @@
                 android:padding="15dp"
                 android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
                 android:textSize="14sp"
                 tools:ignore="Autofill,LabelFor" />
 
@@ -157,6 +158,7 @@
                 android:padding="15dp"
                 android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
                 android:textSize="14sp"
                 tools:ignore="Autofill,LabelFor" />
 
@@ -168,12 +170,13 @@
                 android:background="@drawable/rectangle_corner"
                 android:fontFamily="@font/futuramediumbt"
                 android:hint="@string/pet_weight"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:maxLength="6"
                 android:maxLines="1"
                 android:padding="15dp"
                 android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
                 android:textSize="14sp"
                 tools:ignore="Autofill,LabelFor,TextFields" />
 
@@ -205,11 +208,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/new_green_btn"
-                        android:checked="true"
                         android:fontFamily="@font/futuramediumbt"
                         android:text="@string/yes"
                         android:textColor="@color/new_txt_color"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:checked="true"/>
 
                     <RadioButton
                         android:id="@+id/radioButton2"

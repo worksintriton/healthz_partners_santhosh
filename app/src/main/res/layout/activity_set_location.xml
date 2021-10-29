@@ -61,7 +61,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                    android:src="@drawable/ic_notifications"
+                     android:src="@drawable/ic_notification_new"
                     tools:ignore="ContentDescription" />
 
 
@@ -77,7 +77,7 @@
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_user"
+                    android:src="@drawable/new_user"
                     tools:ignore="ContentDescription" />
             </LinearLayout>
 
@@ -101,6 +101,7 @@
             android:id="@+id/rlmap"
             android:background="@drawable/round_corner"
             tools:ignore="UselessParent">
+
             <fragment
                 android:id="@+id/map"
                 android:name="com.google.android.gms.maps.SupportMapFragment"

@@ -46,7 +46,9 @@
                 android:padding="15dp"
                 android:scrollbars="vertical"
                 android:textAlignment="viewStart"
+                android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
                 android:textSize="14sp"
                 tools:ignore="Autofill,LabelFor" />
 

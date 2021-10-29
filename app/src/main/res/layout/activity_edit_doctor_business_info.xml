@@ -67,7 +67,6 @@
                 android:background="@drawable/rectangle_corner"
                 android:fontFamily="@font/futuramediumbt"
                 android:hint="@string/clinic_number"
-                android:inputType="number"
                 android:maxLength="50"
                 android:maxLines="1"
                 android:padding="15dp"
@@ -83,7 +82,6 @@
                 android:background="@drawable/rectangle_corner"
                 android:fontFamily="@font/futuramediumbt"
                 android:hint="@string/doctor_id"
-                android:inputType="number"
                 android:maxLength="50"
                 android:maxLines="1"
                 android:padding="15dp"
@@ -243,18 +241,16 @@
                     <Button
                         android:id="@+id/buttonAddedu"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/rounded_curve"
                         android:fontFamily="@font/futuralightbt"
-                        android:padding="5dp"
                         android:text="@string/add"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:gravity="center"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -398,18 +394,16 @@
                     <Button
                         android:id="@+id/buttonAddexpr"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/rounded_curve"
                         android:fontFamily="@font/futuralightbt"
-                        android:padding="5dp"
                         android:text="@string/add"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:gravity="center"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 

@@ -152,6 +152,7 @@
                     android:inputType="number"
                     android:textColor="@color/new_light_green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor,TextFields" />
 
@@ -167,6 +168,7 @@
                     android:inputType="text"
                     android:textColor="@color/new_light_green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor,TextFields" />
 
@@ -181,6 +183,7 @@
                     android:padding="15dp"
                     android:textColor="@color/new_light_green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     android:inputType="text"
                     tools:ignore="Autofill,LabelFor,TextFields" />
@@ -197,6 +200,7 @@
                     android:padding="15dp"
                     android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor,TextFields"
                     android:maxLines="1"

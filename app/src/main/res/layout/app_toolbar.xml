@@ -51,7 +51,7 @@
             android:layout_height="24dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/ic_notifications"
+             android:src="@drawable/ic_notification_new"
             tools:ignore="ContentDescription" />
         <ImageView
             android:layout_width="24dp"
@@ -63,7 +63,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_user"
+            android:src="@drawable/new_user"
             tools:ignore="ContentDescription"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"

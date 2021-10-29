@@ -71,11 +71,11 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/futuramediumbt"
                     android:hint="@string/pet_s_genus_breed"
-                    android:maxLength="25"
                     android:maxLines="1"
                     android:padding="15dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="16sp"
                     tools:ignore="Autofill,LabelFor"
                     android:ellipsize="end"
@@ -105,8 +105,9 @@
                 android:maxLength="25"
                 android:maxLines="1"
                 android:padding="15dp"
-                android:textColor="@color/black"
+                android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor,TextFields" />
             <LinearLayout
@@ -172,7 +173,8 @@
                     android:orientation="vertical"
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                    tools:ignore="RtlHardcoded,UseCompoundDrawables"
+                    android:visibility="invisible">
 
                     <TextView
                         android:gravity="center"
@@ -206,8 +208,9 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/futuramediumbt"
                     android:hint="@string/date_of_birth"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="16sp" />
 
                 <ImageView
@@ -236,8 +239,9 @@
                 android:padding="15dp"
                 android:scrollbars="vertical"
                 android:textAlignment="viewStart"
+                android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
-                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
                 android:textSize="16sp"
                 tools:ignore="Autofill,LabelFor" />
 
@@ -267,11 +271,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/new_green_btn"
-                        android:checked="true"
                         android:fontFamily="@font/futuramediumbt"
                         android:text="@string/yes"
                         android:textColor="@color/new_txt_color"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                       />
 
                     <RadioButton
                         android:id="@+id/radioButton2"
@@ -282,7 +286,8 @@
                         android:fontFamily="@font/futuramediumbt"
                         android:text="@string/no"
                         android:textColor="@color/new_txt_color"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:checked="true"/>
 
                 </RadioGroup>
 
@@ -319,6 +324,7 @@
                         android:hint="@string/select_vaccinated"
                         android:textColor="@color/green"
                         android:textColorHint="@color/dark_gray"
+                        android:textCursorDrawable="@null"
                         android:textSize="16sp" />
 
                     <ImageView
@@ -349,6 +355,7 @@
                 android:padding="15dp"
                 android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
                 android:textSize="14sp"
                 tools:ignore="Autofill,LabelFor" />
 
@@ -360,12 +367,13 @@
                 android:background="@drawable/textview_bg"
                 android:fontFamily="@font/futuramediumbt"
                 android:hint="@string/pet_weight"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:maxLength="6"
                 android:maxLines="1"
                 android:padding="15dp"
                 android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
                 android:textSize="14sp"
                 tools:ignore="Autofill,LabelFor,TextFields" />
 

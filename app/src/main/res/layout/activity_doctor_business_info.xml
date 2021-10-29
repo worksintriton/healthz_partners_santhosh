@@ -51,9 +51,9 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp">
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
 
             <!--Clinic Details -->
 
@@ -65,7 +65,6 @@
                 android:background="@drawable/rectangle_corner"
                 android:fontFamily="@font/futuramediumbt"
                 android:hint="@string/clinic_number"
-                android:inputType="number"
                 android:maxLength="50"
                 android:maxLines="1"
                 android:padding="15dp"
@@ -140,12 +139,12 @@
                 android:fontFamily="@font/futuramediumbt"
                 android:hint="@string/clinic_name"
                 android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
                 android:padding="15dp"
                 android:textColorHint="@color/dark_gray"
                 android:textSize="14sp"
-                tools:ignore="Autofill,LabelFor"
-                android:maxLength="50"
-                android:maxLines="1"/>
+                tools:ignore="Autofill,LabelFor" />
 
             <!--Communication type-->
             <RelativeLayout
@@ -198,10 +197,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp">
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
 
                     <EditText
                         android:id="@+id/edtx_educ_nme"
@@ -216,8 +215,7 @@
                         android:padding="15dp"
                         android:textColorHint="@color/dark_gray"
                         android:textSize="14sp"
-                        tools:ignore="Autofill,LabelFor"
-                        />
+                        tools:ignore="Autofill,LabelFor" />
 
                     <TextView
                         android:id="@+id/txt_edu_yr"
@@ -236,18 +234,16 @@
                     <Button
                         android:id="@+id/buttonAddedu"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/rounded_curve"
                         android:fontFamily="@font/futuralightbt"
-                        android:padding="5dp"
                         android:text="@string/add"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:gravity="center"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -258,7 +254,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcyrl_added_edu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="10dp" />
 
             <TextView
@@ -285,9 +281,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp">
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
 
                     <EditText
                         android:id="@+id/edtx_comp_nme"
@@ -298,26 +294,26 @@
                         android:fontFamily="@font/futuramediumbt"
                         android:hint="@string/company_name"
                         android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1"
                         android:padding="15dp"
                         android:textColorHint="@color/dark_gray"
                         android:textSize="14sp"
-                        tools:ignore="Autofill,LabelFor"
-                        android:maxLines="1"
-                        android:maxLength="25"/>
+                        tools:ignore="Autofill,LabelFor" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
                         android:layout_marginTop="10dp"
-                        android:baselineAligned="false">
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
 
                         <RelativeLayout
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:background="@drawable/rectangle_corner_white">
+                            android:layout_weight="1"
+                            android:background="@drawable/rectangle_corner_white"
+                            android:orientation="horizontal">
 
 
                             <EditText
@@ -329,10 +325,10 @@
                                 android:fontFamily="@font/futuramediumbt"
                                 android:hint="@string/from"
                                 android:inputType="none"
+                                android:padding="15dp"
                                 android:textColorHint="@color/dark_gray"
-                                tools:ignore="Autofill,LabelFor"
                                 android:textSize="14sp"
-                                android:padding="15dp"/>
+                                tools:ignore="Autofill,LabelFor" />
 
                             <ImageView
                                 android:id="@+id/img_cal_from"
@@ -349,26 +345,26 @@
 
                         <RelativeLayout
                             android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginStart="5dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:background="@drawable/rectangle_corner_white">
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rectangle_corner_white"
+                            android:orientation="horizontal">
 
                             <EditText
                                 android:id="@+id/edtx_to"
                                 android:layout_width="100dp"
                                 android:layout_height="wrap_content"
-                                android:background="@android:color/transparent"
                                 android:layout_marginStart="10dp"
+                                android:background="@android:color/transparent"
                                 android:focusable="false"
                                 android:fontFamily="@font/futuramediumbt"
                                 android:hint="@string/to"
                                 android:inputType="none"
+                                android:padding="15dp"
                                 android:textColorHint="@color/dark_gray"
-                                tools:ignore="Autofill,LabelFor"
                                 android:textSize="14sp"
-                                android:padding="15dp" />
+                                tools:ignore="Autofill,LabelFor" />
 
                             <ImageView
                                 android:id="@+id/img_cal_to"
@@ -388,18 +384,16 @@
                     <Button
                         android:id="@+id/buttonAddexpr"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/rounded_curve"
                         android:fontFamily="@font/futuralightbt"
-                        android:padding="5dp"
                         android:text="@string/add"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:gravity="center"/>
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -408,8 +402,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcylr_added_expr"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
 
             <!--Specialization Details-->
             <TextView
@@ -422,6 +416,7 @@
                 android:text="@string/specialization"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cdvw_Specialization"
                 android:layout_width="match_parent"
@@ -435,26 +430,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp">
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rcylr_speclist"
                         android:layout_width="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
 
                     <!--> Add More Specialization Button -->
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcylr_added_specializationlist"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
 
             <!--Pets Type Details-->
 
@@ -482,15 +478,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp">
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rcylr_pettypelist"
                         android:layout_width="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
 
                     <!--> Add More Pet Types Button -->
 
@@ -501,16 +497,17 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcylr_added_pettype_list"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
 
 
             <!--Add Clinic Address details-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -519,10 +516,12 @@
                     android:text="@string/clinic_address"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="end" >
+                    android:gravity="end">
+
                     <TextView
                         android:id="@+id/txt_location_change"
                         android:layout_width="wrap_content"
@@ -530,15 +529,16 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/futuralightbt"
+                        android:gravity="center"
                         android:padding="5dp"
                         android:text="@string/change"
                         android:textColor="@color/new_green_btn"
                         android:textSize="16sp"
-                        android:gravity="center"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
             </LinearLayout>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cdvw_clinic_address"
                 android:layout_width="match_parent"
@@ -559,17 +559,17 @@
                     android:fontFamily="@font/futuramediumbt"
                     android:gravity="start"
                     android:hint="@string/write_here"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
                     android:maxLength="150"
+                    android:maxLines="3"
+                    android:minLines="2"
                     android:padding="15dp"
+                    android:scrollbars="vertical"
                     android:textAlignment="viewStart"
                     android:textColorHint="@color/dark_gray"
                     android:textSize="14sp"
-                    tools:ignore="Autofill,LabelFor"
-                    android:inputType="textMultiLine"
-                    android:lines="3"
-                    android:minLines="2"
-                    android:maxLines="3"
-                    android:scrollbars="vertical"/>
+                    tools:ignore="Autofill,LabelFor" />
 
             </androidx.cardview.widget.CardView>
 
@@ -598,7 +598,8 @@
                 app:cardUseCompatPadding="true">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <EditText
@@ -628,7 +629,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
                         android:contentDescription="@string/image"
-                        android:src="@drawable/add"  />
+                        android:src="@drawable/add" />
 
 
                 </RelativeLayout>
@@ -639,8 +640,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcylr_choosen_clinic_img"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
 
             <!--Certificate-->
 
@@ -696,7 +697,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_marginBottom="5dp"
                         android:contentDescription="@string/image"
-                        android:src="@drawable/add"  />
+                        android:src="@drawable/add" />
 
                 </RelativeLayout>
 
@@ -705,8 +706,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcylr_choosen_certificate_img"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
 
             <!--Govt ID proof-->
 
@@ -771,8 +772,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcylr_choosen_govtid_images"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
 
             <!--Photo ID proof-->
 
@@ -840,8 +841,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcylr_choosen_photoid_img"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
 
 
             <EditText
@@ -853,92 +854,97 @@
                 android:fontFamily="@font/futuramediumbt"
                 android:hint="@string/charge_amount"
                 android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1"
                 android:padding="15dp"
                 android:textColorHint="@color/dark_gray"
                 android:textSize="14sp"
-                tools:ignore="Autofill,LabelFor"
-                android:maxLength="4"
-                android:maxLines="1"/>
+                tools:ignore="Autofill,LabelFor" />
 
 
             <!--digital signature-->
             <LinearLayout
+                android:id="@+id/lldigitalsignature"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="20dp"
-                android:id="@+id/lldigitalsignature"
+                android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/futuramediumbt"
                     android:text="@string/digitalsignature"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/futuramediumbt"/>
+                    android:textSize="16sp" />
+
                 <ImageView
-                    android:layout_marginStart="10dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
                     android:background="@drawable/digital_signature"
                     tools:ignore="ContentDescription" />
 
 
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/llheaderdigitalsignature"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/rectangle_corner"
-                android:id="@+id/llheaderdigitalsignature"
-                android:layout_marginTop="10dp">
+                android:orientation="vertical">
+
                 <com.github.gcacace.signaturepad.views.SignaturePad
+                    android:id="@+id/signaturePad"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:id="@+id/signaturePad"/>
+                    android:layout_height="200dp" />
+
                 <LinearLayout
                     android:id="@+id/buttons_container"
-                    android:paddingTop="16dp"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
 
                     <Button
                         android:id="@+id/clear_button"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="Clear"
+                        android:layout_weight="1"
                         android:enabled="false"
                         android:fontFamily="@font/futuramediumbt"
+                        android:text="Clear"
                         tools:ignore="HardcodedText" />
 
                     <Button
                         android:id="@+id/save_button"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="Save"
+                        android:layout_weight="1"
                         android:enabled="false"
                         android:fontFamily="@font/futuramediumbt"
+                        android:text="Save"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
                 <ImageView
+                    android:id="@+id/ivdigitalsignature"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ivdigitalsignature"
                     tools:ignore="ContentDescription" />
             </LinearLayout>
-
 
 
         </LinearLayout>

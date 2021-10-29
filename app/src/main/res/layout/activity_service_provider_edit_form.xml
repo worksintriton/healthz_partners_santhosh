@@ -61,7 +61,9 @@
                 android:hint="@string/business_name"
                 android:inputType="text"
                 android:padding="15dp"
+                android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
                 android:textSize="14sp"
                 tools:ignore="Autofill,LabelFor" />
 
@@ -70,7 +72,8 @@
                 android:id="@+id/rl_aboutsp"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:visibility="gone">
 
                 <EditText
                     android:id="@+id/edt_aboutsp"
@@ -82,8 +85,9 @@
                     android:hint="@string/about_service_provider"
                     android:padding="15dp"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/new_light_green"
+                    android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor"
                     android:inputType="textMultiLine"
@@ -155,7 +159,9 @@
                             android:fontFamily="@font/futuramediumbt"
                             android:hint="@string/add_more"
                             android:padding="15dp"
+                            android:textColor="@color/green"
                             android:textColorHint="@color/dark_gray"
+                            android:textCursorDrawable="@null"
                             android:textSize="14sp"
                             tools:ignore="Autofill,LabelFor"
                             android:inputType="text"
@@ -261,7 +267,9 @@
                             android:fontFamily="@font/futuramediumbt"
                             android:hint="@string/specialization_ifany"
                             android:padding="15dp"
+                            android:textColor="@color/green"
                             android:textColorHint="@color/dark_gray"
+                            android:textCursorDrawable="@null"
                             android:textSize="14sp"
                             tools:ignore="Autofill,LabelFor"
                             android:inputType="text"
@@ -621,7 +629,9 @@
                     android:maxLength="150"
                     android:padding="15dp"
                     android:textAlignment="viewStart"
+                    android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor"
                     android:inputType="textMultiLine"

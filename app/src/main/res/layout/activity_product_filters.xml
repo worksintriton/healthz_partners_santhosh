@@ -21,7 +21,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="15dp"
-            android:background="@drawable/back_arrow_white"
+            android:background="@drawable/left_arrow"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/futuramediumbt"
             android:text="@string/filters"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/big_txt_size"
             android:textStyle="bold"
             android:layout_marginStart="10dp"/>
@@ -216,10 +216,9 @@
 
                     <RadioButton
                         android:id="@+id/rb_discount30"
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:background="@drawable/uncheck"
-                        android:button="@android:color/transparent"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/new_green_btn" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -241,10 +240,9 @@
 
                     <RadioButton
                         android:id="@+id/rb_discount20"
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:background="@drawable/uncheck"
-                        android:button="@android:color/transparent"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/new_green_btn" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -266,11 +264,9 @@
 
                     <RadioButton
                         android:id="@+id/rb_discount10"
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:background="@drawable/uncheck"
-                        android:button="@android:color/transparent"/>
-
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/new_green_btn" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -292,11 +288,9 @@
 
                     <RadioButton
                         android:id="@+id/rb_discount10below"
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:background="@drawable/uncheck"
-                        android:button="@android:color/transparent"
-                        />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/new_green_btn" />
 
                     <TextView
                         android:layout_width="match_parent"

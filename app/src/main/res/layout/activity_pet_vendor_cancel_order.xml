@@ -82,14 +82,14 @@
                     android:fontFamily="@font/futuramediumbt"
                     android:gravity="start"
                     android:hint="@string/write_here"
+                    android:inputType="textMultiLine"
                     android:padding="15dp"
+                    android:scrollbars="vertical"
                     android:textAlignment="viewStart"
                     android:textColor="@color/new_light_green"
                     android:textColorHint="@color/dark_gray"
                     android:textSize="14sp"
-                    tools:ignore="Autofill,LabelFor"
-                    android:inputType="textMultiLine"
-                    android:scrollbars="vertical"/>
+                    tools:ignore="Autofill,LabelFor" />
 
             </RelativeLayout>
 

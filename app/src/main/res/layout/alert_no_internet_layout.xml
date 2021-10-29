@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="Please check your Internet connection"
+                android:text="@string/seems_there_is_a_connectivity_issue_please_check_your_internet_connection_and_try_again"
                 android:textSize="16sp"
                 android:fontFamily="@font/futuramediumbt"/>
 
@@ -70,6 +70,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button_capsule_green"
                 android:text="Retry"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:fontFamily="@font/futuramediumbt"/>
 

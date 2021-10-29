@@ -42,7 +42,7 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/video_camera_gray"
+                    android:src="@drawable/video_camera_green"
                     tools:ignore="ContentDescription" />
 
             </LinearLayout>
@@ -97,7 +97,7 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="@string/patient_name"
+                        android:text="@string/pet_name"
                         android:textColor="@color/new_txt_color"
                         android:textSize="14sp"
                         android:textStyle="normal" />
@@ -138,7 +138,7 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="Relation Type"
+                        android:text="@string/pet_type"
                         android:textColor="@color/new_sec_txt_color"
                         android:textSize="12sp" />
 

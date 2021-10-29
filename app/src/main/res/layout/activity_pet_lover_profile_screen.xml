@@ -166,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/futuramediumbt"
-                android:text="@string/family_members"
+                android:text="@string/pets"
                 android:textColor="@color/new_txt_color"
                 android:textSize="20sp" />
 
@@ -221,12 +221,12 @@
                     android:layout_height="match_parent">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_family"
+                        android:id="@+id/rv_pet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal"
-                        app:reverseLayout="true"/>
+                        app:reverseLayout="true" />
 
 
                 </RelativeLayout>
@@ -389,7 +389,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="20dp">
 
 
         <include

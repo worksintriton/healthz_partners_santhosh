@@ -190,7 +190,7 @@
 
                     <Button
                         android:id="@+id/btn_prescriptiondetails"
-                        android:layout_width="110dp"
+                        android:layout_width="140dp"
                         android:layout_height="30dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginBottom="5dp"
@@ -220,7 +220,7 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/futuramediumbt"
                 android:maxLines="1"
-                android:text="@string/patient_details"
+                android:text="@string/pet_details"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -315,7 +315,7 @@
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="wrap_content"
-                    android:text="@string/relation"
+                    android:text="@string/pet_type_details"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -334,8 +334,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
@@ -359,7 +358,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/ll_gender">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
@@ -378,13 +378,38 @@
                     android:textSize="14sp" />
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/ll_color">
+
+                <TextView
+                    android:layout_width="@dimen/width_appoitmentdetails"
+                    android:layout_height="wrap_content"
+                    android:text="@string/colour"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/new_sec_txt_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_weight">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
@@ -401,38 +426,13 @@
                     android:textSize="14sp" />
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="@dimen/width_appoitmentdetails"
-                    android:layout_height="wrap_content"
-                    android:text="Height"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/txt_color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textColor="@color/new_sec_txt_color"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/ll_age">
 
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
@@ -459,7 +459,7 @@
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="wrap_content"
-                    android:text="Medical Information"
+                    android:text="@string/vaccinated_details"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -471,15 +471,13 @@
                     android:textSize="14sp" />
 
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/ll_petlastvacinateddate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:orientation="horizontal"
-                android:visibility="gone">
+                android:id="@+id/ll_petlastvacinateddate">
 
                 <TextView
                     android:id="@+id/txt_lbl_petlastvaccinated"
@@ -773,6 +771,52 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_original_price">
+
+                <TextView
+                    android:layout_width="@dimen/width_appoitmentdetails"
+                    android:layout_height="wrap_content"
+                    android:text="Original Price"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/new_sec_txt_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/ll_discount_price">
+
+                <TextView
+                    android:layout_width="@dimen/width_appoitmentdetails"
+                    android:layout_height="wrap_content"
+                    android:text="Coupon Price"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_discount_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/new_sec_txt_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -790,6 +834,9 @@
                     android:textSize="14sp" />
 
             </LinearLayout>
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

@@ -71,7 +71,8 @@
                 android:id="@+id/rl_aboutsp"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:visibility="gone">
 
                 <EditText
                     android:id="@+id/edt_aboutsp"
@@ -81,15 +82,15 @@
                     android:fontFamily="@font/futuramediumbt"
                     android:gravity="start"
                     android:hint="@string/about_service_provider"
+                    android:inputType="textMultiLine"
+                    android:maxLength="150"
                     android:padding="15dp"
+                    android:scrollbars="vertical"
                     android:textAlignment="viewStart"
                     android:textColor="@color/new_light_green"
                     android:textColorHint="@color/dark_gray"
                     android:textSize="14sp"
-                    tools:ignore="Autofill,LabelFor"
-                    android:inputType="textMultiLine"
-                    android:scrollbars="vertical"
-                    android:maxLength="150"/>
+                    tools:ignore="Autofill,LabelFor" />
 
             </RelativeLayout>
 
@@ -167,21 +168,23 @@
 
                         <Button
                             android:id="@+id/btn_add_service"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="center"
+                            android:padding="5dp"
                             android:layout_width="wrap_content"
-                            android:layout_height="30dp"
+                            android:layout_height="35dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:background="@drawable/rounded_curve"
                             android:fontFamily="@font/futuralightbt"
-                            android:padding="5dp"
                             android:text="@string/add"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="18sp"
-                            android:gravity="center"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_margin="5dp"
-                            />
+                            tools:ignore="RelativeOverlap" />
 
 
 
@@ -271,23 +274,23 @@
 
                         <Button
                             android:id="@+id/btn_add_specialization"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
                             android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
                             android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/rounded_curve"
-                            android:fontFamily="@font/futuralightbt"
                             android:gravity="center"
                             android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/rounded_curve"
+                            android:fontFamily="@font/futuralightbt"
                             android:text="@string/add"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="18sp"
-                            tools:ignore="RelativeOverlap" />
+                            tools:ignore="RelativeOverlap"/>
 
 
 

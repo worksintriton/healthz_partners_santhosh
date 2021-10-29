@@ -91,6 +91,7 @@
                                     android:hint="@string/filters"
                                     android:inputType="none"
                                     android:textColorHint="@color/new_txt_color"
+                                    android:textCursorDrawable="@null"
                                     android:textSize="12sp"
                                     tools:ignore="Autofill,LabelFor"
                                     android:layout_marginTop="5dp"

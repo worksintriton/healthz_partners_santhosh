@@ -46,7 +46,7 @@
         android:orientation="vertical"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="30dp">
 
         <EditText
             android:id="@+id/edt_emailorphone"
@@ -64,6 +64,7 @@
             android:padding="15dp"
             android:textColor="@color/new_light_green"
             android:textColorHint="@color/dark_gray"
+            android:textCursorDrawable="@null"
             android:textSize="14sp"
             tools:ignore="Autofill,LabelFor,TextFields" />
 

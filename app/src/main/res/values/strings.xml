@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">HealthZ Partners</string>
+    <string name="app_name">Petfolio</string>
     <string name="verify_otp">Verify OTP</string>
     <string name="emailorphonenumber">Phone Number</string>
     <string name="new_here">New here ?</string>
@@ -39,7 +39,7 @@
     <string name="addyourpet">Add your Pet</string>
     <string name="skip">Skip</string>
     <string name="pet_name">Name</string>
-    <string name="petname">Patient Name</string>
+    <string name="petname">Pet Name</string>
     <string name="pet_gender">Gender</string>
     <string name="pet_color">Color</string>
     <string name="pet_weight">Weight (kg)</string>
@@ -52,6 +52,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="err_msg_type_of_pettype">Select the pet type</string>
+    <string name="err_msg_type_of_reason_for_cancellation">Please select the reason for cancellation</string>
     <string name="err_msg_type_of_petbreedtype">Select the pet breed type</string>
     <string name="err_msg_type_of_communicationtype">Select the communication type</string>
     <string name="err_msg_type_of_petgendertype">Select the pet gender type</string>
@@ -60,7 +61,7 @@
 
     <string name="err_msg_type_of_diagnosis">Select the diagnosis type</string>
     <string name="err_msg_type_of_sub_diagnosis">Select the sub diagnosis type</string>
-    <string name="upload_pet_image">Upload Pet image</string>
+    <string name="upload_pet_image">Upload pet image</string>
     <string name="change_pet_image">Change Pet image</string>
     <string name="pet_last_vaccinated_age">Pet Last Vaccinated Date</string>
     <string name="please_wait">Please Wait</string>
@@ -75,7 +76,7 @@
     <string name="search_location_address">Search Location Address</string>
     <string name="search_for_breed">Search for breed...</string>
     <string name="noplacesfound">No Places Found</string>
-    <string name="save_this_location_and_procced">Save this location &amp; Proceed</string>
+    <string name="save_this_location_and_procced">Save this location &amp; proceed</string>
 
 
     <string name="doctor_business_info_title">Doctor Business Info</string>
@@ -88,7 +89,7 @@
     <string name="business_name">Business name</string>
     <string name="education">Education</string>
     <string name="year_of_completion">Year of Completion</string>
-    <string name="add">Add</string>
+    <string name="add">Save</string>
     <string name="education1">Education :</string>
     <string name="year_of_completion1">Year of Completion : </string>
     <string name="experience">Experience</string>
@@ -99,13 +100,13 @@
     <string name="to">To</string>
     <string name="add_more">Add More</string>
     <string name="pets_handled">Pets Handled</string>
-    <string name="pet_type">Pet Type</string>
+    <string name="pet_type">Type</string>
     <string name="clinic_address">Clinic Address</string>
     <string name="write_here">Write Here....</string>
     <string name="clinic_pict">Clinic pictures</string>
     <string name="service_gallery_images">Service gallery images</string>
     <string name="certificate">Certificate</string>
-    <string name="certificates_if_any">Certificates if any</string>
+    <string name="certificates_if_any">Certificates</string>
     <string name="govt_proof">Govt ID Proof</string>
     <string name="photoid_proof">Photo ID Proof</string>
     <string name="choose">Choose</string>
@@ -117,8 +118,9 @@
     <string name="deleteholidaymsg">"Are you sure you want to delete this holiday? "</string>
 
 
-    <string name="my_orders">My orders</string>
+    <string name="my_orders">My Orders</string>
     <string name="my_appointments">My Appointments</string>
+    <string name="walking_appointments">Walk-in Appointments</string>
     <string name="manage_services">Manage Services</string>
     <string name="favourites">Favourites</string>
     <string name="my_coupons">My Coupons</string>
@@ -161,10 +163,9 @@
     <string name="emergency">Emergency</string>
     <string name="allergies">Allergies</string>
     <string name="upload_pet_current_images">Upload pet current images</string>
-    <string name="upload_family_members_images">Upload current family images</string>
     <string name="continues">Continue</string>
     <string name="next">Next</string>
-    <string name="add_comment_here">Add Comment here..</string>
+    <string name="add_comment_here">Add comment here..</string>
     <string name="product_descriptions_here">Product descriptions here..</string>
     <string name="book_now">Book Now</string>
 
@@ -178,7 +179,7 @@
     <string name="add_review">Add Review</string>
     <string name="all_categories">All categories</string>
     <string name="cancel_appointment_date">Cancelled on 01-Sep 2020</string>
-    <string name="pickup_location">PickUp Location</string>
+    <string name="pickup_location">Pickup Location</string>
     <string name="current_location">Current Location</string>
     <string name="my_appointment">My appointment</string>
     <string name="pet_care">Pet Care</string>
@@ -232,14 +233,14 @@
 
     <string name="medical_history">Medical History</string>
     <string name="appointmentdateandtime">Appointment Date and Time</string>
-    <string name="order_date">Order date</string>
-    <string name="bookingdate">Booked At</string>
+    <string name="order_date">Order Date</string>
+    <string name="bookingdate">Booked Date</string>
     <string name="order">Order #</string>
     <string name="bookingid">Booking ID</string>
     <string name="payment_method">Payment Method</string>
     <string name="order_cost">Order cost</string>
     <string name="address">Address</string>
-    <string name="order_details">Order details </string>
+    <string name="order_details">Order Details </string>
     <string name="allergies_pet_details">Allergies :</string>
     <string name="prescription">Prescription</string>
     <string name="before_given_prescription_details">Before given Prescription Details</string>
@@ -267,14 +268,14 @@
     <string name="set_location">Set Location</string>
     <string name="choose_location">Choose Location</string>
     <string name="edit_address">Edit Address</string>
-    <string name="add_your_pet">Add your Pet</string>
-    <string name="edit_profile_image">Edit Profile image</string>
+    <string name="add_your_pet">My pet details</string>
+    <string name="edit_profile_image">Edit profile image</string>
     <string name="registeryourpet">Register your Pet</string>
 
-    <string name="deletemsg">Are you sure you want to delete this location details?</string>
-    <string name="deletepetmsg">Are you sure you want to delete this details?</string>
-    <string name="removeproductfavmsg">Are you sure you want to remove this product from your favorites?</string>
-    <string name="locationstatuschange">Are you sure you want to change this location as default address?</string>
+    <string name="deletemsg">Are you sure you want to delete this address?</string>
+    <string name="deletepetmsg">Are you sure you want to delete this pet details?</string>
+    <string name="removeproductfavmsg">Are you sure you want to remove this from your favorites?</string>
+    <string name="locationstatuschange">Are you sure you want to change the location as default address?</string>
 
     <string name="turn_on_your">Turn on your</string>
     <string name="location_services">location services</string>
@@ -322,11 +323,13 @@
     <string name="up"><![CDATA[& Up]]></string>
 
     <string name="excellent">Excellent</string>
+    <string name="above_average">Above Average</string>
     <string name="average">Average</string>
     <string name="below_average">Below Average</string>
     <string name="poor">Poor</string>
-    <string name="communication_type">Offline Doctors</string>
+    <string name="communication_type">Clinic vists</string>
     <string name="communicationtype">Communication Type</string>
+    <string name="consulationtype">Consultation Type</string>
     <string name="visittype">Visit Type</string>
 
     <string name="review_added">Review Added</string>
@@ -334,6 +337,7 @@
     <string name="type">Appointment Type</string>
 
     <string name="business">Business</string>
+    <string name="vendor_business">Vendor Business Info</string>
 
     <string name="recent_search">Recent search</string>
     <string name="today_deal">Deals of the day</string>
@@ -341,11 +345,10 @@
     <string name="community">Community</string>
 
 
-    <string name="review_msg">Our team is reviewing your profile and will get in touch with you to close the formalities</string>
-    <string name="back_to_login">Back to login</string>
+    <string name="review_msg">Our team is reviewing your profile and will get in touch with you to close the formalities.</string>
 
     <string name="near_by_services">Near by Services</string>
-    <string name="popular_services">Popular services</string>
+    <string name="popular_services">Popular Services</string>
     <string name="sort">Sort</string>
     <string name="providers">Providers</string>
     <string name="service_providers">Service providers</string>
@@ -381,7 +384,7 @@
     <string name="discountamount">Discount Amount</string>
     <string name="shippingamount">Shipping Amount</string>
     <string name="totalamount">Total Amount</string>
-    <string name="proceedtobuy">Proceed to Buy</string>
+    <string name="proceedtobuy">Proceed to buy</string>
     <string name="coupon_applied">coupon applied</string>
     <string name="coupon">Coupon </string>
     <string name="percentage_discount">0 % discount </string>
@@ -398,7 +401,7 @@
     <string name="status">Status</string>
     <string name="view_prescription">View Prescription</string>
     <string name="consultation_fees">Consultation Fee</string>
-    <string name="notification">Notification</string>
+    <string name="notification">Notifications</string>
 
     <string name="service_details">Service Details</string>
 
@@ -489,6 +492,8 @@
     <string name="confirm_all">Confirm All</string>
     <string name="payment_successful">Payment successful</string>
     <string name="back_to_shop">Back to shop</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="back_to_profile">Back to profile</string>
     <string name="return_product">Return product</string>
     <string name="shipping_address">Shipping Address</string>
 
@@ -500,8 +505,8 @@
     <string name="_10">10</string>
     <string name="years">Years</string>
     <string name="km">KM Away</string>
-    <string name="about_vet">About Doctor</string>
-    <string name="make_an_appointment">Make an Appointment</string>
+    <string name="about_vet">About Vet</string>
+    <string name="make_an_appointment">Make an appointment</string>
     <string name="bathing">Bathing</string>
     <string name="_1a_anna_nagar_main_road_chennai">1A, Anna Nagar Main Road, Chennai</string>
 
@@ -537,7 +542,7 @@
     <string name="pet_service">Pet Service</string>
     <string name="sos">SOS</string>
     <string name="add_products">Add Products</string>
-    <string name="pet_s_genus_breed">Types &amp; Breed</string>
+    <string name="pet_s_genus_breed">Types &amp; Breeds</string>
     <string name="date_of_birth">Date of Birth</string>
     <string name="pet_bio">Bio</string>
     <string name="save_continue"><![CDATA[Save & Continue]]></string>
@@ -550,23 +555,23 @@
     <string name="owner_s_name">Owner\'s Name</string>
     <string name="_200_km">266.68 KM</string>
 
-    <string name="no_new_appointments_petlover">Is it time for the Doc yet?</string>
-    <string name="no_missed_appointments_petlover">I miss my Doc</string>
-    <string name="no_completed_appointments_petlover">I miss my Doc</string>
+    <string name="no_new_appointments_petlover">No new appointments</string>
+    <string name="no_missed_appointments_petlover">No missed appointments</string>
+    <string name="no_completed_appointments_petlover">No completed appointments</string>
 
-    <string name="no_phone_numbers">I know you got me!</string>
-    <string name="no_notifications">I\'m bored</string>
-    <string name="no_new_pets">Add your loved one!</string>
-    <string name="no_pet_service">Groom me please!</string>
+    <string name="no_phone_numbers">No phone numbers</string>
+    <string name="no_notifications">No notifications</string>
+    <string name="no_new_pets">No new pets</string>
+    <string name="no_pet_service">No pet service</string>
     <string name="cart_empty">Buy me something please</string>
 
-    <string name="no_new_appointments_doctor">Someone needs your love</string>
-    <string name="no_missed_appointments_doctor">You make this world a Woofer place</string>
-    <string name="no_completed_appointments_doctor">Time to get Jiggy with it</string>
+    <string name="no_new_appointments_doctor">No new appointments</string>
+    <string name="no_missed_appointments_doctor">No missed appointments</string>
+    <string name="no_completed_appointments_doctor">No completed appointments</string>
 
-    <string name="no_new_appointments_sp">Someone needs your love</string>
-    <string name="no_missed_appointments_sp">You make this world a Woofer place</string>
-    <string name="no_completed_appointments_sp">Time to get Jiggy with it</string>
+    <string name="no_new_appointments_sp">No new appointments</string>
+    <string name="no_missed_appointments_sp">No missed appointments</string>
+    <string name="no_completed_appointments_sp">No completed appointments</string>
 
     <string name="no_holidays">Have a great Holiday Doc. You need it!</string>
 
@@ -577,29 +582,19 @@
     <string name="select_sub_diagnosis">Select the Sub Diagnosis Type</string>
     <string name="prescription_method">Prescription Method</string>
     <string name="manual">Manual</string>
-    <string name="prescription_no">Prescription NO</string>
+    <string name="prescription_no">Prescription No</string>
     <string name="clinic_loc">Clinic Location</string>
-    <string name="apply_coupon">Apply Coupon</string>
+    <string name="apply_coupon">Apply</string>
     <string name="enter_coupon">Enter Coupon</string>
     <string name="cash">Cash</string>
     <string name="make_payment">Make Payment</string>
     <string name="choose__payment_method">Payment Method</string>
+    <string name="shop_name">Shop Name</string>
+    <string name="successfullycancelled">Successfully Cancelled</string>
+    <string name="turn_off">Turn off</string>
+    <string name="version">Version V.13.10</string>
+    <string name="tablet_name">Tablet Name</string>
+    <string name="consumption">Consumption</string>
+    <string name="seems_there_is_a_connectivity_issue_please_check_your_internet_connection_and_try_again">Seems there is a connectivity issue. Please check your internet connection and try again</string>
 
-    <!--> Salveo -->
-
-    <string name="Consultation">Consultation</string>
-    <string name="Diagnostics">Diagnostics</string>
-    <string name="Profile">Profile</string>
-    <string name="add_your_family">Add your family members</string>
-    <string name="male">Male</string>
-    <string name="female">Female</string>
-    <string name="transgender">Transgender</string>
-    <string name="height">Height</string>
-    <string name="any_medical_information">Other Medical Information</string>
-    <string name="family_members">Family Members</string>
-    <string name="no_new_fam_memb">Add your Family Member!</string>
-    <string name="select_family_members">Select Family Members</string>
-    <string name="patient_details">Patient Details</string>
-    <string name="relation">Relation</string>
-    <string name="patient_name">Patient Name</string>
 </resources>

@@ -70,7 +70,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/ic_notifications"
+                 android:src="@drawable/ic_notification_new"
                 android:visibility="invisible"
                 tools:ignore="ContentDescription" />
 
@@ -96,7 +96,8 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-    <include layout="@layout/petcare_bottom_sheet" />
+    <include layout="@layout/petcare_bottom_sheet"
+        />
 
 
     <com.wang.avi.AVLoadingIndicatorView

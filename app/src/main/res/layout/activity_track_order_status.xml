@@ -96,7 +96,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/futuramediumbt"
                     android:maxLines="1"
-                    android:text="\u20B9 880"
+                    android:text="INR 880"
                     android:textColor="@color/black"
                     android:textSize="16sp"/>
 
@@ -113,7 +113,7 @@
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="wrap_content"
-                    android:text="Order date"
+                    android:text="Order Date"
                     android:fontFamily="@font/futuramediumbt"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
@@ -191,7 +191,7 @@
                 <TextView
                     android:layout_width="@dimen/width_appoitmentdetails"
                     android:layout_height="wrap_content"
-                    android:text="Order total"
+                    android:text="Order Total"
                     android:textColor="@color/black"
                     android:fontFamily="@font/futuramediumbt"
                     android:textSize="14sp" />
@@ -203,7 +203,7 @@
                     android:textColor="@color/new_sec_txt_color"
                     android:textSize="14sp"
                     android:fontFamily="@font/futuramediumbt"
-                    android:text="\u20B9  0"/>
+                    android:text="INR  0"/>
 
             </LinearLayout>
 
@@ -281,7 +281,7 @@
                         android:layout_marginStart="10dp"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="Order booked"
+                        android:text="Order Booked"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:fontFamily="@font/futuramediumbt"
@@ -694,7 +694,7 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="In transit"
+                        android:text="In Transit"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         tools:ignore="UseCompatTextViewDrawableXml" />

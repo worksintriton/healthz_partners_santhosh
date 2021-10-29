@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,6 +19,19 @@
             android:layout_gravity="center"
             tools:ignore="ContentDescription"
             android:scaleType="centerInside"/>
+        <TextView
+            android:layout_below="@+id/logo"
+            android:id="@+id/txt_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/futuramediumbt"
+            android:text="@string/version"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/big_txt_size"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

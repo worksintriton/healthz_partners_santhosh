@@ -3,7 +3,7 @@
     <color name="colorPrimary">#2896c2</color>
     <color name="colorPrimaryDark"> #2896c2</color>
     <color name="colorAccent">#FF4081</color>
-    <!-- <color name="color1">#56B9A4</color>-->
+   <!-- <color name="color1">#56B9A4</color>-->
     <color name="color1"> #2896c2</color>
     <!-- <color name="color">#33a9ee</color>-->
     <color name="white">#ffffff</color>
@@ -12,7 +12,7 @@
     <color name="forgot">#d1f4f9</color>
     <color name="red">#BA0D4C</color>
     <color name="red_back">#c40505</color>
-    <!--  <color name="green">#71D1BD</color>-->
+  <!--  <color name="green">#71D1BD</color>-->
     <color name="green">#2896c2</color>
     <color name="light_red">#ccc5c7</color>
     <color name="hollo">#606060</color>
@@ -40,10 +40,10 @@
     <color name="greyishBrownSeven">#3f3f3f</color>
     <color name="macaroniAndCheeseThree">#e5a939</color>
     <color name="whiteTwo">#ffffff</color>
-    <!-- <color name="green_color">#56B9A4</color>-->
+   <!-- <color name="green_color">#56B9A4</color>-->
     <color name="green_color">#2896c2</color>
     <color name="light_green">#e3f9ff</color>
-    <color name="cardview_bg">#E7F5F2</color>
+    <color name="cardview_bg">#e3f9ff</color>
 
     <color name="whitelight">#F6F3F3</color>
 
@@ -53,11 +53,11 @@
     <color name="orange">#ffc900</color>
     <color name="missed_red">#ef728a</color>
     <color name="medium_green">#4caf50</color>
-    <!--  <color name="new_light_green">#56B9A4</color>-->
+  <!--  <color name="new_light_green">#56B9A4</color>-->
     <color name="new_light_green">#2896c2</color>
     <color name="new_txt_color">#444444</color>
     <color name="new_sec_txt_color">#888888</color>
-    <!--   <color name="new_green_btn">#56B9A4</color>-->
+ <!--   <color name="new_green_btn">#56B9A4</color>-->
     <color name="new_green_btn">#2896c2</color>
     <color name="orange_bgm_color">#fbdd68</color>
     <color name="light_orange">#fff6d6</color>
@@ -73,13 +73,13 @@
     <color name="sort_by_bg">#F4F4F4</color>
     <color name="bg_white">#FFFFFF</color>
 
-    <!-- <color name="new_header_bg">#E8571E</color>-->
+   <!-- <color name="new_header_bg">#E8571E</color>-->
     <color name="new_header_bg">#FFFFFF</color>
     <color name="new_shop_bg">#7AD1C0</color>
     <color name="new_txt_header">#141414</color>
     <color name="new_secondtxt">#2E2E2E</color>
     <color name="new_footer_change_blue">#448ECA</color>
-    <!-- <color name="new_view_more">#009377</color>-->
+   <!-- <color name="new_view_more">#009377</color>-->
     <color name="new_view_more">#2896c2</color>
 
     <color name="selected_dots">#37BFAF</color>
@@ -90,7 +90,7 @@
     <color name="new_red">#E8571E</color>
     <color name="new_light_black">#2E2E2E</color>
     <color name="new_off">#9BD152</color>
-    <color name="solid_bg">#7AD1C0</color>
+    <color name="solid_bg">#e3f9ff</color>
     <color name="new_thick_orange_bgm_color">#F8B232</color>
 
     <color name="new_green_bgm_color">#7AD1C0</color>

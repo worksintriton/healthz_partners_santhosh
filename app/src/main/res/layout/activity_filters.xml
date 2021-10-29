@@ -54,15 +54,38 @@
             android:orientation="vertical"
             android:layout_marginBottom="20dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableRight="@drawable/ic_baseline_expand_less_24"
-                android:fontFamily="@font/futuramediumbt"
-                android:text="@string/specialization"
-                android:textColor="@color/new_txt_color"
-                android:textSize="16sp"
-                tools:ignore="RtlHardcoded" />
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/ll_specialization">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:text="@string/specialization"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/img_specialization"
+                        android:layout_width="12dp"
+                        android:layout_height="8dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_up"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
 
             <RadioGroup
                 android:id="@+id/rg_specialization"
@@ -144,16 +167,38 @@
                 android:layerType="software"
                 android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/textView22"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:drawableRight="@drawable/ic_baseline_expand_less_24"
-                android:fontFamily="@font/futuramediumbt"
-                android:text="@string/review"
-                android:textColor="@color/new_txt_color"
-                android:textSize="16sp" />
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/ll_review"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:text="@string/review"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="16sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/img_review"
+                        android:layout_width="12dp"
+                        android:layout_height="8dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_up"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
 
             <RadioGroup
                 android:id="@+id/rg_review"
@@ -161,6 +206,60 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_five_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/new_green_btn" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/futuramediumbt"
+                        android:padding="2dp"
+                        android:text="@string/excellent"
+                        android:textColor="@color/new_txt_color"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
 
 
                 <LinearLayout
@@ -206,7 +305,7 @@
                         android:layout_height="match_parent"
                         android:fontFamily="@font/futuramediumbt"
                         android:padding="2dp"
-                        android:text="@string/excellent"
+                        android:text="@string/above_average"
                         android:textColor="@color/new_txt_color"
                         android:textSize="16sp" />
 

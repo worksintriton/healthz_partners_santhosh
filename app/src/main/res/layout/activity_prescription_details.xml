@@ -28,7 +28,7 @@
         android:layout_below="@+id/headerView"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="40dp">
 
 
 
@@ -118,6 +118,32 @@
                     android:layout_marginTop="10dp"/>
                 <TextView
                     android:id="@+id/txt_sub_diagnosis"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rectangular_curved_corner"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:padding="15dp"
+                    android:textColor="@color/new_light_green"
+                    android:textColorHint="@color/dark_gray"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,LabelFor" />
+
+
+
+
+
+                <TextView
+                    android:id="@+id/txt_lbl_serviceamout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:text="@string/charge_amount"
+                    android:textColor="@color/new_txt_color"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/txt_serviceamout"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginTop="10dp"
@@ -282,7 +308,8 @@
                             android:id="@+id/rv_prescriptiondetails"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp" />
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="30dp"/>
 
                         <TextView
                             android:id="@+id/txt_no_records"

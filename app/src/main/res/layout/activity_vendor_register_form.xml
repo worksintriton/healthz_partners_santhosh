@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/futuramediumbt"
-            android:text="@string/business"
+            android:text="@string/vendor_business"
             android:textColor="@color/black"
             android:textSize="@dimen/big_txt_size"
             android:textStyle="bold"
@@ -72,8 +72,9 @@
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="15dp"
-                    android:textColor="@color/new_light_green"
+                    android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor" />
 
@@ -89,8 +90,9 @@
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="15dp"
-                    android:textColor="@color/new_light_green"
+                    android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor" />
 
@@ -104,12 +106,14 @@
                     android:hint="@string/business"
                     android:inputType="text"
                     android:padding="15dp"
-                    android:textColor="@color/new_light_green"
+                    android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor,TextFields"
                     android:maxLines="1"
-                    android:maxLength="25"/>
+                    android:maxLength="25"
+                    android:visibility="gone"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -129,8 +133,9 @@
                         android:maxLength="10"
                         android:maxLines="1"
                         android:padding="15dp"
-                        android:textColor="@color/new_light_green"
+                        android:textColor="@color/green"
                         android:textColorHint="@color/dark_gray"
+                        android:textCursorDrawable="@null"
                         android:textSize="14sp"
                         tools:ignore="Autofill,LabelFor" />
 
@@ -162,8 +167,9 @@
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="15dp"
-                    android:textColor="@color/new_light_green"
+                    android:textColor="@color/green"
                     android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor" />
 

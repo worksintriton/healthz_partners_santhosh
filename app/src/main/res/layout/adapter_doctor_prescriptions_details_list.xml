@@ -41,14 +41,14 @@
             android:text="@string/consumption_per_day"
             android:textColor="@color/new_txt_color"
             android:layout_marginStart="10dp"
-            android:visibility="visible"/>
+            android:visibility="gone"/>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
-            android:visibility="gone">
+            android:visibility="visible">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,6 +61,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:theme="@style/MyCheckBox"
+                    android:clickable="false"
                     />
             </LinearLayout>
             <LinearLayout
@@ -76,6 +77,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:theme="@style/MyCheckBox"
+                    android:clickable="false"
                     />
             </LinearLayout>
             <LinearLayout
@@ -89,6 +91,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:theme="@style/MyCheckBox"
+                    android:clickable="false"
                     />
             </LinearLayout>
 

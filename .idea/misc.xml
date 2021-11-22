@@ -3,6 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable-v24/cb_selectors.xml" value="0.290625" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable-v24/drawableleftchangeusertype.xml" value="0.290625" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable-v24/rounded_corner_green.xml" value="0.290625" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable/cb_selectors.xml" value="0.290625" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable/drawableleftchangeusertype.xml" value="0.290625" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable/edt_rectangle_corner_border.xml" value="0.290625" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable/green_bgm_border.xml" value="0.290625" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable/rectangle_corner_border.xml" value="0.290625" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_add_members_new.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_add_your_pet.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_choose_user_type.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_customer_profile_screen.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_business_info.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_edit_doctor_business_info.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_sample.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_sign_up.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/adapter_usertypes_cardview.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_patient_santhosh/app/src/main/res/drawable-v24/button_bg.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_patient_santhosh/app/src/main/res/drawable-v24/cb_selector.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_patient_santhosh/app/src/main/res/drawable-v24/cb_selectors.xml" value="0.21614583333333334" />

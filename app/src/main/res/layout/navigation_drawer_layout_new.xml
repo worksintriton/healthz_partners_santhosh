@@ -13,12 +13,12 @@
         android:layout_width="wrap_content"
         android:orientation="vertical">
 
-        <include
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/toolbar_layout"
-            android:id="@+id/include_petlover_header"/>
 
+        <include
+            android:id="@+id/include_petlover_header"
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <FrameLayout
             android:id="@+id/base_container"

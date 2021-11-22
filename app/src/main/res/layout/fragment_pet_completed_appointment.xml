@@ -56,10 +56,10 @@
         <Button
             android:id="@+id/btn_load_more"
             android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:layout_gravity="center"
             android:background="@drawable/rounded_curve"
-            android:fontFamily="@font/futuramediumbt"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:text="@string/load_more"
             android:textAllCaps="false"

@@ -148,6 +148,7 @@
                     android:textColor="@color/color"
                     android:textSize="16sp"
                     android:visibility="gone" />
+
                 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                     android:id="@+id/refresh_layout"
                     android:layout_width="match_parent"
@@ -155,12 +156,12 @@
                     tools:ignore="MissingClass">
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_nearbyservices"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:visibility="visible" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_nearbyservices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible" />
                 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
                 <RelativeLayout

@@ -32,7 +32,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/layout_bg_service_green"
+                android:background="@drawable/layout_bg_service_greenyish"
                 android:orientation="vertical"
                 tools:ignore="UselessParent">
 

@@ -20,7 +20,7 @@
             android:layout_height="90dp"
             android:contentDescription="@string/image"
             android:scaleType="fitXY"
-            android:src="@drawable/services"
+            android:src="@drawable/ic_hzbanner"
            />
 
 

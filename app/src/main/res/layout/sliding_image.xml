@@ -9,13 +9,11 @@
     android:background="#fff">
 
 
-        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        <ImageView
             android:id="@+id/itemImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:siShape="@drawable/new_solid_bgm"
-            android:scaleType="fitXY"
             android:alpha="1"
-            />
+            android:scaleType="fitXY" />
 
 </androidx.cardview.widget.CardView>

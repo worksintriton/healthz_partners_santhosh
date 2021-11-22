@@ -81,8 +81,8 @@
     <dimen name="width_appoitmentdetails">135dp</dimen>
 
     //drawer
-    <dimen name="nav_header_height">160dp</dimen>
-    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">120dp</dimen>
+    <dimen name="nav_header_vertical_spacing">10dp</dimen>
     <dimen name="design_navigation_separator_vertical_padding">0dp</dimen>
     <dimen name="normal_text_profile">14sp</dimen>
     <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
@@ -101,5 +101,6 @@
     <dimen name="timestamp">11dp</dimen>
     <dimen name="description">15dp</dimen>
     <dimen name="price">13dp</dimen>
+
 
 </resources>

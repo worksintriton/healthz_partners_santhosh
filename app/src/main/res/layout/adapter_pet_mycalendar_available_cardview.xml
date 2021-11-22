@@ -10,19 +10,16 @@
         android:id="@+id/txt_days"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:fontFamily="@font/futuramediumbt"
+        android:layout_marginEnd="5dp"
+        android:background="@color/white"
+        android:fontFamily="@font/montserrat"
         android:gravity="center_horizontal"
+        android:padding="10dp"
         android:text="Monday"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/button_rounded_corner"
-        android:padding="10dp"
 
         />
-
-
-
 
 
 </LinearLayout>

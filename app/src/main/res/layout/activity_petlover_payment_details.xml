@@ -17,12 +17,11 @@
         android:visibility="visible"
         tools:ignore="UseCompoundDrawables">
 
-        <include
+       <include
             android:id="@+id/include_petlover_header"
-            layout="@layout/toolbar_layout_petlover_header"
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_layout_petlover_header" />
         <ImageView
             android:id="@+id/img_back"
             android:layout_width="24dp"

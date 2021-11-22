@@ -13,7 +13,7 @@
         <include
             android:id="@+id/include_petlover_header"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             layout="@layout/toolbar_layout_petlover_header" />
 
 
@@ -32,8 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:orientation="vertical"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -46,17 +46,17 @@
                     android:id="@+id/spr_selectyourpettype"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
                     android:background="@android:color/transparent"
-                    android:gravity="center_horizontal"
-                    android:layout_marginStart="10dp"/>
+                    android:gravity="center_horizontal" />
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
+                    android:layout_margin="5dp"
                     android:background="@drawable/option"
-                    tools:ignore="ContentDescription"
-                    android:layout_margin="5dp"/>
+                    tools:ignore="ContentDescription" />
             </RelativeLayout>
 
             <TextView
@@ -69,7 +69,7 @@
                 android:text="@string/or"
                 android:textColor="@color/new_txt_color"
                 android:textSize="16sp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/edt_petname"
@@ -80,16 +80,15 @@
                 android:fontFamily="@font/futuramediumbt"
                 android:hint="@string/pet_name"
                 android:inputType="text"
+                android:maxLength="25"
+                android:maxLines="1"
                 android:padding="15dp"
                 android:textColor="@color/green"
                 android:textColorHint="@color/dark_gray"
                 android:textCursorDrawable="@null"
                 android:textSize="14sp"
-                tools:ignore="Autofill,LabelFor"
-                android:maxLines="1"
-                android:maxLength="25"
                 android:visibility="gone"
-                />
+                tools:ignore="Autofill,LabelFor" />
 
             <TextView
                 android:id="@+id/txt_pettype"
@@ -102,8 +101,8 @@
                 android:textColor="@color/new_light_green"
                 android:textColorHint="@color/dark_gray"
                 android:textSize="14sp"
-                tools:ignore="Autofill,LabelFor"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                tools:ignore="Autofill,LabelFor" />
 
             <TextView
                 android:id="@+id/txt_petbreed"
@@ -117,10 +116,8 @@
                 android:textColor="@color/new_light_green"
                 android:textColorHint="@color/dark_gray"
                 android:textSize="14sp"
-                tools:ignore="Autofill,LabelFor"
-                android:visibility="gone"/>
-
-
+                android:visibility="gone"
+                tools:ignore="Autofill,LabelFor" />
 
 
             <RelativeLayout
@@ -143,10 +140,11 @@
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
+                    android:layout_margin="5dp"
                     android:background="@drawable/option"
-                    tools:ignore="ContentDescription"
-                    android:layout_margin="5dp"/>
+                    tools:ignore="ContentDescription" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/rl_petbreed"
                 android:layout_width="match_parent"
@@ -167,39 +165,40 @@
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
+                    android:layout_margin="5dp"
                     android:background="@drawable/option"
-                    tools:ignore="ContentDescription"
-                    android:layout_margin="5dp"/>
+                    tools:ignore="ContentDescription" />
             </RelativeLayout>
 
 
             <RadioGroup
                 android:id="@+id/rg_appointmenttype"
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/new_green_btn"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:checked="true"
+                    android:fontFamily="@font/montserrat"
                     android:text="@string/normal"
-                    android:textColor="@color/new_txt_color"
-                    tools:ignore="UnusedAttribute"
-                    android:checked="true" />
+                    android:textColor="@color/black"
+                    tools:ignore="UnusedAttribute" />
+
                 <RadioButton
                     android:id="@+id/radioButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
                     android:buttonTint="@color/new_green_btn"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:fontFamily="@font/montserrat"
                     android:text="@string/emergency"
-                    android:textColor="@color/new_txt_color"
-                    tools:ignore="UnusedAttribute"
-                    android:layout_marginStart="10dp"/>
-
+                    android:textColor="@color/black"
+                    tools:ignore="UnusedAttribute" />
 
 
             </RadioGroup>
@@ -209,66 +208,66 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/rectangular_curved_corner"
+                android:background="@drawable/rectangle_corner"
+                android:ellipsize="end"
                 android:fontFamily="@font/futuramediumbt"
-                android:hint="@string/allergies"
+                android:hint="@string/category"
+                android:inputType="text"
+                android:maxLength="25"
+                android:maxLines="1"
                 android:padding="15dp"
                 android:textColor="@color/new_light_green"
                 android:textColorHint="@color/dark_gray"
                 android:textSize="14sp"
-                tools:ignore="Autofill,LabelFor"
-                android:maxLength="25"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:inputType="text" />
+                tools:ignore="Autofill,LabelFor" />
 
             <TextView
                 android:id="@+id/txt_lbl_uploadpet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/futuramediumbt"
-                android:text="@string/upload_pet_current_images"
-                android:textColor="@color/new_txt_color"
+                android:fontFamily="@font/montserrat"
+                android:text="Upload Report Image"
+                android:textColor="@color/green"
                 android:textSize="14sp" />
 
             <RelativeLayout
                 android:id="@+id/rl_pet_pics"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="45dp">
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp">
 
-                    <TextView
-                        android:id="@+id/txt_pet_image"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rectangular_curved_corner"
-                        android:focusable="false"
-                        android:fontFamily="@font/futuramediumbt"
-                        android:hint="@string/choose"
-                        android:inputType="none"
-                        android:padding="15dp"
-                        android:textColor="@color/green"
-                        android:textColorHint="@color/dark_gray"
-                        android:textCursorDrawable="@null"
-                        android:textSize="14sp"
-                        tools:ignore="Autofill,LabelFor" />
+                <TextView
+                    android:id="@+id/txt_pet_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_corner"
+                    android:focusable="false"
+                    android:fontFamily="@font/futuramediumbt"
+                    android:hint="@string/choose"
+                    android:inputType="none"
+                    android:padding="15dp"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/dark_gray"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,LabelFor" />
 
-                    <ImageView
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_margin="5dp"
-                        android:contentDescription="@string/image"
-                        android:src="@drawable/img_add" />
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/img_add" />
 
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_upload_pet_images"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
 
             <ImageView
                 android:id="@+id/img_pet_imge"
@@ -278,7 +277,7 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/image"
                 android:src="@drawable/upload"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cdvw"
@@ -324,8 +323,8 @@
                     android:id="@+id/edt_comment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/rectangular_curved_corner"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:background="@drawable/rectangle_corner"
+                    android:fontFamily="@font/montserrat"
                     android:gravity="start"
                     android:hint="@string/add_comment_here"
                     android:inputType="textMultiLine"
@@ -350,25 +349,25 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:fontFamily="@font/montserrat"
                     android:gravity="end|center_vertical"
                     android:text="@string/consulationtype"
-                    android:textColor="@color/new_txt_color"
+                    android:textColor="@color/green"
                     android:textSize="14sp" />
 
                 <RadioGroup
                     android:id="@+id/rg_communicationtype"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginStart="5dp">
+                    android:layout_marginStart="5dp"
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/radioButton_online"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/new_green_btn"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/online"
                         android:textColor="@color/new_txt_color"
                         android:textSize="14sp" />
@@ -379,7 +378,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:buttonTint="@color/new_green_btn"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/visit"
                         android:textColor="@color/new_txt_color"
                         android:textSize="14sp" />
@@ -389,35 +388,35 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_visit_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:id="@+id/ll_visit_group"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:fontFamily="@font/montserrat"
                     android:gravity="end|center_vertical"
                     android:text="@string/visittype"
-                    android:textColor="@color/new_txt_color"
+                    android:textColor="@color/green"
                     android:textSize="14sp" />
 
                 <RadioGroup
                     android:id="@+id/rg_visit_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginStart="5dp">
+                    android:layout_marginStart="5dp"
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/radioButton_home"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/new_green_btn"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:buttonTint="@color/black"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/visithome"
                         android:textColor="@color/new_txt_color"
                         android:textSize="14sp" />
@@ -427,8 +426,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:buttonTint="@color/new_green_btn"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:buttonTint="@color/black"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/visitclinic"
                         android:textColor="@color/new_txt_color"
                         android:textSize="14sp" />
@@ -436,8 +435,6 @@
                 </RadioGroup>
 
             </LinearLayout>
-
-
 
 
         </LinearLayout>
@@ -456,7 +453,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/new_rounded_corner_btn"
-            android:fontFamily="@font/futuramediumbt"
+            android:fontFamily="@font/montserrat_bold"
             android:text="@string/continues"
             android:textAllCaps="false"
             android:textColor="@color/white"

@@ -16,7 +16,7 @@
         <include
             android:id="@+id/include_petlover_header"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             layout="@layout/toolbar_layout_petlover_header" />
 
         <RelativeLayout
@@ -52,8 +52,8 @@
             android:layout_width="match_parent"
             android:layout_margin="@dimen/tab_spacing_half"
             android:layout_height="wrap_content"
-            app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="@color/new_green_btn"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@color/greyish"
             app:tabIndicatorHeight="0dp"
             app:tabPaddingStart="0dp"
             app:tabPaddingEnd="0dp"
@@ -83,13 +83,6 @@
                 android:text="@string/tabmissed" />
 
         </com.google.android.material.tabs.TabLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/vertical_dotted_line"
-            android:layerType="software" />
 
     </LinearLayout>
     <ScrollView

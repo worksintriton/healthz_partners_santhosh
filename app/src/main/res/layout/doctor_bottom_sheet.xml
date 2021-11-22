@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="30dp"
-    android:visibility="visible"
-    app:layout_behavior="@string/bottom_sheet_behavior">
+    android:visibility="visible">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -116,7 +115,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="10dp"
-                        android:background="@drawable/layout_bg_service_green"
+                        android:background="@drawable/layout_bg_service_greenyish"
                         android:orientation="vertical"
                         tools:ignore="UselessParent">
 

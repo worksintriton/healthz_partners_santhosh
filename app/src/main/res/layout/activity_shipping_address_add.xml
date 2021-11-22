@@ -17,7 +17,7 @@
         <include
             android:id="@+id/include_petlover_header"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             layout="@layout/toolbar_layout_petlover_header" />
 
         <RelativeLayout
@@ -68,30 +68,33 @@
 
             <LinearLayout
                 android:id="@+id/ll_add_address"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:id="@+id/img_back2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/addaddr"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_baseline_add_green"
                     tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/txt_change_or_add_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="Add Address"
-                    android:textColor="@color/new_light_green"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/text_colors"
                     android:textSize="16sp" />
             </LinearLayout>
-            <TextView
+          <!--  <TextView
                 android:id="@+id/txt_savedaddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +104,7 @@
                 android:maxLines="1"
                 android:text="@string/saved_address"
                 android:textColor="@color/new_sec_txt_color"
-                android:textSize="16sp" />
+                android:textSize="16sp" />-->
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -142,16 +145,15 @@
             android:orientation="horizontal"
             android:layout_marginBottom="10dp">
 
-            <Button
+            <TextView
                 android:id="@+id/btn_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/rectangle_corner_white"
-                android:fontFamily="@font/futuramediumbt"
+                android:fontFamily="@font/montserrat_bold"
                 android:text="Cancel"
                 android:textAllCaps="false"
-                android:textColor="@color/color"
+                android:textColor="@color/black"
                 android:textSize="@dimen/normal_text_size_for_header"
                 tools:ignore="HardcodedText" />
 
@@ -161,11 +163,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/new_rounded_corner_btn"
-                android:fontFamily="@font/futuramediumbt"
+                android:fontFamily="@font/montserrat_bold"
                 android:text="Use this address"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/normal_text_size_for_header"
+                android:textSize="14sp"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>

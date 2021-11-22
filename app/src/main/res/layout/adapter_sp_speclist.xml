@@ -3,7 +3,6 @@
 <!--Dynamically adding service Details-->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/material_cardview_education_details"
     android:layout_width="wrap_content"
@@ -18,20 +17,20 @@
             tools:ignore="UselessParent">
 
 
-            <ImageView
-                android:id="@+id/img_close"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+            <RelativeLayout
+                android:id="@+id/rl_close"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
                 android:layout_gravity="end|center"
                 android:layout_marginEnd="5dp"
-                android:contentDescription="@string/image"
-                android:src="@drawable/new_check" />
+                android:background="@drawable/layout_bg_service_greenyish"
+                android:contentDescription="@string/image" />
 
             <TextView
                 android:id="@+id/txt_specname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/futuramediumbt"
+                android:fontFamily="@font/montserrat"
                 android:padding="5dp"
                 android:text="@string/medicine"
                 android:textColor="@color/new_light_black"

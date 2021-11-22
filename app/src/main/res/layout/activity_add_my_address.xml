@@ -14,7 +14,7 @@
         <include
             android:id="@+id/include_petlover_header"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             layout="@layout/toolbar_layout_petlover_header" />
 
 
@@ -84,7 +84,7 @@
                     android:layout_toEndOf="@id/button1button"
                     android:layout_toRightOf="@id/button1button"
                     android:ellipsize="end"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:fontFamily="@font/montserrat_bold"
                     android:singleLine="true"
                     android:text="TESSDGDSGADSGD"
                     android:textColor="@color/new_txt_color"
@@ -102,18 +102,21 @@
                     android:layout_toEndOf="@id/button1button"
                     android:layout_toRightOf="@id/button1button"
                     android:ellipsize="end"
-                    android:fontFamily="@font/futuramediumbt"
-                    android:singleLine="true"
+                    android:fontFamily="@font/montserrat"
+                    android:lines="2"
+                    android:singleLine="false"
                     android:text="TESSDGD dgsdg dgasdg saddagdasg dsgasdg sadgdsgds SGADSGD"
-                    android:textColor="@color/new_sec_txt_color"
+                    android:textColor="@color/lato_grey"
                     android:textSize="12sp"
                     tools:ignore="HardcodedText" />
+
                 <RelativeLayout
+                    android:id="@+id/rlchangebutton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rlchangebutton"
                     android:layout_toEndOf="@+id/txt_cityname_title"
-                    android:layout_toRightOf="@+id/txt_cityname_title">
+                    android:layout_toRightOf="@+id/txt_cityname_title"
+                    android:visibility="gone">
 
                     <Button
                         android:id="@+id/btn_change"
@@ -141,20 +144,20 @@
                 android:orientation="vertical"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="20dp">
 
                 <EditText
                     android:id="@+id/edt_pincode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/rectangle_corner"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:background="@drawable/rectangle_corner_border"
+                    android:fontFamily="@font/montserrat"
                     android:hint="@string/pincode"
-                    android:padding="15dp"
                     android:inputType="number"
-                    android:textColor="@color/new_light_green"
-                    android:textColorHint="@color/dark_gray"
+                    android:padding="15dp"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/lato_grey"
                     android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor,TextFields" />
@@ -164,13 +167,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/rectangle_corner"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:background="@drawable/rectangle_corner_border"
+                    android:fontFamily="@font/montserrat"
                     android:hint="@string/location"
-                    android:padding="15dp"
                     android:inputType="text"
-                    android:textColor="@color/new_light_green"
-                    android:textColorHint="@color/dark_gray"
+                    android:padding="15dp"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/lato_grey"
                     android:textCursorDrawable="@null"
                     android:textSize="14sp"
                     tools:ignore="Autofill,LabelFor,TextFields" />
@@ -180,15 +183,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/rectangle_corner"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:background="@drawable/rectangle_corner_border"
+                    android:fontFamily="@font/montserrat"
                     android:hint="@string/city_name"
+                    android:inputType="text"
                     android:padding="15dp"
-                    android:textColor="@color/new_light_green"
-                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/lato_grey"
                     android:textCursorDrawable="@null"
                     android:textSize="14sp"
-                    android:inputType="text"
                     tools:ignore="Autofill,LabelFor,TextFields" />
 
                 <LinearLayout
@@ -200,11 +203,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:fontFamily="@font/montserrat_bold"
                         android:gravity="center"
                         android:text="@string/save_as"
-                        android:textColor="@color/new_txt_color"
-                        android:textSize="16sp" />
+                        android:textColor="@color/lato_black"
+                        android:textSize="14sp" />
 
                     <RadioGroup
                         android:id="@+id/rglocationtype"
@@ -213,38 +216,38 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/radioButton1"
+                            android:id="@+id/radioButton_Home"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:buttonTint="@color/new_green_btn"
                             android:checked="true"
-                            android:fontFamily="@font/futuramediumbt"
+                            android:fontFamily="@font/montserrat_bold"
                             android:text="@string/home"
-                            android:buttonTint="@color/new_green_btn"
-                            android:textColor="@color/new_txt_color"
+                            android:textColor="@color/lato_black"
                             android:textSize="14sp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton2"
+                            android:id="@+id/radioButton_Work"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginLeft="10dp"
-                            android:fontFamily="@font/futuramediumbt"
+                            android:buttonTint="@color/new_green_btn"
+                            android:fontFamily="@font/montserrat_bold"
                             android:text="@string/work"
-                            android:buttonTint="@color/new_green_btn"
-                            android:textColor="@color/new_txt_color"
+                            android:textColor="@color/lato_black"
                             android:textSize="14sp" />
 
                         <RadioButton
-                            android:id="@+id/radioButton3"
+                            android:id="@+id/radioButton_Others"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginLeft="10dp"
-                            android:fontFamily="@font/futuramediumbt"
-                            android:text="@string/others"
                             android:buttonTint="@color/new_green_btn"
-                            android:textColor="@color/new_txt_color"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/others"
+                            android:textColor="@color/lato_black"
                             android:textSize="14sp" />
 
                     </RadioGroup>
@@ -256,24 +259,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/rectangle_corner"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:background="@drawable/rectangle_corner_border"
+                    android:fontFamily="@font/montserrat"
                     android:hint="@string/pick_a_name_for_this_location"
                     android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
                     android:padding="15dp"
-                    android:textColor="@color/new_light_green"
-                    android:textColorHint="@color/dark_gray"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/lato_grey"
                     android:textCursorDrawable="@null"
                     android:textSize="14sp"
-                    tools:ignore="Autofill,LabelFor,TextFields"
-                    android:maxLines="1"
-                    android:maxLength="25" />
+                    tools:ignore="Autofill,LabelFor,TextFields" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    android:visibility="gone">
+
                     <TextView
                         android:id="@+id/txt_lbl_setasfault"
                         android:layout_width="wrap_content"
@@ -287,19 +292,21 @@
                         android:textColor="@color/new_txt_color"
                         android:textSize="16sp"
                         tools:ignore="HardcodedText" />
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="end">
+
                         <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/switchButton_default"
+                            style="@style/switchStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:checked="false"
                             android:layout_marginStart="5dp"
-                            style="@style/switchStyle"
+                            android:checked="false"
                             android:theme="@style/switchStyle"
-                            app:theme="@style/switchStyle"/>
+                            app:theme="@style/switchStyle" />
 
                     </RelativeLayout>
 
@@ -327,12 +334,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/new_rounded_corner_btn"
-            android:fontFamily="@font/futuramediumbt"
-            android:text="@string/save_this_location_and_procced"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Save Location"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="@dimen/normal_text_size_for_header"
-            />
+            android:textSize="@dimen/normal_text_size_for_header" />
 
     </LinearLayout>
 
@@ -341,7 +347,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        app:indicatorColor="@color/new_green_btn"
+        app:indicatorColor="@color/green"
         app:indicatorName="LineSpinFadeLoaderIndicator" />
 
 </RelativeLayout>

@@ -13,7 +13,7 @@
         <include
             android:id="@+id/include_petlover_header"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             layout="@layout/toolbar_layout_petlover_header" />
 
 
@@ -31,8 +31,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -44,7 +46,8 @@
                     android:id="@+id/textView5"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/clinic_name"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/clinicname"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -52,13 +55,15 @@
                     android:id="@+id/txt_clinicname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:alpha="0.5"
                     android:ellipsize="end"
+                    android:fontFamily="@font/montserrat"
                     android:maxLines="1"
-                    android:textColor="@color/new_txt_color"
-                    android:textSize="14sp"
-                    />
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -70,7 +75,8 @@
                     android:id="@+id/textView6"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/doctor_name"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/doctorname"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -80,12 +86,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginLeft="5dp"
+                    android:alpha="0.5"
                     android:ellipsize="end"
+                    android:fontFamily="@font/montserrat"
                     android:maxLines="1"
-                    android:textColor="@color/new_txt_color"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -97,7 +106,8 @@
                     android:id="@+id/textView7"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/petname"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Member Name"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -106,12 +116,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:alpha="0.5"
                     android:ellipsize="end"
+                    android:fontFamily="@font/montserrat"
                     android:maxLines="1"
-                    android:textColor="@color/new_txt_color"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -123,6 +136,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="@string/appointment_type"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
@@ -132,12 +146,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:alpha="0.5"
                     android:ellipsize="end"
+                    android:fontFamily="@font/montserrat"
                     android:maxLines="1"
-                    android:textColor="@color/new_txt_color"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -148,6 +165,7 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="@string/service_cost"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
@@ -157,12 +175,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:alpha="0.5"
                     android:ellipsize="end"
+                    android:fontFamily="@font/montserrat"
                     android:maxLines="1"
-                    android:textColor="@color/new_txt_color"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -173,6 +194,7 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="@string/bookingdate"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
@@ -182,52 +204,60 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:alpha="0.5"
                     android:ellipsize="end"
+                    android:fontFamily="@font/montserrat"
                     android:maxLines="1"
-                    android:textColor="@color/new_txt_color"
+                    android:textColor="@color/black"
                     android:textSize="14sp" />
 
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/vertical_dotted_line"
                 android:layerType="software" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
                     android:text="@string/payment_method"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green"
                     android:textSize="14sp" />
+
                 <RadioGroup
                     android:id="@+id/rdGroupPayment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:ignore="UselessParent"
                     android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
 
                     <RadioButton
                         android:id="@+id/rdonline"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/online"
                         android:textColor="@color/new_txt_color"
-                        android:textSize="14sp"
-                        android:checked="true"
-                        />
+                        android:textSize="14sp" />
 
                     <RadioButton
-                        android:layout_marginStart="10dp"
                         android:id="@+id/rdcod"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/cash"
                         android:textColor="@color/new_txt_color"
                         android:textSize="14sp" />
@@ -247,15 +277,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/futuramediumbt"
+                    android:fontFamily="@font/montserrat"
                     android:text="@string/coupon"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green"
                     android:textSize="14sp"
                     android:visibility="visible" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rectangle_corner"
                     android:orientation="horizontal">
 
                     <EditText
@@ -265,7 +297,7 @@
                         android:layout_marginTop="5dp"
                         android:background="@drawable/rectangle_corner"
                         android:fontFamily="@font/futuramediumbt"
-                        android:hint="@string/enter_coupon"
+                        android:hint="@string/enter_code"
                         android:inputType="text"
                         android:maxLength="25"
                         android:padding="15dp"
@@ -281,25 +313,25 @@
                         android:layout_gravity="center"
                         android:layout_weight=".5"
                         android:scaleType="centerInside"
-                        android:src="@drawable/cb_selector"
+                        android:src="@drawable/cb_selectors"
                         android:visibility="gone"
                         tools:ignore="ContentDescription" />
 
                     <Button
                         android:id="@+id/btn_apply_coupon"
-                        android:layout_width="wrap_content"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        android:layout_height="35dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
                         android:layout_marginBottom="5dp"
                         android:layout_toEndOf="@id/edt_coupon"
                         android:background="@drawable/rounded_curve"
                         android:fontFamily="@font/futuralightbt"
                         android:gravity="center"
                         android:padding="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
                         android:text="@string/apply_coupon"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
@@ -320,19 +352,19 @@
                 </RelativeLayout>
 
                 <View
+                    android:id="@+id/viewapply"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/vertical_dotted_line"
-                    android:layerType="software"
-                    android:id="@+id/viewapply"/>
+                    android:layerType="software" />
 
                 <LinearLayout
+                    android:id="@+id/ll_cost"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
-                    android:id="@+id/ll_cost">
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/txt_lbl_subtotal"
@@ -340,9 +372,9 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_weight="1"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/service_cost"
-                        android:textColor="@color/black"
+                        android:textColor="@color/green"
                         android:textSize="14sp"
                         tools:ignore="RtlHardcoded" />
 
@@ -352,29 +384,29 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
                         android:layout_weight="1"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:fontFamily="@font/montserrat"
                         android:gravity="right"
                         android:text="@string/service_cost"
-                        android:textColor="@color/new_txt_color"
+                        android:textColor="@color/black"
                         android:textSize="14sp"
                         tools:ignore="RtlHardcoded" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll_discount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
-                    android:id="@+id/ll_discount">
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_weight="1"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:fontFamily="@font/montserrat"
                         android:text="@string/discountamount"
-                        android:textColor="@color/black"
+                        android:textColor="@color/green"
                         android:textSize="14sp"
                         tools:ignore="RtlHardcoded" />
 
@@ -384,31 +416,32 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
                         android:layout_weight="1"
-                        android:fontFamily="@font/futuramediumbt"
+                        android:fontFamily="@font/montserrat"
                         android:gravity="right"
                         android:text="@string/discountamount"
-                        android:textColor="@color/new_txt_color"
+                        android:textColor="@color/black"
                         android:textSize="14sp"
                         tools:ignore="RtlHardcoded" />
                 </LinearLayout>
 
 
-
                 <View
+                    android:id="@+id/viewTotalamout"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/vertical_dotted_line"
                     android:layerType="software"
-                    android:id="@+id/viewTotalamout"/>
+                    android:visibility="gone" />
 
                 <LinearLayout
+                    android:id="@+id/ll_totalamount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal"
-                    android:id="@+id/ll_totalamount">
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="0dp"
@@ -421,21 +454,8 @@
                         android:textSize="14sp"
                         tools:ignore="RtlHardcoded" />
 
-                    <TextView
-                        android:id="@+id/txt_total_amount"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/futuramediumbt"
-                        android:gravity="right"
-                        android:text="@string/totalamount"
-                        android:textColor="@color/new_txt_color"
-                        android:textSize="14sp"
-                        tools:ignore="RtlHardcoded" />
                 </LinearLayout>
             </LinearLayout>
-
 
 
         </LinearLayout>
@@ -449,16 +469,37 @@
         android:orientation="vertical"
         android:layout_margin="20dp">
 
-        <Button
-            android:id="@+id/btn_bookappointment"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/new_rounded_corner_btn"
-            android:fontFamily="@font/futuramediumbt"
-            android:text="@string/book_appointment"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="@dimen/normal_text_size_for_header" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_total_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="5dp"
+                android:text="@string/totalamount"
+                android:textAlignment="center"
+                android:textColor="@color/new_txt_color"
+                android:textSize="14sp"
+                tools:ignore="RtlHardcoded" />
+
+            <Button
+                android:id="@+id/btn_bookappointment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/new_rounded_corner_btn"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/book_now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
 
 
     </LinearLayout>

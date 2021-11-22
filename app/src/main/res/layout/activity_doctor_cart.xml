@@ -298,7 +298,7 @@
                     android:layout_gravity="center"
                     android:layout_weight=".5"
                     android:scaleType="centerInside"
-                    android:src="@drawable/cb_selector"
+                    android:src="@drawable/cb_selectors"
                     android:visibility="gone"
                     tools:ignore="ContentDescription" />
 

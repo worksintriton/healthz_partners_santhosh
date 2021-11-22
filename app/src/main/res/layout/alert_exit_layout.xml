@@ -37,11 +37,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
                     android:gravity="center"
                     android:text="Exit app"
                     android:textColor="#000000"
-                    android:textSize="18sp"
-                   />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -50,10 +50,11 @@
                 android:id="@+id/tvInternetNotConnected"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat"
                 android:gravity="center"
                 android:text="Do you want to exit the app?"
-                android:textSize="16sp"
-                android:layout_marginTop="10dp"/>
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,27 +62,31 @@
                 android:orientation="horizontal"
                android:gravity="center"
                 android:layout_marginTop="20dp">
+
                 <Button
                     android:id="@+id/btn_cancel"
                     android:layout_width="110dp"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/new_rounded_corner_btn"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="Cancel"
+                    android:textAllCaps="false"
                     android:textColor="@color/white"
-                    tools:ignore="HardcodedText"
-                    android:textAllCaps="false"/>
+                    tools:ignore="HardcodedText" />
+
                 <Button
                     android:id="@+id/btn_exit"
                     android:layout_width="110dp"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/orange_background_button"
+                    android:background="@drawable/new_rounded_corner_btn"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="Exit"
+                    android:textAllCaps="false"
                     android:textColor="@color/white"
-                    tools:ignore="ButtonStyle,HardcodedText"
-                    android:textAllCaps="false"/>
+                    tools:ignore="ButtonStyle,HardcodedText" />
             </LinearLayout>
 
 

@@ -56,7 +56,7 @@ public class DoctorWalkinNewAppointmentAdapter extends  RecyclerView.Adapter<Rec
     private String communicationtype;
     AVLoadingIndicatorView avi_indicator;
     private boolean isVaildDate;
-    private List<DoctorAppointmentsResponse.DataBean.PetIdBean.PetImgBean> petImgBeanList;
+    private List<DoctorAppointmentsResponse.DataBean.FamilyIdBean.PicBean> petImgBeanList;
     private String petImagePath;
 
 
@@ -94,14 +94,14 @@ public class DoctorWalkinNewAppointmentAdapter extends  RecyclerView.Adapter<Rec
             communicationtype = newAppointmentResponseList.get(position).getCommunication_type();
         }
 
-        if(newAppointmentResponseList.get(position).getPet_id() != null){
-            if(newAppointmentResponseList.get(position).getPet_id().getPet_name() != null) {
-                holder.txt_petname.setText(newAppointmentResponseList.get(position).getPet_id().getPet_name());
+        if(newAppointmentResponseList.get(position).getFamily_id() != null){
+            if(newAppointmentResponseList.get(position).getFamily_id().getName() != null) {
+                holder.txt_petname.setText(newAppointmentResponseList.get(position).getFamily_id().getName());
             }
-            if(newAppointmentResponseList.get(position).getPet_id().getPet_type() != null) {
-                holder.txt_pettype.setText(newAppointmentResponseList.get(position).getPet_id().getPet_type());
+            if(newAppointmentResponseList.get(position).getFamily_id().getRelation_type() != null) {
+                holder.txt_pettype.setText(newAppointmentResponseList.get(position).getFamily_id().getRelation_type());
             }
-            petImgBeanList = newAppointmentResponseList.get(position).getPet_id().getPet_img();
+            petImgBeanList = newAppointmentResponseList.get(position).getFamily_id().getPic();
         }
 
 
@@ -120,7 +120,7 @@ public class DoctorWalkinNewAppointmentAdapter extends  RecyclerView.Adapter<Rec
 
         if (petImgBeanList != null && petImgBeanList.size() > 0) {
             for(int j=0;j<petImgBeanList.size();j++) {
-                petImagePath = petImgBeanList.get(j).getPet_img();
+                petImagePath = petImgBeanList.get(j).getImage();
 
             }
         }
@@ -160,9 +160,9 @@ public class DoctorWalkinNewAppointmentAdapter extends  RecyclerView.Adapter<Rec
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context, WalkinPrescriptionActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                if(newAppointmentResponseList.get(position).getPet_id() != null){
-                    i.putExtra("petname",newAppointmentResponseList.get(position).getPet_id().getPet_name());
-                    i.putExtra("pettype",newAppointmentResponseList.get(position).getPet_id().getPet_type());
+                if(newAppointmentResponseList.get(position).getFamily_id() != null){
+                    i.putExtra("petname",newAppointmentResponseList.get(position).getFamily_id().getName());
+                    i.putExtra("pettype",newAppointmentResponseList.get(position).getFamily_id().getRelation_type());
                 }
 
                 i.putExtra("id",newAppointmentResponseList.get(position).get_id());
@@ -205,8 +205,8 @@ public class DoctorWalkinNewAppointmentAdapter extends  RecyclerView.Adapter<Rec
                 }else {
                     Intent i = new Intent(context, VideoCallDoctorActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     i.putExtra("id", newAppointmentResponseList.get(position).get_id());
-                    i.putExtra("petname", newAppointmentResponseList.get(position).getPet_id().getPet_name());
-                    i.putExtra("pettype", newAppointmentResponseList.get(position).getPet_id().getPet_type());
+                    i.putExtra("petname", newAppointmentResponseList.get(position).getFamily_id().getName());
+                    i.putExtra("pettype", newAppointmentResponseList.get(position).getFamily_id().getRelation_type());
                     i.putExtra("userid", newAppointmentResponseList.get(position).getUser_id().get_id());
                     Log.w(TAG, " User_ID "+newAppointmentResponseList.get(position).getUser_id().get_id());
                     i.putExtra("allergies", newAppointmentResponseList.get(position).getAllergies());
@@ -305,8 +305,8 @@ public class DoctorWalkinNewAppointmentAdapter extends  RecyclerView.Adapter<Rec
                     if(response.body().getCode() == 200){
                         Intent i = new Intent(context, VideoCallDoctorActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         i.putExtra("id", newAppointmentResponseList.get(position).get_id());
-                        i.putExtra("petname", newAppointmentResponseList.get(position).getPet_id().getPet_name());
-                        i.putExtra("pettype", newAppointmentResponseList.get(position).getPet_id().getPet_type());
+                        i.putExtra("petname", newAppointmentResponseList.get(position).getFamily_id().getName());
+                        i.putExtra("pettype", newAppointmentResponseList.get(position).getFamily_id().getRelation_type());
                         i.putExtra("userid", newAppointmentResponseList.get(position).getUser_id().get_id());
                         i.putExtra("allergies", newAppointmentResponseList.get(position).getAllergies());
                         i.putExtra("probleminfo", newAppointmentResponseList.get(position).getProblem_info());

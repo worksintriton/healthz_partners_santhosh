@@ -14,6 +14,7 @@ import android.location.Location;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -34,11 +35,18 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.triton.healthZpartners.R;
 
 import com.triton.healthZpartners.api.APIClient;
 import com.triton.healthZpartners.api.RestApiInterface;
+import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerCareFragment;
+import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerCommunityFragment;
+import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerHomeFragment;
+import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerServicesFragment;
+import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerShopFragment;
 import com.triton.healthZpartners.fragmentdoctor.DoctorCommunityFragment;
 import com.triton.healthZpartners.fragmentdoctor.DoctorShopFragment;
 import com.triton.healthZpartners.fragmentdoctor.FragmentDoctorDashboard;
@@ -110,9 +118,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements Serializable, View.OnClickListener,
+public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements Serializable,
         OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener, LocationListener {
+        GoogleApiClient.OnConnectionFailedListener, LocationListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
     private String TAG = "DoctorDashboardActivity";
 
@@ -121,9 +129,6 @@ public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements 
     @BindView(R.id.avi_indicator)
     AVLoadingIndicatorView avi_indicator;
 
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.include_doctor_footer)
-    View include_doctor_footer;
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.txt_location)
@@ -156,36 +161,12 @@ public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements 
 
     /* Bottom Navigation */
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.rl_home)
-    RelativeLayout rl_home;
+    @BindView(R.id.bottomNavigation)
+    BottomNavigationView bottomNavigation;
 
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.rl_shop)
-    RelativeLayout rl_shop;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.title_shop)
-    TextView title_shop;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.img_shop)
-    ImageView img_shop;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.rl_comn)
-    RelativeLayout rl_comn;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.title_community)
-    TextView title_community;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.img_community)
-    ImageView img_community;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.rl_homes)
-    RelativeLayout rl_homes;
+    @BindView(R.id.fab)
+    FloatingActionButton floatingActionButton;
 
     public static String appintments;
     String gotoWalkinAppointments;
@@ -209,26 +190,47 @@ public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements 
         }
 
 
-//        bottom_navigation_view = include_doctor_footer.findViewById(R.id.bottom_navigation_view);
-//        bottom_navigation_view.setItemIconTintList(null);
-//        bottom_navigation_view.getMenu().findItem(R.id.home).setChecked(true);
+       floatingActionButton.setImageResource(R.drawable.ic_hzhome_png);
 
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        /*home*/
+                active = fragmentDoctorDashboard;
+                bottomNavigation.setSelectedItemId(R.id.home);
+                loadFragment(new FragmentDoctorDashboard());
+            }
+        });
 
-        title_shop.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-        img_shop.setImageResource(R.drawable.grey_shop);
-        title_community.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-        img_community.setImageResource(R.drawable.grey_community);
+        bottomNavigation.getMenu().getItem(0).setCheckable(false);
 
-
-        rl_home.setOnClickListener(this);
-        rl_shop.setOnClickListener(this);
-        rl_comn.setOnClickListener(this);
-        rl_homes.setOnClickListener(this);
-
+        tag = getIntent().getStringExtra("tag");
+        Log.w(TAG," tag : "+tag);
+        if(tag != null){
+            if(tag.equalsIgnoreCase("1")){
+                active = fragmentDoctorDashboard;
+                bottomNavigation.setSelectedItemId(R.id.home);
+                loadFragment(new FragmentDoctorDashboard());
+            }else if(tag.equalsIgnoreCase("2")){
+                active = doctorShopFragment;
+                bottomNavigation.setSelectedItemId(R.id.shop);
+                loadFragment(new DoctorShopFragment());
+            } else if(tag.equalsIgnoreCase("3")){
+                active = communitydoctorFragment;
+                bottomNavigation.setSelectedItemId(R.id.community);
+                loadFragment(new DoctorCommunityFragment());
+            }
+        }
+        else{
+            bottomNavigation.setSelectedItemId(R.id.home);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.frame_schedule, active, active_tag);
+            transaction.commitNowAllowingStateLoss();
+        }
 
         avi_indicator.setVisibility(View.GONE);
+
+        bottomNavigation.setOnNavigationItemSelectedListener(this);
 
 
         SessionManager session = new SessionManager(getApplicationContext());
@@ -256,45 +258,7 @@ public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements 
 
         }
 
-        tag = getIntent().getStringExtra("tag");
-        Log.w(TAG," tag : "+tag);
-        if(tag != null){
-            if(tag.equalsIgnoreCase("1")){
-                active = fragmentDoctorDashboard;
-//                bottom_navigation_view.getMenu().findItem(R.id.home).setChecked(true);
-                title_shop.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_shop.setImageResource(R.drawable.grey_shop);
-                title_community.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_community.setImageResource(R.drawable.grey_community);
-                loadFragment(new FragmentDoctorDashboard());
-            }else if(tag.equalsIgnoreCase("2")){
-                active = doctorShopFragment;
-//                bottom_navigation_view.getMenu().findItem(R.id.shop).setChecked(true);
-                title_community.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_community.setImageResource(R.drawable.grey_community);
-                title_shop.setTextColor(getResources().getColor(R.color.new_gree_color,getTheme()));
-                img_shop.setImageResource(R.drawable.green_shop);
-                loadFragment(new DoctorShopFragment());
-            } else if(tag.equalsIgnoreCase("3")){
-//                bottom_navigation_view.getMenu().findItem(R.id.community).setChecked(true);
-                active=communitydoctorFragment;
-                title_shop.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_shop.setImageResource(R.drawable.grey_shop);
-                title_community.setTextColor(getResources().getColor(R.color.new_gree_color,getTheme()));
-                img_community.setImageResource(R.drawable.green_comm);
-                loadFragment(new DoctorCommunityFragment());
-            }
-        }
-        else{
-//          bottom_navigation_view.getMenu().findItem(R.id.home).setChecked(true);
-            title_shop.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-            img_shop.setImageResource(R.drawable.grey_shop);
-            title_community.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-            img_community.setImageResource(R.drawable.grey_community);
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.frame_schedule, active, active_tag);
-            transaction.commitNowAllowingStateLoss();
-        }
+
 
         txt_location.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -841,51 +805,7 @@ public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements 
 
 
 
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View v) {
 
-
-        switch (v.getId()) {
-
-            case R.id.rl_homes:
-                active_tag = "1";
-                title_shop.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_shop.setImageResource(R.drawable.grey_shop);
-                title_community.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_community.setImageResource(R.drawable.grey_community);
-                replaceFragment(new FragmentDoctorDashboard());
-                break;
-
-            case R.id.rl_home:
-                active_tag = "1";
-                title_shop.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_shop.setImageResource(R.drawable.grey_shop);
-                title_community.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_community.setImageResource(R.drawable.grey_community);
-                replaceFragment(new FragmentDoctorDashboard());
-                break;
-
-            case R.id.rl_shop:
-                active_tag = "2";
-                title_community.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_community.setImageResource(R.drawable.grey_community);
-                title_shop.setTextColor(getResources().getColor(R.color.new_gree_color,getTheme()));
-                img_shop.setImageResource(R.drawable.green_shop);
-                replaceFragment(new DoctorShopFragment());
-                break;
-
-            case R.id.rl_comn:
-                active_tag = "3";
-                title_shop.setTextColor(getResources().getColor(R.color.darker_grey_new,getTheme()));
-                img_shop.setImageResource(R.drawable.grey_shop);
-                title_community.setTextColor(getResources().getColor(R.color.new_gree_color,getTheme()));
-                img_community.setImageResource(R.drawable.green_comm);
-                replaceFragment(new DoctorCommunityFragment());
-                break;
-        }
-
-    }
 
 
 
@@ -937,5 +857,29 @@ public class DoctorDashboardActivity  extends DoctorNavigationDrawer implements 
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.home:
+                active_tag = "1";
+                item.setCheckable(true);
+                replaceFragment(new FragmentDoctorDashboard());
+                break;
+            case R.id.shop:
+                active_tag = "2";
+                item.setCheckable(true);
+                replaceFragment(new DoctorShopFragment());
+                break;
 
+            case R.id.community:
+                active_tag = "3";
+                item.setCheckable(true);
+                replaceFragment(new DoctorCommunityFragment());
+                break;
+
+            default:
+                return  false;
+        }
+        return true;
+    }
 }

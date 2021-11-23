@@ -10,7 +10,7 @@
         android:id="@+id/cdvw_newappointment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/light_green"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="10dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true">
@@ -70,8 +70,7 @@
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/image"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/image_thumbnail"
-                        />
+                        app:srcCompat="@drawable/image_thumbnail" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -91,13 +90,13 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/txt_petnamelabel"
+                        android:id="@+id/txt_genderlabel"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="@string/pet_name"
+                        android:text="@string/gender"
                         android:textColor="@color/new_txt_color"
                         android:textSize="14sp"
                         android:textStyle="normal" />
@@ -112,14 +111,14 @@
                         android:textStyle="normal" />
 
                     <TextView
-                        android:id="@+id/txt_petname"
+                        android:id="@+id/txt_gender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="@string/pet_name"
+                        android:text="@string/gender"
                         android:textColor="@color/new_txt_color"
                         android:textSize="14sp"
                         android:textStyle="normal" />
@@ -132,13 +131,13 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/txt_pettypelabel"
+                        android:id="@+id/txt_patient_name_lbl"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="@string/pet_type"
+                        android:text="@string/patient_name"
                         android:textColor="@color/new_sec_txt_color"
                         android:textSize="12sp" />
 
@@ -151,14 +150,14 @@
                         android:textSize="12sp" />
 
                     <TextView
-                        android:id="@+id/txt_pettype"
+                        android:id="@+id/txt_patient_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="@string/pet_type"
+                        android:text="@string/patient_name"
                         android:textColor="@color/new_sec_txt_color"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -176,7 +175,7 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/futuramediumbt"
                         android:maxLines="1"
-                        android:text="@string/type"
+                        android:text="Appointment"
                         android:textColor="@color/new_sec_txt_color"
                         android:textSize="12sp" />
 
@@ -245,19 +244,60 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/txt_bookedon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ly_petname"
+                android:layout_below="@id/cv_pet"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/futuramediumbt"
+                android:maxLines="1"
+                android:text="@string/completed_on_date"
+                android:textColor="@color/new_green_btn"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_bookedon"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal"
                 android:id="@+id/ll_btn"
                 android:layout_marginStart="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/orange_background_button"
+                    android:layout_toEndOf="@id/cv_pet"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_cancel"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal|center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="center"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
                 <Button
                     android:id="@+id/btn_complete"
                     android:layout_width="110dp"
-                    android:layout_height="30dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/new_rounded_corner_btn"
@@ -267,38 +307,12 @@
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     tools:ignore="ButtonStyle" />
-                <Button
-                    android:id="@+id/btn_cancel"
-                    android:layout_width="110dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/orange_background_button"
-                    android:fontFamily="@font/futuramediumbt"
-                    android:text="@string/cancel"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    tools:ignore="ButtonStyle" />
+
 
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/txt_bookedon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ll_btn"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/futuramediumbt"
-                android:maxLines="1"
-                android:text="@string/completed_on_date"
-                android:textColor="@color/new_green_btn"
-                android:textSize="12sp" />
+
 
         </RelativeLayout>
 

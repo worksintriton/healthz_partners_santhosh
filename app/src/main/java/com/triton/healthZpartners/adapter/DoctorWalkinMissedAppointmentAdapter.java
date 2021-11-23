@@ -31,7 +31,7 @@ public class DoctorWalkinMissedAppointmentAdapter extends  RecyclerView.Adapter<
     private int size;
 
     DoctorAppointmentsResponse.DataBean currentItem;
-    private List<DoctorAppointmentsResponse.DataBean.PetIdBean.PetImgBean> petImgBeanList;
+    private List<DoctorAppointmentsResponse.DataBean.FamilyIdBean.PicBean> petImgBeanList;
     private String petImagePath;
 
 
@@ -61,13 +61,13 @@ public class DoctorWalkinMissedAppointmentAdapter extends  RecyclerView.Adapter<
 
         currentItem = missedAppointmentResponseList.get(position);
 
-        if(missedAppointmentResponseList.get(position).getPet_id() != null){
-            if(missedAppointmentResponseList.get(position).getPet_id().getPet_name() != null){
-                holder.txt_petname.setText(missedAppointmentResponseList.get(position).getPet_id().getPet_name());}
-            if(missedAppointmentResponseList.get(position).getPet_id().getPet_type() != null) {
-                holder.txt_pettype.setText(missedAppointmentResponseList.get(position).getPet_id().getPet_type());
+        if(missedAppointmentResponseList.get(position).getFamily_id() != null){
+            if(missedAppointmentResponseList.get(position).getFamily_id().getName() != null){
+                holder.txt_petname.setText(missedAppointmentResponseList.get(position).getFamily_id().getName());}
+            if(missedAppointmentResponseList.get(position).getFamily_id().getRelation_type() != null) {
+                holder.txt_pettype.setText(missedAppointmentResponseList.get(position).getFamily_id().getRelation_type());
             }
-            petImgBeanList = missedAppointmentResponseList.get(position).getPet_id().getPet_img();
+            petImgBeanList = missedAppointmentResponseList.get(position).getFamily_id().getPic();
 
         }
 
@@ -84,7 +84,7 @@ public class DoctorWalkinMissedAppointmentAdapter extends  RecyclerView.Adapter<
 
         if (petImgBeanList != null && petImgBeanList.size() > 0) {
             for(int j=0;j<petImgBeanList.size();j++) {
-                petImagePath = petImgBeanList.get(j).getPet_img();
+                petImagePath = petImgBeanList.get(j).getImage();
 
             }
         }

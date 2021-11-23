@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Healthz</string>
+    <string name="app_name">Healthz Partners</string>
     <string name="verify_otp">Verify OTP</string>
     <string name="emailorphonenumber">Phone Number</string>
     <string name="new_here">New here ?</string>
@@ -80,7 +80,6 @@
 
 
     <string name="doctor_business_info_title">Doctor Business Info</string>
-    <string name="edit_doctor_business_info_title">Edit Business info</string>
     <string name="serviceproviderbusiness">Service Provider Business</string>
     <string name="editserviceproviderbusiness">Edit Service Provider Business</string>
     <string name="image">Image</string>
@@ -105,7 +104,6 @@
     <string name="write_here">Write Here....</string>
     <string name="clinic_pict">Clinic pictures</string>
     <string name="service_gallery_images">Service gallery images</string>
-    <string name="certificate">Certificates</string>
     <string name="certificates_if_any">Certificates</string>
     <string name="govt_proof">Govt ID Proof</string>
     <string name="photoid_proof">Photo ID Proof</string>
@@ -120,7 +118,7 @@
 
     <string name="my_orders">My Orders</string>
     <string name="my_appointments">My Appointments</string>
-    <string name="manage_services">Manage Services</string>
+    <string name="manage_services">Manage Service</string>
     <string name="favourites">Favourites</string>
     <string name="my_coupons">My Coupons</string>
     <string name="dashboard">Dashboard</string>
@@ -672,6 +670,9 @@
 
     <string name="see_more_pets_handled" tools:ignore="TypographyEllipsis">See More...</string>
     <string name="see_more_pets_specialization" tools:ignore="TypographyEllipsis">See More...</string>
+    <string name="edit_doctor_business_info_title">Edit Business info</string>
+    <string name="certificate">Certificates</string>
+
     <string name="charge">Charge</string>
     <string name="sizelimit">Max. File Size 2MB</string>
 </resources>

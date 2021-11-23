@@ -56,7 +56,7 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
     private String communicationtype;
     AVLoadingIndicatorView avi_indicator;
     private boolean isVaildDate;
-    private List<DoctorAppointmentsResponse.DataBean.PetIdBean.PetImgBean> petImgBeanList;
+    private List<DoctorAppointmentsResponse.DataBean.FamilyIdBean.PicBean> petImgBeanList;
     private String petImagePath;
 
 
@@ -94,14 +94,15 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
             communicationtype = newAppointmentResponseList.get(position).getCommunication_type();
         }
 
-        if(newAppointmentResponseList.get(position).getPet_id() != null){
-            if(newAppointmentResponseList.get(position).getPet_id().getPet_name() != null) {
-                holder.txt_petname.setText(newAppointmentResponseList.get(position).getPet_id().getPet_name());
+        if(newAppointmentResponseList.get(position).getFamily_id() != null){
+            if(newAppointmentResponseList.get(position).getFamily_id().getName() != null) {
+                holder.txt_patient_name.setText(newAppointmentResponseList.get(position).getFamily_id().getName());
             }
-            if(newAppointmentResponseList.get(position).getPet_id().getPet_type() != null) {
-                holder.txt_pettype.setText(newAppointmentResponseList.get(position).getPet_id().getPet_type());
+            if(newAppointmentResponseList.get(position).getFamily_id().getGender() != null) {
+                holder.txt_gender.setText(newAppointmentResponseList.get(position).getFamily_id().getGender());
             }
-            petImgBeanList = newAppointmentResponseList.get(position).getPet_id().getPet_img();
+
+            petImgBeanList = newAppointmentResponseList.get(position).getFamily_id().getPic();
         }
 
 
@@ -113,14 +114,14 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
         }
 
         if(newAppointmentResponseList.get(position).getBooking_date_time() != null){
-            holder.txt_bookedon.setText("Booked for :"+" "+newAppointmentResponseList.get(position).getBooking_date_time());
+            holder.txt_bookedon.setText("Booked For :"+" "+newAppointmentResponseList.get(position).getBooking_date_time());
 
         }
 
 
         if (petImgBeanList != null && petImgBeanList.size() > 0) {
             for(int j=0;j<petImgBeanList.size();j++) {
-                petImagePath = petImgBeanList.get(j).getPet_img();
+                petImagePath = petImgBeanList.get(j).getImage();
 
             }
         }
@@ -160,9 +161,9 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context, PrescriptionActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                if(newAppointmentResponseList.get(position).getPet_id() != null){
-                    i.putExtra("petname",newAppointmentResponseList.get(position).getPet_id().getPet_name());
-                    i.putExtra("pettype",newAppointmentResponseList.get(position).getPet_id().getPet_type());
+                if(newAppointmentResponseList.get(position).get_id() != null){
+                    i.putExtra("petname",newAppointmentResponseList.get(position).getFamily_id().getName());
+                    i.putExtra("pettype",newAppointmentResponseList.get(position).getFamily_id().getRelation_type());
                 }
 
                 i.putExtra("id",newAppointmentResponseList.get(position).get_id());
@@ -182,12 +183,12 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
         compareDatesandTime(currentDateandTime,bookingDateandTime);
 
         if(isVaildDate){
-            holder.btn_cancel.setVisibility(View.VISIBLE);
+            holder.txt_cancel.setVisibility(View.VISIBLE);
         }else{
-            holder.btn_cancel.setVisibility(View.GONE);
+            holder.txt_cancel.setVisibility(View.GONE);
         }
 
-        holder.btn_cancel.setOnClickListener(new View.OnClickListener() {
+        holder.txt_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onAppointmentCancel.onAppointmentCancel(newAppointmentResponseList.get(position).get_id(),newAppointmentResponseList.get(position).getAppointment_types(),newAppointmentResponseList.get(position).getUser_id().get_id(),newAppointmentResponseList.get(position).getDoctor_id().get_id(),newAppointmentResponseList.get(position).getAppointment_UID(),"",newAppointmentResponseList.get(position).getService_amount(),newAppointmentResponseList.get(position).getPayment_method());
@@ -205,8 +206,8 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
                 }else {
                     Intent i = new Intent(context, VideoCallDoctorActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     i.putExtra("id", newAppointmentResponseList.get(position).get_id());
-                    i.putExtra("petname", newAppointmentResponseList.get(position).getPet_id().getPet_name());
-                    i.putExtra("pettype", newAppointmentResponseList.get(position).getPet_id().getPet_type());
+                    i.putExtra("petname", newAppointmentResponseList.get(position).getFamily_id().getName());
+                    i.putExtra("pettype", newAppointmentResponseList.get(position).getFamily_id().getRelation_type());
                     i.putExtra("userid", newAppointmentResponseList.get(position).getUser_id().get_id());
                     Log.w(TAG, " User_ID "+newAppointmentResponseList.get(position).getUser_id().get_id());
                     i.putExtra("allergies", newAppointmentResponseList.get(position).getAllergies());
@@ -254,9 +255,9 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
         return position;
     }
     static class ViewHolderOne extends RecyclerView.ViewHolder {
-        public TextView txt_petname,txt_pettype,txt_type,txt_service_cost,txt_bookedon;
+        public TextView txt_gender,txt_patient_name,txt_type,txt_service_cost,txt_bookedon,txt_cancel;
         public ImageView img_pet_imge,img_emergency_appointment,img_videocall;
-        public Button btn_cancel,btn_complete;
+        public Button btn_complete;
         public LinearLayout ll_new;
 
 
@@ -264,12 +265,12 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
         public ViewHolderOne(View itemView) {
             super(itemView);
             img_pet_imge = itemView.findViewById(R.id.img_pet_imge);
-            txt_petname = itemView.findViewById(R.id.txt_petname);
-            txt_pettype = itemView.findViewById(R.id.txt_pettype);
+            txt_gender = itemView.findViewById(R.id.txt_gender);
+            txt_patient_name = itemView.findViewById(R.id.txt_patient_name);
             txt_type = itemView.findViewById(R.id.txt_type);
             txt_service_cost = itemView.findViewById(R.id.txt_service_cost);
             txt_bookedon = itemView.findViewById(R.id.txt_bookedon);
-            btn_cancel = itemView.findViewById(R.id.btn_cancel);
+            txt_cancel = itemView.findViewById(R.id.txt_cancel);
             btn_complete = itemView.findViewById(R.id.btn_complete);
             ll_new = itemView.findViewById(R.id.ll_new);
             img_emergency_appointment = itemView.findViewById(R.id.img_emergency_appointment);
@@ -305,8 +306,8 @@ public class DoctorNewAppointmentAdapter extends  RecyclerView.Adapter<RecyclerV
                     if(response.body().getCode() == 200){
                         Intent i = new Intent(context, VideoCallDoctorActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         i.putExtra("id", newAppointmentResponseList.get(position).get_id());
-                        i.putExtra("petname", newAppointmentResponseList.get(position).getPet_id().getPet_name());
-                        i.putExtra("pettype", newAppointmentResponseList.get(position).getPet_id().getPet_type());
+                        i.putExtra("petname", newAppointmentResponseList.get(position).getFamily_id().getName());
+                        i.putExtra("pettype", newAppointmentResponseList.get(position).getFamily_id().getRelation_type());
                         i.putExtra("userid", newAppointmentResponseList.get(position).getUser_id().get_id());
                         i.putExtra("allergies", newAppointmentResponseList.get(position).getAllergies());
                         i.putExtra("probleminfo", newAppointmentResponseList.get(position).getProblem_info());

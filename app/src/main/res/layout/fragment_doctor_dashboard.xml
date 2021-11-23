@@ -10,8 +10,87 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_logo_with_border"
+            tools:ignore="ContentDescription"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/txt_clinic_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/clinic_name"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/txt_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futuramediumbt"
+                android:text="@string/edit_profile"
+                android:textAllCaps="false"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_16sp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_cornerwithcolor"
+                android:padding="10dp"/>
+
+
+            <Button
+                android:id="@+id/btn_viewprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/new_rounded_corner_btn"
+                android:fontFamily="@font/futuramediumbt"
+                android:text="View Profile"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp"
+                android:layout_marginStart="20dp"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="You dont have any appointments"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_myappointments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futuramediumbt"
+            android:text="@string/my_appointments"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_cornerwithcolor"
+            android:padding="15dp"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tablayout"
@@ -27,7 +106,8 @@
             app:tabPaddingStart="0dp"
             app:tabRippleColor="@null"
             app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="@color/green_color">
+            app:tabTextColor="@color/green_color"
+            android:visibility="gone">
 
 
             <com.google.android.material.tabs.TabItem

@@ -31,7 +31,7 @@ public class DoctorCompletedAppointmentAdapter extends  RecyclerView.Adapter<Rec
     private int size;
 
     DoctorAppointmentsResponse.DataBean currentItem;
-    private List<DoctorAppointmentsResponse.DataBean.PetIdBean.PetImgBean> petImgBeanList;
+    private List<DoctorAppointmentsResponse.DataBean.FamilyIdBean.PicBean> petImgBeanList;
     private String petImagePath;
 
 
@@ -60,17 +60,17 @@ public class DoctorCompletedAppointmentAdapter extends  RecyclerView.Adapter<Rec
     @SuppressLint({"SetTextI18n", "LogNotTimber"})
     private void initLayoutOne(ViewHolderOne holder, final int position) {
 
-        if(completedAppointmentResponseList.get(position).getPet_id() != null){
-            if(completedAppointmentResponseList.get(position).getPet_id().getPet_name() != null){
-                holder.txt_petname.setText(completedAppointmentResponseList.get(position).getPet_id().getPet_name());}
-            if(completedAppointmentResponseList.get(position).getPet_id().getPet_type() != null){
-                holder.txt_pettype.setText(completedAppointmentResponseList.get(position).getPet_id().getPet_type());}
-            petImgBeanList = completedAppointmentResponseList.get(position).getPet_id().getPet_img();
+        if(completedAppointmentResponseList.get(position).getFamily_id() != null){
+            if(completedAppointmentResponseList.get(position).getFamily_id().getGender() != null){
+                holder.txt_gender.setText(completedAppointmentResponseList.get(position).getFamily_id().getGender());}
+            if(completedAppointmentResponseList.get(position).getFamily_id().getName() != null){
+                holder.txt_patient_name.setText(completedAppointmentResponseList.get(position).getFamily_id().getName());}
+            petImgBeanList = completedAppointmentResponseList.get(position).getFamily_id().getPic();
 
         }
 
         if(completedAppointmentResponseList.get(position).getCompleted_at() != null){
-        holder.txt_completed_date.setText("Completed on:"+" "+completedAppointmentResponseList.get(position).getCompleted_at());}
+        holder.txt_bookedon.setText("Completed on:"+" "+completedAppointmentResponseList.get(position).getCompleted_at());}
         if(completedAppointmentResponseList.get(position).getAppointment_types() != null){
             holder.txt_type.setText(completedAppointmentResponseList.get(position).getAppointment_types());
         }
@@ -80,7 +80,7 @@ public class DoctorCompletedAppointmentAdapter extends  RecyclerView.Adapter<Rec
 
         if (petImgBeanList != null && petImgBeanList.size() > 0) {
             for(int j=0;j<petImgBeanList.size();j++) {
-                petImagePath = petImgBeanList.get(j).getPet_img();
+                petImagePath = petImgBeanList.get(j).getImage();
 
             }
         }
@@ -103,7 +103,7 @@ public class DoctorCompletedAppointmentAdapter extends  RecyclerView.Adapter<Rec
 
         }
 
-        holder.btn__prescriptiondetails.setOnClickListener(new View.OnClickListener() {
+        holder.btn_prescriptiondetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(completedAppointmentResponseList.get(position).get_id() != null) {
@@ -144,25 +144,26 @@ public class DoctorCompletedAppointmentAdapter extends  RecyclerView.Adapter<Rec
     }
 
     static class ViewHolderOne extends RecyclerView.ViewHolder {
-        public TextView txt_petname,txt_pettype,txt_type,txt_service_cost,txt_completed_date;
+        public TextView txt_gender,txt_patient_name,txt_type,txt_service_cost,txt_bookedon,txt_cancel;
         public ImageView img_pet_imge,img_emergency_appointment;
-        public Button btn_cancel,btn_complete,btn__prescriptiondetails;
+        public Button btn_prescriptiondetails;
         LinearLayout ll_new;
 
 
         public ViewHolderOne(View itemView) {
             super(itemView);
             img_pet_imge = itemView.findViewById(R.id.img_pet_imge);
-            txt_petname = itemView.findViewById(R.id.txt_petname);
-            txt_pettype = itemView.findViewById(R.id.txt_pettype);
+            txt_gender = itemView.findViewById(R.id.txt_gender);
+            txt_patient_name = itemView.findViewById(R.id.txt_patient_name);
             txt_type = itemView.findViewById(R.id.txt_type);
             txt_service_cost = itemView.findViewById(R.id.txt_service_cost);
-            txt_completed_date = itemView.findViewById(R.id.txt_completed_date);
-            btn_cancel = itemView.findViewById(R.id.btn_cancel);
-            btn_complete = itemView.findViewById(R.id.btn_complete);
-            //img_prescriptiondetails = itemView.findViewById(R.id.img_prescriptiondetails);
+            txt_bookedon = itemView.findViewById(R.id.txt_bookedon);
+            txt_cancel = itemView.findViewById(R.id.txt_cancel);
             ll_new = itemView.findViewById(R.id.ll_new);
-            btn__prescriptiondetails = itemView.findViewById(R.id.btn_prescriptiondetails);
+            img_emergency_appointment = itemView.findViewById(R.id.img_emergency_appointment);
+            img_emergency_appointment.setVisibility(View.GONE);
+
+            btn_prescriptiondetails = itemView.findViewById(R.id.btn_prescriptiondetails);
             img_emergency_appointment = itemView.findViewById(R.id.img_emergency_appointment);
             img_emergency_appointment.setVisibility(View.GONE);
 

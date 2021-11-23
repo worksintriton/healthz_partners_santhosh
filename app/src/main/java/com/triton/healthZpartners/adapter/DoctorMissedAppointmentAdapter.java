@@ -31,7 +31,7 @@ public class DoctorMissedAppointmentAdapter extends  RecyclerView.Adapter<Recycl
     private int size;
 
     DoctorAppointmentsResponse.DataBean currentItem;
-    private List<DoctorAppointmentsResponse.DataBean.PetIdBean.PetImgBean> petImgBeanList;
+    private List<DoctorAppointmentsResponse.DataBean.FamilyIdBean.PicBean> petImgBeanList;
     private String petImagePath;
 
 
@@ -61,18 +61,18 @@ public class DoctorMissedAppointmentAdapter extends  RecyclerView.Adapter<Recycl
 
         currentItem = missedAppointmentResponseList.get(position);
 
-        if(missedAppointmentResponseList.get(position).getPet_id() != null){
-            if(missedAppointmentResponseList.get(position).getPet_id().getPet_name() != null){
-                holder.txt_petname.setText(missedAppointmentResponseList.get(position).getPet_id().getPet_name());}
-            if(missedAppointmentResponseList.get(position).getPet_id().getPet_type() != null) {
-                holder.txt_pettype.setText(missedAppointmentResponseList.get(position).getPet_id().getPet_type());
+        if(missedAppointmentResponseList.get(position).getFamily_id() != null){
+            if(missedAppointmentResponseList.get(position).getFamily_id().getGender() != null){
+                holder.txt_gender.setText(missedAppointmentResponseList.get(position).getFamily_id().getGender());}
+            if(missedAppointmentResponseList.get(position).getFamily_id().getName() != null) {
+                holder.txt_patient_name.setText(missedAppointmentResponseList.get(position).getFamily_id().getName());
             }
-            petImgBeanList = missedAppointmentResponseList.get(position).getPet_id().getPet_img();
+            petImgBeanList = missedAppointmentResponseList.get(position).getFamily_id().getPic();
 
         }
 
         if(missedAppointmentResponseList.get(position).getMissed_at() != null ){
-        holder.txt_missed_date.setText("Missed on:"+" "+missedAppointmentResponseList.get(position).getMissed_at());}
+        holder.txt_bookedon.setText("Missed on:"+" "+missedAppointmentResponseList.get(position).getMissed_at());}
 
         if(missedAppointmentResponseList.get(position).getAppointment_types() != null){
             holder.txt_type.setText(missedAppointmentResponseList.get(position).getAppointment_types());
@@ -84,7 +84,7 @@ public class DoctorMissedAppointmentAdapter extends  RecyclerView.Adapter<Recycl
 
         if (petImgBeanList != null && petImgBeanList.size() > 0) {
             for(int j=0;j<petImgBeanList.size();j++) {
-                petImagePath = petImgBeanList.get(j).getPet_img();
+                petImagePath = petImgBeanList.get(j).getImage();
 
             }
         }
@@ -158,7 +158,7 @@ public class DoctorMissedAppointmentAdapter extends  RecyclerView.Adapter<Recycl
     }
 
     static class ViewHolderOne extends RecyclerView.ViewHolder {
-        public TextView txt_petname,txt_pettype,txt_type,txt_service_cost,txt_missed_date,txt_appointment_status;
+        public TextView txt_gender,txt_patient_name,txt_type,txt_service_cost,txt_bookedon,txt_cancel,txt_appointment_status;
         public ImageView img_pet_imge,img_emergency_appointment;
         public Button btn_cancel,btn_complete;
         public LinearLayout ll_appointmentstatus;
@@ -168,11 +168,16 @@ public class DoctorMissedAppointmentAdapter extends  RecyclerView.Adapter<Recycl
         public ViewHolderOne(View itemView) {
             super(itemView);
             img_pet_imge = itemView.findViewById(R.id.img_pet_imge);
-            txt_petname = itemView.findViewById(R.id.txt_petname);
-            txt_pettype = itemView.findViewById(R.id.txt_pettype);
+            txt_gender = itemView.findViewById(R.id.txt_gender);
+            txt_patient_name = itemView.findViewById(R.id.txt_patient_name);
             txt_type = itemView.findViewById(R.id.txt_type);
             txt_service_cost = itemView.findViewById(R.id.txt_service_cost);
-            txt_missed_date = itemView.findViewById(R.id.txt_missed_date);
+            txt_bookedon = itemView.findViewById(R.id.txt_bookedon);
+            txt_cancel = itemView.findViewById(R.id.txt_cancel);
+            img_pet_imge = itemView.findViewById(R.id.img_pet_imge);
+
+            txt_type = itemView.findViewById(R.id.txt_type);
+            txt_service_cost = itemView.findViewById(R.id.txt_service_cost);
             btn_cancel = itemView.findViewById(R.id.btn_cancel);
             btn_complete = itemView.findViewById(R.id.btn_complete);
             txt_appointment_status = itemView.findViewById(R.id.txt_appointment_status);

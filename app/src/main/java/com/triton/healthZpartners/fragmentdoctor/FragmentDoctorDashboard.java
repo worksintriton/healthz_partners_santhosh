@@ -33,6 +33,7 @@ import com.triton.healthZpartners.api.RestApiInterface;
 import com.triton.healthZpartners.doctor.DoctorBusinessInfoActivity;
 import com.triton.healthZpartners.doctor.DoctorDashboardActivity;
 import com.triton.healthZpartners.doctor.DoctorMyCalendarNewUserActivity;
+import com.triton.healthZpartners.doctor.DoctorMyappointmentsActivity;
 import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorCompletedAppointment;
 import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorMissedAppointment;
 import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorNewAppointment;
@@ -72,6 +73,10 @@ public class FragmentDoctorDashboard extends Fragment  {
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.viewPager)
     ViewPager viewPager;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.txt_myappointments)
+    TextView txt_myappointments;
 
     private SharedPreferences preferences;
     private Context mContext;
@@ -122,6 +127,14 @@ public class FragmentDoctorDashboard extends Fragment  {
                 doctorCheckStatusResponseCall();
             }
         }
+
+
+        txt_myappointments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(mContext, DoctorMyappointmentsActivity.class));
+            }
+        });
 
 
 
@@ -219,7 +232,7 @@ public class FragmentDoctorDashboard extends Fragment  {
                                     Log.w(TAG,"isDoctorStatus else : "+isDoctorStatus);
 
                                     if(isDoctorStatus){
-                                        setupViewPager(viewPager);
+                                       // setupViewPager(viewPager);
                                         if(DoctorDashboardActivity.appintments != null && DoctorDashboardActivity.appintments.equalsIgnoreCase("New")){
                                             someIndex = 0;
                                         }

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthZpartners.doctor;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -26,37 +26,37 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.triton.healthZpartners.R;
-
-
 import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.fragmentcustomer.myappointments.FragmentPetMissedAppointment;
+import com.triton.healthZpartners.customer.CustomerDashboardActivity;
+import com.triton.healthZpartners.customer.CustomerProfileScreenActivity;
 import com.triton.healthZpartners.fragmentcustomer.myappointments.FragmentPetCompletedAppointment;
+import com.triton.healthZpartners.fragmentcustomer.myappointments.FragmentPetMissedAppointment;
 import com.triton.healthZpartners.fragmentcustomer.myappointments.FragmentPetNewAppointment;
+import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorCompletedAppointment;
+import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorMissedAppointment;
+import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorNewAppointment;
 import com.triton.healthZpartners.responsepojo.PetLoverDashboardResponse;
-
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PetMyappointmentsActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-    private String TAG = "PetMyappointmentsActivity";
+public class DoctorMyappointmentsActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+
+    private String TAG = "DoctorMyappointmentsActivity";
 
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.include_petlover_footer)
-    View include_petlover_footer;
+    @BindView(R.id.include_doctor_footer)
+    View include_doctor_footer;
 
     BottomNavigationView bottom_navigation_view;
 
@@ -97,7 +97,7 @@ public class PetMyappointmentsActivity extends AppCompatActivity implements Bott
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pet_myappointments);
+        setContentView(R.layout.activity_doctor_myappointments);
         ButterKnife.bind(this);
         Log.w(TAG,"onCreate");
 
@@ -139,9 +139,9 @@ public class PetMyappointmentsActivity extends AppCompatActivity implements Bott
         img_cart.setOnClickListener(this);
         img_profile.setOnClickListener(this);
 
-        fab = include_petlover_footer.findViewById(R.id.fab);
+        fab = include_doctor_footer.findViewById(R.id.fab);
 
-        bottom_navigation_view = include_petlover_footer.findViewById(R.id.bottomNavigation);
+        bottom_navigation_view = include_doctor_footer.findViewById(R.id.bottomNavigation);
         bottom_navigation_view.setItemIconTintList(null);
         bottom_navigation_view.setOnNavigationItemSelectedListener(this);
         bottom_navigation_view.getMenu().findItem(R.id.home).setChecked(true);
@@ -161,16 +161,16 @@ public class PetMyappointmentsActivity extends AppCompatActivity implements Bott
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FragmentPetNewAppointment(), "New");
-        adapter.addFragment(new FragmentPetCompletedAppointment(), "Completed");
-        adapter.addFragment(new FragmentPetMissedAppointment(), "Missed");
+        adapter.addFragment(new FragmentDoctorNewAppointment(), "New");
+        adapter.addFragment(new FragmentDoctorCompletedAppointment(), "Completed");
+        adapter.addFragment(new FragmentDoctorMissedAppointment(), "Missed");
         viewPager.setAdapter(adapter);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i = new Intent(PetMyappointmentsActivity.this, CustomerDashboardActivity.class);
+        Intent i = new Intent(DoctorMyappointmentsActivity.this, DoctorDashboardActivity.class);
         startActivity(i);
         finish();
     }
@@ -186,14 +186,9 @@ public class PetMyappointmentsActivity extends AppCompatActivity implements Bott
             case R.id.shop:
                 callDirections("2");
                 break;
-            case R.id.services:
-                callDirections("3");
-                break;
-            case R.id.care:
-                callDirections("4");
-                break;
+
             case R.id.community:
-                callDirections("5");
+                callDirections("3");
                 break;
 
             default:
@@ -242,7 +237,7 @@ public class PetMyappointmentsActivity extends AppCompatActivity implements Bott
 
         try {
 
-            dialog = new Dialog(PetMyappointmentsActivity.this);
+            dialog = new Dialog(DoctorMyappointmentsActivity.this);
             dialog.setContentView(R.layout.sos_popup_layout);
             RecyclerView rv_sosnumbers = (RecyclerView)dialog.findViewById(R.id.rv_sosnumbers);
             Button btn_call = (Button)dialog.findViewById(R.id.btn_call);
@@ -260,7 +255,7 @@ public class PetMyappointmentsActivity extends AppCompatActivity implements Bott
                 @Override
                 public void onClick(View v) {
                     if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                        ActivityCompat.requestPermissions(PetMyappointmentsActivity.this, new String[]{Manifest.permission.CALL_PHONE},REQUEST_PHONE_CALL);
+                        ActivityCompat.requestPermissions(DoctorMyappointmentsActivity.this, new String[]{Manifest.permission.CALL_PHONE},REQUEST_PHONE_CALL);
                     }
                     else
                     {
@@ -310,33 +305,7 @@ public class PetMyappointmentsActivity extends AppCompatActivity implements Bott
                 startActivity(intent);
                 break;
 
-            case R.id.rl_homes:
-                callDirections("1");
-                break;
 
-            case R.id.rl_home:
-                callDirections("1");
-                break;
-
-
-            case R.id.rl_shop:
-                callDirections("2");
-                break;
-
-
-            case R.id.rl_service:
-                callDirections("3");
-                break;
-
-
-            case R.id.rl_care:
-                callDirections("4");
-                break;
-
-
-            case R.id.rl_comn:
-                callDirections("5");
-                break;
         }
     }
 

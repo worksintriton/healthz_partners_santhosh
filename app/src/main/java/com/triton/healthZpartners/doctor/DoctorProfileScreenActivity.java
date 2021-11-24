@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
+import com.github.siyamed.shapeimageview.CircularImageView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -290,7 +291,7 @@ public class DoctorProfileScreenActivity extends AppCompatActivity implements Vi
 
 */
         bottomNavigation.setSelectedItemId(R.id.shop);
-        
+
         floatingActionButton.setImageResource(R.drawable.ic_hzhome_png);
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {

@@ -669,7 +669,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat_bold"
                     android:text="@string/logout"
-                    android:textColor="@color/new_thick_red_bgm_color"
+                    android:textColor="#FF0000"
                     android:textSize="18sp" />
 
             </LinearLayout>

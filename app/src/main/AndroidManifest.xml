@@ -217,7 +217,7 @@
         <activity
             android:name="com.triton.healthZpartners.activity.ChooseUserTypeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
+            android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.triton.healthZpartners.activity.VerifyEmailOtpActivity"
@@ -432,7 +432,7 @@
         <activity
             android:name="com.triton.healthZpartners.activity.location.SetLocationDoctorNewActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
+            android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.triton.healthZpartners.activity.location.SetLocationDoctorOldActivity"
@@ -561,7 +561,7 @@
         <activity
             android:name="com.triton.healthZpartners.doctor.DoctorEditProfileActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
+            android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.triton.healthZpartners.doctor.DoctorProfileScreenActivity"
@@ -571,7 +571,7 @@
         <activity
             android:name="com.triton.healthZpartners.doctor.EditDoctorProfileImageActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
+            android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.triton.healthZpartners.doctor.DoctorPrescriptionDetailsActivity"

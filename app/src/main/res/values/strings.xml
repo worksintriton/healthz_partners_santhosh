@@ -372,7 +372,7 @@
     <string name="edit"><u>Edit</u></string>
 
     <string name="businessname">Business Name</string>
-    <string name="businessemail">Business email</string>
+    <string name="businessemail">Business Email ID</string>
     <string name="businessregistrationdetails">Business registration details</string>
     <string name="upload_gallery_images">Upload gallery images</string>
     <string name="upload_service_images">Upload service images</string>

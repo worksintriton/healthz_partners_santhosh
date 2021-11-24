@@ -13,9 +13,9 @@
 
         <include
             android:id="@+id/include_petlover_header"
-            layout="@layout/toolbar_layout_petlover_header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_layout_petlover_header" />
 
     </LinearLayout>
 
@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/img_profile"
+                        android:id="@+id/img_profile1"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/upload" />
@@ -54,7 +54,7 @@
                         android:id="@+id/txt_edit_image"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/img_profile"
+                        android:layout_below="@id/img_profile1"
                         android:layout_alignParentStart="false"
                         android:layout_centerInParent="true"
                         android:layout_marginTop="5dp"
@@ -158,7 +158,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:scaleType="center"
-                    android:src="@drawable/hznewperson_name"
+                    android:src="@drawable/ic_name"
                     android:visibility="visible"
                     tools:ignore="ContentDescription" />
 
@@ -787,42 +787,21 @@
 
     </ScrollView>
 
-    <FrameLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/footerView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_marginBottom="35dp"
-            android:contentDescription="@string/image_description"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_hzhome_png"
-            android:visibility="visible"
-            app:backgroundTint="@color/green"
-            app:tint="@null" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigation"
-            style="@style/MyBottomNavigationView"
+        <include
+            android:id="@+id/include_petlover_footer"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="bottom"
-            app:backgroundTint="@color/white"
-            app:elevation="0dp"
-            app:itemIconSize="18dp"
-            app:itemIconTint="@color/selector"
-            app:itemRippleColor="@android:color/white"
-            app:itemTextColor="@color/selector"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/bottom_navigation_doctor" />
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_layout_petlover_footer_new_shaped" />
 
-
-    </FrameLayout>
+    </LinearLayout>
 
     <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/avi_indicator"

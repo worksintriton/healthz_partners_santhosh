@@ -30,7 +30,8 @@
                     android:text="Monday"
                     android:textColor="@color/black"
                     android:textSize="10sp" />
-               <RelativeLayout
+
+                <RelativeLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:gravity="end"

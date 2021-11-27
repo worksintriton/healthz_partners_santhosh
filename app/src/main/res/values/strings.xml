@@ -278,7 +278,7 @@
     <string name="location_services">location services</string>
     <string name="deny">Deny</string>
     <string name="allow">Allow</string>
-    <string name="colon1">.</string>
+    <string name="colon1">:</string>
     <string name="colon">:</string>
     <string name="sub_services">Sub Services</string>
     <string name="producttitle">producttitle</string>
@@ -424,6 +424,7 @@
     <string name="video">Video</string>
     <string name="selected_dates">Selected dates</string>
     <string name="add_holiday">Add Holiday</string>
+    <string name="add_holidays">Add holidays</string>
     <string name="my_calendar">My Calendar</string>
     <string name="available_days">Available days</string>
     <string name="available_times">Available Times</string>
@@ -514,7 +515,6 @@
     <string name="pedigree_adult_dry_chicken_treat_500gms">Pedigree Adult Dry Chicken Treat 500gms</string>
     <string name="sunshine_pet_food">Sunshine Pet Food</string>
     <string name="product_description">Product Description</string>
-    <string name="about_service_provider">About Service Provider</string>
 
     <string name="view_vendor_details"><u>View Vendor Details</u></string>
     <string name="view_vendor_detail">View Vendor Details</string>
@@ -686,7 +686,10 @@
     <string name="healthz_in">Healthz.in</string>
     <string name="view_profile">View Profile</string>
     <string name="you_dont_have_any_appointments">You dont have any appointments</string>
+
+    <string name="about_service_provider">About Service Provider</string>
     <string name="business_no">Business Number</string>
     <string name="service_pics">Service Pics</string>
+
 </resources>
 

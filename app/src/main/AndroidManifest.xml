@@ -1012,6 +1012,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"
             android:windowSoftInputMode="adjustPan" />
+
         <activity
             android:name="com.triton.healthZpartners.customer.PetloverPetDetailsActivity"
             android:screenOrientation="portrait"

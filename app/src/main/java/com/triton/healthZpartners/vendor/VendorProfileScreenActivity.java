@@ -113,7 +113,7 @@ public class VendorProfileScreenActivity extends AppCompatActivity implements Vi
     TextView txt_business_name;
 
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.txt_business)
+    @BindView(R.id.txt_name)
     TextView txt_business;
 
     @SuppressLint("NonConstantResourceId")

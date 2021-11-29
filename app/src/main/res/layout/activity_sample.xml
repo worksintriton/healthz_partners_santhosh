@@ -570,14 +570,14 @@
                     tools:ignore="ContentDescription" />
 
                 <TextView
-                    android:id="@+id/txt_manage_address"
+                    android:id="@+id/txt_manage_products"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/manage_address"
+                    android:text="@string/manage_products"
                     android:textColor="@color/new_txt_color"
                     android:textSize="18sp" />
 

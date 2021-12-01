@@ -217,6 +217,7 @@ public class VendorNavigationDrawer extends AppCompatActivity implements View.On
 
                     //Replacing the main content with ContentFragment Which is our Inbox View;
                     case R.id.nav_item_one:
+
                         return true;
 
                     // For rest of the options we just show a toast on click
@@ -256,7 +257,7 @@ public class VendorNavigationDrawer extends AppCompatActivity implements View.On
     }
 
     private void gotoDashboard() {
-        Intent intent = new Intent(getApplicationContext(),VendorDashboardActivity.class);
+        Intent intent = new Intent(getApplicationContext(),VendorMyOrdersActivity.class);
         intent.putExtra("fromactivity",TAG);
         startActivity(intent);
     }

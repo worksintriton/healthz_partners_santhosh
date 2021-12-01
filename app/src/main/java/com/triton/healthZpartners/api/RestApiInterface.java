@@ -610,7 +610,7 @@ public interface RestApiInterface {
 
     /*vendor order details*/
     @POST("vendor_order_group/get_product_list_by_vendor")
-    Call<PetLoverVendorOrderDetailsResponse> get_product_list_by_vendor_ResponseCall(@Header("Content-Type") String type, @Body VendorOrderDetailsListRequest vendorOrderDetailsListRequest);
+    Call<ListByVendorOrderDetailsResponse> get_product_list_by_vendor_ResponseCall(@Header("Content-Type") String type, @Body VendorOrderDetailsListRequest vendorOrderDetailsListRequest);
 
     /*vendor single product track order details*/
     @POST("vendor_order_group/fetch_single_product_detail")
@@ -729,7 +729,7 @@ public interface RestApiInterface {
     Call<CatgoryGetListResponse> getlistCatResponseCall(@Header("Content-Type") String type);
 
     /*View the Product's by cat id see more*/
-    @POST("newproduct_detail/fetch_product_by_cat")
+    @POST("product_cate/mobile_getlist_id")
     Call<FetctProductByCatDetailsResponse> fetctProductByCatDetailsResponse(@Header("Content-Type") String type, @Body FetctProductByCatRequest fetctProductByCatRequest);
 
 

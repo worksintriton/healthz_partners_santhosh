@@ -209,6 +209,8 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
 
         Log.w(TAG,"onCreate : ");
 
+        Log.w(TAG,"VendorID : "+APIClient.VENDOR_ID);
+
         ButterKnife.bind(this);
 
         Bundle extras = getIntent().getExtras();
@@ -656,12 +658,12 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
         }
         else if (imgList.size()==0) {
             Toasty.warning(getApplicationContext(), "Please add minimum one image", Toast.LENGTH_SHORT, true).show();
-
+            can_proceed = false;
         }
 
         else if (additional_detail.size()==0) {
             Toasty.warning(getApplicationContext(), "Please add minimum one details", Toast.LENGTH_SHORT, true).show();
-
+            can_proceed = false;
         }
 
         if (can_proceed) {

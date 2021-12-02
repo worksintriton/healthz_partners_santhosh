@@ -4,30 +4,39 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ReceiverCallNotAllowedException;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 import com.triton.healthZpartners.R;
+import com.triton.healthZpartners.adapter.PetShopCategorySeeMoreAdapter;
+import com.triton.healthZpartners.adapter.VendorProductListAdapter;
 import com.triton.healthZpartners.api.APIClient;
 import com.triton.healthZpartners.api.RestApiInterface;
 import com.triton.healthZpartners.doctor.DoctorEditProfileActivity;
@@ -36,16 +45,22 @@ import com.triton.healthZpartners.doctor.DoctorProfileScreenActivity;
 import com.triton.healthZpartners.fragmentvendor.myorders.FragementNewOrders;
 import com.triton.healthZpartners.fragmentvendor.myorders.FragmentCancelledOrders;
 import com.triton.healthZpartners.fragmentvendor.myorders.FragmentCompletedOrders;
+import com.triton.healthZpartners.requestpojo.FetchProductByUserIDRequest;
+import com.triton.healthZpartners.requestpojo.FetctProductByCatRequest;
 import com.triton.healthZpartners.requestpojo.SPCheckStatusRequest;
 import com.triton.healthZpartners.requestpojo.VendorGetsOrderIdRequest;
 import com.triton.healthZpartners.responsepojo.DoctorDetailsByUserIdResponse;
+import com.triton.healthZpartners.responsepojo.FetchProductByUserIDResponse;
+import com.triton.healthZpartners.responsepojo.FetctProductByCatResponse;
 import com.triton.healthZpartners.responsepojo.SPCheckStatusResponse;
 import com.triton.healthZpartners.responsepojo.VendorGetsOrderIDResponse;
 import com.triton.healthZpartners.sessionmanager.SessionManager;
 import com.triton.healthZpartners.utils.ConnectionDetector;
 import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthZpartners.vendor.VendorAddProductsActivity;
 import com.triton.healthZpartners.vendor.VendorDashboardActivity;
 import com.triton.healthZpartners.vendor.VendorEditProfileActivity;
+import com.triton.healthZpartners.vendor.VendorNavigationDrawer;
 import com.triton.healthZpartners.vendor.VendorProfileScreenActivity;
 import com.triton.healthZpartners.vendor.VendorRegisterFormActivity;
 import com.wang.avi.AVLoadingIndicatorView;
@@ -77,11 +92,13 @@ public class FragmentVendorDashboard extends Fragment  {
     @BindView(R.id.tablayout)
     TabLayout tablayout;
 
+//    @SuppressLint("NonConstantResourceId")
+//    @BindView(R.id.viewPager)
+//    ViewPager viewPager;
+
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.viewPager)
-    ViewPager viewPager;
-
-
+    @BindView(R.id.edt_search)
+    EditText edt_search;
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.txt_view_profile)
@@ -113,8 +130,29 @@ public class FragmentVendorDashboard extends Fragment  {
 
     FragmentManager  childFragMang;
 
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.rv_productList)
+    RecyclerView rv_productList;
+
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.txt_no_records)
+    TextView txt_no_records;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.txt_add_product)
+    TextView txt_add_product;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.rl_category)
+    RelativeLayout rl_category;
+
+    String searchString="";
+
     private int someIndex = 0;
     private List<VendorGetsOrderIDResponse.DataBean.BussinessGalleryBean> businessgalerydetailsResponseList;
+
+     private List<FetchProductByUserIDResponse.DataBean> productList;
 
 
     public FragmentVendorDashboard() {
@@ -164,6 +202,42 @@ public class FragmentVendorDashboard extends Fragment  {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(mContext, VendorProfileScreenActivity.class));
+            }
+        });
+
+        edt_search.addTextChangedListener(new TextWatcher() {
+            @SuppressLint("LogNotTimber")
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                Log.w(TAG,"beforeTextChanged-->"+s.toString());
+            }
+
+            @SuppressLint("LogNotTimber")
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Log.w(TAG,"onTextChanged-->"+s.toString());
+                searchString = s.toString();
+
+
+            }
+
+            @SuppressLint("LogNotTimber")
+            @Override
+            public void afterTextChanged(Editable s) {
+                Log.w(TAG,"afterTextChanged-->"+s.toString());
+                searchString = s.toString();
+                if(!searchString.isEmpty()){
+                    if (new ConnectionDetector(getContext()).isNetworkAvailable(getContext())) {
+                        fetctProductBYuSERidResponseCall();
+                    }
+                }else{
+                    searchString ="";
+                    if (new ConnectionDetector(getContext()).isNetworkAvailable(getContext())) {
+                        fetctProductBYuSERidResponseCall();
+                    }
+
+                }
+
             }
         });
 
@@ -245,15 +319,22 @@ public class FragmentVendorDashboard extends Fragment  {
 
                                     }
 
+
                                 }else{
                                     isDoctorStatus = true;
 
                                     getVendorOrderIDResponseCall();
+
+                                    if (new ConnectionDetector(getContext()).isNetworkAvailable(getContext())) {
+                                        fetctProductBYuSERidResponseCall();
+                                    }
+
+
                                     Log.w(TAG,"isDoctorStatus else : "+isDoctorStatus);
                                     Log.w(TAG,"isDoctorStatus orders : "+VendorDashboardActivity.orders );
 
                                     if(isDoctorStatus){
-                                        if(viewPager != null) {
+                                     /*   if(viewPager != null) {
                                            // setupViewPager(viewPager);
                                             if(VendorDashboardActivity.orders != null && VendorDashboardActivity.orders.equalsIgnoreCase("New")){
                                                 someIndex = 0;
@@ -271,7 +352,7 @@ public class FragmentVendorDashboard extends Fragment  {
                                                 tab.select();
                                             }
 
-                                        }
+                                        }*/
                                     }
 
                                 }
@@ -466,5 +547,93 @@ public class FragmentVendorDashboard extends Fragment  {
         return vendorGetsOrderIdRequest;
     }
 
+
+    @SuppressLint("LogNotTimber")
+    public void fetctProductBYuSERidResponseCall(){
+        avi_indicator.setVisibility(View.VISIBLE);
+        avi_indicator.smoothToShow();
+        //Creating an object of our api interface
+        RestApiInterface ApiService = APIClient.getClient().create(RestApiInterface.class);
+        Call<FetchProductByUserIDResponse> call = ApiService.fetchproductbyuseridResponseCall(RestUtils.getContentType(),FetchProductByUserIDRequest());
+
+        Log.w(TAG,"url  :%s"+ call.request().url().toString());
+
+        call.enqueue(new Callback<FetchProductByUserIDResponse>() {
+            @Override
+            public void onResponse(@NonNull Call<FetchProductByUserIDResponse> call, @NonNull Response<FetchProductByUserIDResponse> response) {
+                avi_indicator.smoothToHide();
+
+
+                if (response.body() != null) {
+                    if(200 == response.body().getCode()){
+                        Log.w(TAG,"ShopDashboardResponse" + new Gson().toJson(response.body()));
+
+                        if(response.body().getData()!= null && response.body().getData().size()>0){
+                            productList = response.body().getData();
+
+                            txt_no_records.setVisibility(View.GONE);
+
+                            txt_add_product.setVisibility(View.GONE);
+
+                            rl_category.setVisibility(View.GONE);
+
+                            setView(productList);
+
+                        }
+                        else {
+
+                            rl_category.setVisibility(View.VISIBLE);
+
+                            txt_no_records.setVisibility(View.VISIBLE);
+
+                            txt_add_product.setVisibility(View.VISIBLE);
+
+                            txt_add_product.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+                                    Intent i = new Intent(getContext(), VendorAddProductsActivity.class);
+                                    startActivity(i);
+                                }
+                            });
+                        }
+
+                    }
+                }
+
+            }
+
+
+            @Override
+            public void onFailure(@NonNull Call<FetchProductByUserIDResponse> call, @NonNull  Throwable t) {
+                avi_indicator.smoothToHide();
+                Log.w(TAG,"FetchProductByUserIDResponse flr"+t.getMessage());
+            }
+        });
+
+    }
+    @SuppressLint("LogNotTimber")
+    private FetchProductByUserIDRequest FetchProductByUserIDRequest() {
+        /*
+         * cat_id : 5fec14a5ea832e2e73c1fc79
+         * skip_count : 6
+         */
+
+        FetchProductByUserIDRequest FetchProductByUserIDRequest = new FetchProductByUserIDRequest();
+        FetchProductByUserIDRequest.setVendor_id(APIClient.VENDOR_ID);
+        FetchProductByUserIDRequest.setSearch_string(searchString);
+
+        Log.w(TAG,"FetchProductByUserIDRequest"+ "--->" + new Gson().toJson(FetchProductByUserIDRequest));
+        return FetchProductByUserIDRequest;
+    }
+    private void setView(List<FetchProductByUserIDResponse.DataBean> data) {
+
+        rv_productList.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        VendorProductListAdapter vendorProductListAdapter = new VendorProductListAdapter(getContext(), data);
+        rv_productList.setAdapter(vendorProductListAdapter);
+
+
+
+    }
 
 }

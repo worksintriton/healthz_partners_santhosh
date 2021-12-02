@@ -844,14 +844,14 @@ public interface RestApiInterface {
     @POST("locationdetails/mobile/getlist_id1")
     Call<DefaultLocationResponse> defaultLocationResponseCall(@Header("Content-Type") String type, @Body DefaultLocationRequest defaultLocationRequest);
 
-  /*  *//*session clear*//*
-    @POST("/product_details/dashboard_getlist")
-    Call<> logoutResponseCall(@Header("Content-Type") String type, @Body DefaultLocationRequest defaultLocationRequest);
-*/
+    /*Fetch ProductBy User Id Response*/
+    @POST("product_details/mobile/getlist_from_vendor_id1")
+    Call<FetchProductByUserIDResponse> fetchproductbyuseridResponseCall(@Header("Content-Type") String type, @Body FetchProductByUserIDRequest fetchProductByUserIDRequest);
 
     /*session clear*/
     @POST("userdetails/logout")
     Call<SuccessResponse> logoutResponseCall(@Header("Content-Type") String type, @Body DefaultLocationRequest defaultLocationRequest);
+
 
 
 }

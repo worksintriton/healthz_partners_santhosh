@@ -152,21 +152,85 @@
         android:layout_below="@+id/headerView">
 
 
-        <TextView
-            android:id="@+id/txt_no_records"
+        <RelativeLayout
+            android:id="@+id/rl_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/new_rounded_corner_btn_white"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/search" />
+
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/img_search"
+                android:background="@null"
+                android:fontFamily="@font/montserrat"
+                android:hint="@string/search"
+                android:imeOptions="actionDone"
+                android:inputType="textWebEmailAddress"
+                android:maxLines="1"
+                android:textColor="@color/green"
+                android:textColorHint="@color/dark_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_no_records"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="@string/norecordsfound"
-            android:textColor="@color/color"
+            android:text="You Dont Have Product"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:visibility="gone" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
+
+        <TextView
+            android:id="@+id/txt_add_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_cornerwithcolor"
+            android:fontFamily="@font/futuramediumbt"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/add_product"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_productList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:visibility="visible" />
 
 
     </LinearLayout>

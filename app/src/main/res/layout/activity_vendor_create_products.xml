@@ -56,7 +56,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="20dp"
-                     android:src="@drawable/notification_white"
+                    android:src="@drawable/notification_white"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
@@ -478,7 +478,7 @@
                 android:id="@+id/rv_add_additional_details"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-              />
+                />
 
 
         </LinearLayout>

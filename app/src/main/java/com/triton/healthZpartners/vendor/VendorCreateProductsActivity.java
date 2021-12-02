@@ -1,15 +1,23 @@
 package com.triton.healthZpartners.vendor;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,26 +25,47 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.canhub.cropper.CropImage;
+import com.google.android.gms.common.util.IOUtils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.triton.healthZpartners.R;
 import com.triton.healthZpartners.activity.NotificationActivity;
+import com.triton.healthZpartners.adapter.AddExpAdapter;
+import com.triton.healthZpartners.adapter.AddProdDetailsListAdapter;
+import com.triton.healthZpartners.adapter.ImageListAdapter;
+import com.triton.healthZpartners.adapter.PetCurrentImageListAdapter;
 import com.triton.healthZpartners.api.APIClient;
 import com.triton.healthZpartners.api.RestApiInterface;
 import com.triton.healthZpartners.appUtils.NumericKeyBoardTransformationMethod;
+import com.triton.healthZpartners.customer.BookAppointmentActivity;
+import com.triton.healthZpartners.requestpojo.DocBusInfoUploadRequest;
+import com.triton.healthZpartners.requestpojo.PetAppointmentCreateRequest;
 import com.triton.healthZpartners.requestpojo.ProductVendorCreateRequest;
 import com.triton.healthZpartners.responsepojo.CatgoryGetListResponse;
 import com.triton.healthZpartners.responsepojo.FetctProductByCatDetailsResponse;
+import com.triton.healthZpartners.responsepojo.FileUploadResponse;
 import com.triton.healthZpartners.responsepojo.SuccessResponse;
 import com.triton.healthZpartners.sessionmanager.SessionManager;
 import com.triton.healthZpartners.utils.ConnectionDetector;
 import com.triton.healthZpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -44,7 +73,11 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import es.dmoral.toasty.Toasty;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -58,24 +91,9 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
     ImageView img_back;
 
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.img_products_image)
-    ImageView img_products_image;
-
-    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.txt_product_title)
     TextView txt_product_title;
 
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.edt_product_price)
-    EditText edt_product_price;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.edt_product_thresould)
-    EditText edt_product_thresould;
-
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.edt_product_descriptions)
-    EditText edt_product_descriptions;
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.btn_update)
@@ -94,7 +112,50 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
     @BindView(R.id.img_profile)
     ImageView img_profile;
 
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.ll_main_root)
+    LinearLayout ll_main_root;
 
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.rv_product_list)
+    RecyclerView rv_product_list;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_product_title)
+    EditText edt_product_title;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_product_categprod)
+    EditText edt_product_categprod;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_product_price)
+    EditText edt_product_price;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_product_thresould)
+    EditText edt_product_thresould;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_product_descriptions)
+    EditText edt_product_descriptions;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_product_condition)
+    EditText edt_product_condition;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_product_pricetype)
+    EditText edt_product_pricetype;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.edt_addmore_service)
+    EditText edt_addmore_service;
+
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.btn_add)
+    Button btn_add;
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.include_vendor_footer)
@@ -118,6 +179,29 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
 
     FloatingActionButton fab;
 
+    int PERMISSION_CLINIC = 1;
+    int PERMISSION_CERT = 2;
+    int PERMISSION_GOVT = 3;
+    int PERMISSION_PHOTO = 4;
+
+    String[] PERMISSIONS = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA
+    };
+
+    List<ProductVendorCreateRequest.ProductImgBean> imgList = new ArrayList();
+    List<String> additional_detail = new ArrayList();
+    private static final int REQUEST_CLINIC_CAMERA_PERMISSION_CODE = 785;
+    private static final int SELECT_CLINIC_CAMERA = 1000;
+    private static final int REQUEST_READ_CLINIC_PIC_PERMISSION = 786;
+    private static final int SELECT_CLINIC_PICTURE = 1001;
+
+    MultipartBody.Part filePart;
+
+    String uploadimagepath;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,24 +222,12 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
 
 
             if(producttitle != null){
-                txt_product_title.setText(producttitle);
+                edt_product_categprod.setText(producttitle);
             }
             if(productdesc != null){
                 edt_product_descriptions.setText(productdesc);
             }
 
-            if (productimage != null && !productimage.isEmpty()) {
-                Glide.with(getApplicationContext())
-                        .load(productimage)
-                        .into(img_products_image);
-
-            }
-            else{
-                Glide.with(getApplicationContext())
-                        .load(APIClient.PROFILE_IMAGE_URL)
-                        .into(img_products_image);
-
-            }
 
             btn_update.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -170,7 +242,6 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
                     onBackPressed();
                 }
             });
-
 
 
         }
@@ -223,9 +294,291 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
         });
 
 
+        ll_main_root.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                chooseImage();
+            }
+        });
+
+
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(!(edt_addmore_service.getText().toString().equals(""))){
+
+                    insert(edt_addmore_service.getText().toString());
+                }
+
+                else {
+
+                    Toasty.warning(getApplicationContext(),"Plz add details",Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+    }
+
+    private void insert(String service) {
+
+        if(additional_detail.size()>=3){
+            Toasty.warning(getApplicationContext(),"Sorry you cannot add more than 3",Toast.LENGTH_SHORT).show();
+
+        }
+
+        else {
+            Toasty.success(getApplicationContext(),"Details added successfully",Toast.LENGTH_SHORT).show();
+           additional_detail.add(service);
+
+            if(additional_detail != null && additional_detail.size()>0){
+                rv_product_list.setVisibility(View.VISIBLE);
+                rv_product_list.setHasFixedSize(true);
+                rv_product_list.setNestedScrollingEnabled(false);
+                setViewDetails();
+
+            }else{
+                rv_product_list.setVisibility(View.GONE);
+
+            }
+        }
+
+    }
+
+    private void setViewDetails() {
+        rv_product_list.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        rv_product_list.setItemAnimator(new DefaultItemAnimator());
+        AddProdDetailsListAdapter addExpAdapter = new AddProdDetailsListAdapter(getApplicationContext(), additional_detail);
+        rv_product_list.setAdapter(addExpAdapter);
+    }
 
 
 
+
+    private void chooseImage() {
+
+        if (imgList!=null && imgList.size() >= 4) {
+
+            Toasty.warning(getApplicationContext(), "Sorry you can't Add more than 4", Toast.LENGTH_SHORT).show();
+
+        } else {
+
+
+            if (!hasPermissions(this, PERMISSIONS)) {
+                ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_CLINIC);
+            }
+
+
+            else
+            {
+
+
+                CropImage.activity().start(VendorCreateProductsActivity.this);
+
+
+            }
+
+
+        }
+
+    }
+
+
+    private boolean hasPermissions(Context context, String... permissions) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    @SuppressLint("LogNotTimber")
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //	Toast.makeText(getActivity(),"kk",Toast.LENGTH_SHORT).show();
+
+        try {
+            if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+                CropImage.ActivityResult result = CropImage.getActivityResult(data);
+                if (resultCode == RESULT_OK) {
+                    Uri resultUri = result.getUriContent();
+
+                    if (resultUri != null) {
+
+                        Log.w("selectedImageUri", " " + resultUri);
+
+                        String filename = getFileName(resultUri);
+
+                        Log.w("filename", " " + filename);
+
+                        String filePath = getFilePathFromURI(VendorCreateProductsActivity.this, resultUri);
+
+                        assert filePath != null;
+
+                        File file = new File(filePath); // initialize file here
+
+                        long length = file.length() / 1024; // Size in KB
+
+                        Log.w("filesize", " " + length);
+
+                        if (length > 2000) {
+
+                            new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                                    .setTitleText("File Size")
+                                    .setContentText("Please choose file size less than 2 MB ")
+                                    .setConfirmText("Ok")
+                                    .show();
+                        } else {
+
+
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy hh:mm aa", Locale.getDefault());
+                            String currentDateandTime = sdf.format(new Date());
+
+                            filePart = MultipartBody.Part.createFormData("sampleFile", userid + currentDateandTime + filename, RequestBody.create(MediaType.parse("image/*"), file));
+
+                            uploadImage();
+
+                        }
+
+
+                    } else {
+
+                        Toasty.warning(VendorCreateProductsActivity.this, "Image Error!!Please upload Some other image", Toasty.LENGTH_LONG).show();
+                    }
+
+
+                }
+            }
+
+
+        }
+
+
+        catch (Exception e){
+            Log.w(TAG,"onActivityResult exception"+e.toString());
+        }
+
+
+
+
+
+    }
+
+    private void uploadImage() {
+
+        avi_indicator.show();
+
+        RestApiInterface apiInterface = APIClient.getImageClient().create(RestApiInterface.class);
+
+
+        Call<FileUploadResponse> call = apiInterface.getImageStroeResponse(filePart);
+
+
+        Log.w(TAG, "url  :%s" + call.request().url().toString());
+
+        call.enqueue(new Callback<FileUploadResponse>() {
+            @SuppressLint("LogNotTimber")
+            @Override
+            public void onResponse(@NonNull Call<FileUploadResponse> call, @NonNull Response<FileUploadResponse> response) {
+                avi_indicator.smoothToHide();
+
+                if (response.body() != null) {
+                    if (200 == response.body().getCode()) {
+                        Log.w(TAG, "Profpic" + "--->" + new Gson().toJson(response.body()));
+/*
+
+                        DocBusInfoUploadRequest.ClinicPicBean clinicPicBean = new DocBusInfoUploadRequest.ClinicPicBean(response.body().getData().trim());
+                        clinicPicBeans.add(clinicPicBean);
+*/
+
+                        uploadimagepath = response.body().getData();
+                        ProductVendorCreateRequest.ProductImgBean productImgBean = new ProductVendorCreateRequest.ProductImgBean();
+                        productImgBean.setProduct_img(uploadimagepath);
+                        imgList.add(productImgBean);
+                        if (uploadimagepath != null) {
+                            setView();
+                        }
+
+
+                    }
+
+                }
+
+
+            }
+
+            @SuppressLint("LogNotTimber")
+            @Override
+            public void onFailure(@NonNull Call<FileUploadResponse> call, @NonNull Throwable t) {
+                // avi_indicator.smoothToHide();
+                Log.w(TAG, "ServerUrlImagePath" + "On failure working" + t.getMessage());
+                //Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+
+    private void setView() {
+        rv_product_list.setVisibility(View.VISIBLE);
+        rv_product_list.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        //rv_upload_pet_images.setLayoutManager(new LinearLayoutManager(this));
+        rv_product_list.setItemAnimator(new DefaultItemAnimator());
+        ImageListAdapter imageListAdapter = new ImageListAdapter(getApplicationContext(), imgList);
+        rv_product_list.setAdapter(imageListAdapter);
+    }
+
+    public static String getFilePathFromURI(Context context, Uri contentUri) {
+        //copy file and send new file path
+        String fileName = getFileName(contentUri);
+        if (!TextUtils.isEmpty(fileName)) {
+            String path = context.getFilesDir() + "/" + "MyFirstApp/";
+
+            //String path = Environment.getExternalStoragePublicDirectory(DIRECTORY_DOCUMENTS).getPath() + "/" + "MyFirstApp/";
+            // Create the parent path
+            File dir = new File(path);
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
+
+            String fullName = path + "mylog";
+            File copyFile = new File (fullName);
+
+        //  File copyFile = new File(Environment.DIRECTORY_DOWNLOADS + File.separator + fileName);
+
+            copy(context, contentUri, copyFile);
+            return copyFile.getAbsolutePath();
+        }
+        return null;
+    }
+
+    public static String getFileName(Uri uri) {
+        if (uri == null) return null;
+        String fileName = null;
+        String path = uri.getPath();
+        int cut = path.lastIndexOf('/');
+        if (cut != -1) {
+            fileName = path.substring(cut + 1);
+        }
+        return fileName;
+    }
+
+    public static void copy(Context context, Uri srcUri, File dstFile) {
+        try {
+            InputStream inputStream = context.getContentResolver().openInputStream(srcUri);
+            if (inputStream == null) return;
+            OutputStream outputStream = new FileOutputStream(dstFile);
+            IOUtils.copyStream(inputStream, outputStream);
+            inputStream.close();
+            outputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -290,7 +643,26 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
             edt_product_descriptions.requestFocus();
             can_proceed = false;
         }
+        else if (edt_product_condition.getText().toString().trim().equals("")) {
+            edt_product_condition.setError("Please enter product condition");
+            edt_product_condition.requestFocus();
+            can_proceed = false;
+        }
 
+        else if (edt_product_pricetype.getText().toString().trim().equals("")) {
+            edt_product_pricetype.setError("Please enter price type");
+            edt_product_pricetype.requestFocus();
+            can_proceed = false;
+        }
+        else if (imgList.size()==0) {
+            Toasty.warning(getApplicationContext(), "Please add minimum one image", Toast.LENGTH_SHORT, true).show();
+
+        }
+
+        else if (additional_detail.size()==0) {
+            Toasty.warning(getApplicationContext(), "Please add minimum one details", Toast.LENGTH_SHORT, true).show();
+
+        }
 
         if (can_proceed) {
             if (new ConnectionDetector(VendorCreateProductsActivity.this).isNetworkAvailable(VendorCreateProductsActivity.this)) {
@@ -364,12 +736,28 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
          * threshould : 1000
          * mobile_type : Admin
          */
-
+        String thumbnail_image;
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm aa", Locale.getDefault());
         String currentDateandTime = sdf.format(new Date());
 
+        if(imgList!=null&&imgList.size()>0){
+
+            thumbnail_image = imgList.get(0).getProduct_img();
+
+        }
+
+        else {
+
+            thumbnail_image="";
+        }
+
         ProductVendorCreateRequest productVendorCreateRequest = new ProductVendorCreateRequest();
         productVendorCreateRequest.setCat_id(productid);
+        productVendorCreateRequest.setProduct_img(imgList);
+        productVendorCreateRequest.setThumbnail_image(thumbnail_image);
+        productVendorCreateRequest.setCondition(edt_product_condition.getText().toString());
+        productVendorCreateRequest.setAddition_detail(additional_detail);
+        productVendorCreateRequest.setPrice_type(edt_product_pricetype.getText().toString());
         productVendorCreateRequest.setCost(Integer.parseInt(edt_product_price.getText().toString()));
         productVendorCreateRequest.setThreshould(edt_product_thresould.getText().toString());
         productVendorCreateRequest.setProduct_discription(edt_product_descriptions.getText().toString());

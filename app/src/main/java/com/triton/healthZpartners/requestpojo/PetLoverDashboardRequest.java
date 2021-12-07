@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.requestpojo;
+package com.triton.healthzpartners.requestpojo;
 
 
 import com.google.gson.annotations.SerializedName;

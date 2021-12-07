@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor.shop;
+package com.triton.healthzpartners.doctor.shop;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -27,27 +27,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.adapter.PetShopCategorySeeMoreAdapter;
-import com.triton.healthZpartners.adapter.ProductsSearchAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.doctor.DoctorDashboardActivity;
-import com.triton.healthZpartners.doctor.DoctorProfileScreenActivity;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.adapter.PetShopCategorySeeMoreAdapter;
+import com.triton.healthzpartners.adapter.ProductsSearchAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.doctor.DoctorDashboardActivity;
+import com.triton.healthzpartners.doctor.DoctorProfileScreenActivity;
 
-import com.triton.healthZpartners.customer.ProductFiltersActivity;
-import com.triton.healthZpartners.requestpojo.FetctProductByCatRequest;
-import com.triton.healthZpartners.requestpojo.NotificationCartCountRequest;
-import com.triton.healthZpartners.requestpojo.ProductFiltersRequest;
-import com.triton.healthZpartners.requestpojo.ProductSearchRequest;
-import com.triton.healthZpartners.requestpojo.ProductSortByRequest;
-import com.triton.healthZpartners.responsepojo.FetctProductByCatResponse;
-import com.triton.healthZpartners.responsepojo.NotificationCartCountResponse;
-import com.triton.healthZpartners.responsepojo.ProductSearchResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.customer.ProductFiltersActivity;
+import com.triton.healthzpartners.requestpojo.FetctProductByCatRequest;
+import com.triton.healthzpartners.requestpojo.NotificationCartCountRequest;
+import com.triton.healthzpartners.requestpojo.ProductFiltersRequest;
+import com.triton.healthzpartners.requestpojo.ProductSearchRequest;
+import com.triton.healthzpartners.requestpojo.ProductSortByRequest;
+import com.triton.healthzpartners.responsepojo.FetctProductByCatResponse;
+import com.triton.healthzpartners.responsepojo.NotificationCartCountResponse;
+import com.triton.healthzpartners.responsepojo.ProductSearchResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;

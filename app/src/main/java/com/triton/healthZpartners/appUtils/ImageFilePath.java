@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.appUtils;
+package com.triton.healthzpartners.appUtils;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

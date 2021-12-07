@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.activity.location;
+package com.triton.healthzpartners.activity.location;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -33,18 +33,18 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
 
-import com.triton.healthZpartners.doctor.ManageAddressDoctorActivity;
-import com.triton.healthZpartners.customer.CustomerProfileScreenActivity;
-import com.triton.healthZpartners.requestpojo.LocationUpdateRequest;
-import com.triton.healthZpartners.responsepojo.LocationUpdateResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.doctor.ManageAddressDoctorActivity;
+import com.triton.healthzpartners.customer.CustomerProfileScreenActivity;
+import com.triton.healthzpartners.requestpojo.LocationUpdateRequest;
+import com.triton.healthzpartners.responsepojo.LocationUpdateResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

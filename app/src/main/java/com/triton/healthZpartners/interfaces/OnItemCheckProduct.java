@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.interfaces;
+package com.triton.healthzpartners.interfaces;
 
 public interface OnItemCheckProduct {
     void onItemCheckProduct(int count,String product_id, String product_name,int product_price);

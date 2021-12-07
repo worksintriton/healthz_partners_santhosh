@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -23,22 +23,22 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.adapter.DoctorProductsFavAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.adapter.DoctorProductsFavAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
 
-import com.triton.healthZpartners.interfaces.ProductsFavListener;
-import com.triton.healthZpartners.requestpojo.DoctorProductFavListCreateRequest;
-import com.triton.healthZpartners.requestpojo.DoctorProductFavListRequest;
+import com.triton.healthzpartners.interfaces.ProductsFavListener;
+import com.triton.healthzpartners.requestpojo.DoctorProductFavListCreateRequest;
+import com.triton.healthzpartners.requestpojo.DoctorProductFavListRequest;
 
-import com.triton.healthZpartners.responsepojo.DoctorProductFavListResponse;
+import com.triton.healthzpartners.responsepojo.DoctorProductFavListResponse;
 
-import com.triton.healthZpartners.responsepojo.SuccessResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.responsepojo.SuccessResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

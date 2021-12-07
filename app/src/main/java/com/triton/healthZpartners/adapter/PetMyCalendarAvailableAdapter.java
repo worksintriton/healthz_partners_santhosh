@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -13,10 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.interfaces.OnItemSelectedTime;
-import com.triton.healthZpartners.customer.PetAppointment_Doctor_Date_Time_Activity;
-import com.triton.healthZpartners.responsepojo.PetDoctorAvailableTimeResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.interfaces.OnItemSelectedTime;
+import com.triton.healthzpartners.customer.PetAppointment_Doctor_Date_Time_Activity;
+import com.triton.healthzpartners.responsepojo.PetDoctorAvailableTimeResponse;
 
 
 import java.util.List;

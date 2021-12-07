@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,10 +19,10 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.fragmentcustomer.myorders.FragmentPetCancelledOrders;
-import com.triton.healthZpartners.fragmentcustomer.myorders.FragmentPetCompletedOrders;
-import com.triton.healthZpartners.fragmentcustomer.myorders.FragmentPetNewOrders;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.fragmentcustomer.myorders.FragmentPetCancelledOrders;
+import com.triton.healthzpartners.fragmentcustomer.myorders.FragmentPetCompletedOrders;
+import com.triton.healthzpartners.fragmentcustomer.myorders.FragmentPetNewOrders;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

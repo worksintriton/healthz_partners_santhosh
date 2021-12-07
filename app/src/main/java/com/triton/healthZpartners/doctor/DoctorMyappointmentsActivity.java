@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -31,19 +31,14 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.customer.CustomerDashboardActivity;
-import com.triton.healthZpartners.customer.CustomerProfileScreenActivity;
-import com.triton.healthZpartners.fragmentcustomer.myappointments.FragmentPetCompletedAppointment;
-import com.triton.healthZpartners.fragmentcustomer.myappointments.FragmentPetMissedAppointment;
-import com.triton.healthZpartners.fragmentcustomer.myappointments.FragmentPetNewAppointment;
-import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorCompletedAppointment;
-import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorMissedAppointment;
-import com.triton.healthZpartners.fragmentdoctor.myappointments.FragmentDoctorNewAppointment;
-import com.triton.healthZpartners.responsepojo.PetLoverDashboardResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.customer.CustomerProfileScreenActivity;
+import com.triton.healthzpartners.fragmentdoctor.myappointments.FragmentDoctorCompletedAppointment;
+import com.triton.healthzpartners.fragmentdoctor.myappointments.FragmentDoctorMissedAppointment;
+import com.triton.healthzpartners.fragmentdoctor.myappointments.FragmentDoctorNewAppointment;
+import com.triton.healthzpartners.responsepojo.PetLoverDashboardResponse;
 
 import java.util.ArrayList;
 import java.util.List;

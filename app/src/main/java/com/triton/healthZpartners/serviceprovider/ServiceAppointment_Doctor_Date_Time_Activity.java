@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.serviceprovider;
+package com.triton.healthzpartners.serviceprovider;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -22,18 +22,18 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.ServiceMyCalendarAvailableAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.interfaces.OnItemSelectedTime;
-import com.triton.healthZpartners.requestpojo.PetDoctorAvailableTimeRequest;
-import com.triton.healthZpartners.requestpojo.SPUpdateTurnoffRequest;
-import com.triton.healthZpartners.responsepojo.SPAvailableTimeResponse;
-import com.triton.healthZpartners.responsepojo.SuccessResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.ServiceMyCalendarAvailableAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.interfaces.OnItemSelectedTime;
+import com.triton.healthzpartners.requestpojo.PetDoctorAvailableTimeRequest;
+import com.triton.healthzpartners.requestpojo.SPUpdateTurnoffRequest;
+import com.triton.healthzpartners.responsepojo.SPAvailableTimeResponse;
+import com.triton.healthzpartners.responsepojo.SuccessResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.razorpay.Checkout;
 import com.wang.avi.AVLoadingIndicatorView;
 

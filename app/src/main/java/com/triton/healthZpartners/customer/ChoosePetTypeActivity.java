@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -16,14 +16,14 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.PetTypesListAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.interfaces.PetTypeSelectListener;
-import com.triton.healthZpartners.responsepojo.PetTypeListResponse;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.PetTypesListAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.interfaces.PetTypeSelectListener;
+import com.triton.healthzpartners.responsepojo.PetTypeListResponse;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 
 import android.content.Context;
@@ -13,8 +13,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.requestpojo.VendorRegisterFormCreateRequest;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.requestpojo.VendorRegisterFormCreateRequest;
 
 import java.net.MalformedURLException;
 import java.net.URL;

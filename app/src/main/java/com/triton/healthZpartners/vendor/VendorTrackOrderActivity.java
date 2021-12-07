@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.vendor;
+package com.triton.healthzpartners.vendor;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,13 +18,13 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.VendorTrackOrderDetailsRequest;
-import com.triton.healthZpartners.responsepojo.TrackOrderDetailsResponse;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.VendorTrackOrderDetailsRequest;
+import com.triton.healthzpartners.responsepojo.TrackOrderDetailsResponse;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.List;

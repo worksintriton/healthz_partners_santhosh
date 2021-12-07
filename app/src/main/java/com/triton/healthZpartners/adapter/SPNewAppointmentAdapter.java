@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -16,13 +16,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.interfaces.OnAppointmentCancel;
-import com.triton.healthZpartners.interfaces.OnAppointmentComplete;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.interfaces.OnAppointmentCancel;
+import com.triton.healthzpartners.interfaces.OnAppointmentComplete;
 
-import com.triton.healthZpartners.responsepojo.SPAppointmentResponse;
-import com.triton.healthZpartners.serviceprovider.SPAppointmentDetailsActivity;
+import com.triton.healthzpartners.responsepojo.SPAppointmentResponse;
+import com.triton.healthzpartners.serviceprovider.SPAppointmentDetailsActivity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

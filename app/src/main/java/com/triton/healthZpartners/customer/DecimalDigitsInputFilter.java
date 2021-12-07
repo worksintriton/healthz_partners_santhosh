@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import android.text.InputFilter;
 import android.text.Spanned;

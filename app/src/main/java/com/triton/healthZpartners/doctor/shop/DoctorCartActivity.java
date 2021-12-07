@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor.shop;
+package com.triton.healthzpartners.doctor.shop;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -27,27 +27,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.Cart_Adapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.doctor.DoctorDashboardActivity;
-import com.triton.healthZpartners.interfaces.AddandRemoveProductListener;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.Cart_Adapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.doctor.DoctorDashboardActivity;
+import com.triton.healthzpartners.interfaces.AddandRemoveProductListener;
 
 
-import com.triton.healthZpartners.customer.ShippingAddressActivity;
-import com.triton.healthZpartners.requestpojo.CouponCodeCheckRequest;
-import com.triton.healthZpartners.requestpojo.FetchByIdRequest;
-import com.triton.healthZpartners.requestpojo.NotificationCartCountRequest;
-import com.triton.healthZpartners.responsepojo.CartDetailsResponse;
-import com.triton.healthZpartners.responsepojo.CartSuccessResponse;
-import com.triton.healthZpartners.responsepojo.CouponCodeCheckResponse;
-import com.triton.healthZpartners.responsepojo.NotificationCartCountResponse;
-import com.triton.healthZpartners.responsepojo.SuccessResponse;
-import com.triton.healthZpartners.serviceprovider.shop.SPProductDetailsActivity;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.customer.ShippingAddressActivity;
+import com.triton.healthzpartners.requestpojo.CouponCodeCheckRequest;
+import com.triton.healthzpartners.requestpojo.FetchByIdRequest;
+import com.triton.healthzpartners.requestpojo.NotificationCartCountRequest;
+import com.triton.healthzpartners.responsepojo.CartDetailsResponse;
+import com.triton.healthzpartners.responsepojo.CartSuccessResponse;
+import com.triton.healthzpartners.responsepojo.CouponCodeCheckResponse;
+import com.triton.healthzpartners.responsepojo.NotificationCartCountResponse;
+import com.triton.healthzpartners.responsepojo.SuccessResponse;
+import com.triton.healthzpartners.serviceprovider.shop.SPProductDetailsActivity;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 import com.wang.avi.AVLoadingIndicatorView;

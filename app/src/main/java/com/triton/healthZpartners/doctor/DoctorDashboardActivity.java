@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 
 
@@ -19,7 +19,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
@@ -38,27 +37,22 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
+import com.triton.healthzpartners.R;
 
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerCareFragment;
-import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerCommunityFragment;
-import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerHomeFragment;
-import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerServicesFragment;
-import com.triton.healthZpartners.fragmentcustomer.bottommenu.CustomerShopFragment;
-import com.triton.healthZpartners.fragmentdoctor.DoctorCommunityFragment;
-import com.triton.healthZpartners.fragmentdoctor.DoctorShopFragment;
-import com.triton.healthZpartners.fragmentdoctor.FragmentDoctorDashboard;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.fragmentdoctor.DoctorCommunityFragment;
+import com.triton.healthzpartners.fragmentdoctor.DoctorShopFragment;
+import com.triton.healthzpartners.fragmentdoctor.FragmentDoctorDashboard;
 
-import com.triton.healthZpartners.requestpojo.DefaultLocationRequest;
-import com.triton.healthZpartners.requestpojo.ShippingAddressFetchByUserIDRequest;
-import com.triton.healthZpartners.responsepojo.DefaultLocationResponse;
-import com.triton.healthZpartners.responsepojo.ShippingAddressFetchByUserIDResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.requestpojo.DefaultLocationRequest;
+import com.triton.healthzpartners.requestpojo.ShippingAddressFetchByUserIDRequest;
+import com.triton.healthzpartners.responsepojo.DefaultLocationResponse;
+import com.triton.healthzpartners.responsepojo.ShippingAddressFetchByUserIDResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
 
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 
@@ -99,12 +93,12 @@ import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
 
 import com.google.android.gms.maps.model.LatLng;
-import com.triton.healthZpartners.api.API;
+import com.triton.healthzpartners.api.API;
 
 
-import com.triton.healthZpartners.responsepojo.GetAddressResultResponse;
+import com.triton.healthzpartners.responsepojo.GetAddressResultResponse;
 
-import com.triton.healthZpartners.service.GPSTracker;
+import com.triton.healthzpartners.service.GPSTracker;
 
 
 import org.jetbrains.annotations.NotNull;

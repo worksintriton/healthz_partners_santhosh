@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -24,17 +24,17 @@ import android.widget.TextView;
 
 import com.google.android.gms.common.util.IOUtils;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.LoginActivity;
-import com.triton.healthZpartners.adapter.AddPetImageListAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.LoginActivity;
+import com.triton.healthzpartners.adapter.AddPetImageListAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
 
-import com.triton.healthZpartners.requestpojo.PetAddImageRequest;
-import com.triton.healthZpartners.responsepojo.FileUploadResponse;
-import com.triton.healthZpartners.responsepojo.PetAddImageResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.requestpojo.PetAddImageRequest;
+import com.triton.healthzpartners.responsepojo.FileUploadResponse;
+import com.triton.healthzpartners.responsepojo.PetAddImageResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.canhub.cropper.CropImage;
 import com.wang.avi.AVLoadingIndicatorView;
 

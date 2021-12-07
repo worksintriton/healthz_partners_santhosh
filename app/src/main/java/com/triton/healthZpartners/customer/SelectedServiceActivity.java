@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -30,18 +30,18 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.adapter.SelectedServiceProviderAdapter;
-import com.triton.healthZpartners.adapter.ViewPagerPetServiceAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.SPSpecificServiceDetailsRequest;
-import com.triton.healthZpartners.responsepojo.SPSpecificServiceDetailsResponse;
-import com.triton.healthZpartners.serviceprovider.SPFiltersActivity;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.adapter.SelectedServiceProviderAdapter;
+import com.triton.healthzpartners.adapter.ViewPagerPetServiceAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.SPSpecificServiceDetailsRequest;
+import com.triton.healthzpartners.responsepojo.SPSpecificServiceDetailsResponse;
+import com.triton.healthzpartners.serviceprovider.SPFiltersActivity;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.HashMap;

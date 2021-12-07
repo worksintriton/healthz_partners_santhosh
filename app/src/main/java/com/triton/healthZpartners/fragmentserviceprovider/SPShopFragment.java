@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.fragmentserviceprovider;
+package com.triton.healthzpartners.fragmentserviceprovider;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -25,19 +25,19 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.PetShopProductDetailsAdapter;
-import com.triton.healthZpartners.adapter.PetShopTodayDealsAdapter;
-import com.triton.healthZpartners.adapter.ViewPagerShopDashboardAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.ShopDashboardRequest;
-import com.triton.healthZpartners.responsepojo.ShopDashboardResponse;
-import com.triton.healthZpartners.serviceprovider.shop.SPShopTodayDealsSeeMoreActivity;
-import com.triton.healthZpartners.serviceprovider.shop.SearchSPActivity;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.PetShopProductDetailsAdapter;
+import com.triton.healthzpartners.adapter.PetShopTodayDealsAdapter;
+import com.triton.healthzpartners.adapter.ViewPagerShopDashboardAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.ShopDashboardRequest;
+import com.triton.healthzpartners.responsepojo.ShopDashboardResponse;
+import com.triton.healthzpartners.serviceprovider.shop.SPShopTodayDealsSeeMoreActivity;
+import com.triton.healthzpartners.serviceprovider.shop.SearchSPActivity;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.Serializable;

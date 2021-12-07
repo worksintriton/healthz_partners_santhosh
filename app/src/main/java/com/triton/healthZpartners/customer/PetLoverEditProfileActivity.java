@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -19,16 +19,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.EmailOTPRequest;
-import com.triton.healthZpartners.requestpojo.ProfileUpdateRequest;
-import com.triton.healthZpartners.responsepojo.EmailOTPResponse;
-import com.triton.healthZpartners.responsepojo.ProfileUpdateResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.EmailOTPRequest;
+import com.triton.healthzpartners.requestpojo.ProfileUpdateRequest;
+import com.triton.healthzpartners.responsepojo.EmailOTPResponse;
+import com.triton.healthzpartners.responsepojo.ProfileUpdateResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.vendor;
+package com.triton.healthzpartners.vendor;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -23,19 +23,19 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
 
-import com.triton.healthZpartners.fragmentvendor.FragmentVendorDashboard;
-import com.triton.healthZpartners.fragmentvendor.VendorCommunityFragment;
-import com.triton.healthZpartners.requestpojo.ShippingAddressFetchByUserIDRequest;
-import com.triton.healthZpartners.requestpojo.VendorGetsOrderIdRequest;
-import com.triton.healthZpartners.responsepojo.ShippingAddressFetchByUserIDResponse;
-import com.triton.healthZpartners.responsepojo.VendorGetsOrderIDResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.fragmentvendor.FragmentVendorDashboard;
+import com.triton.healthzpartners.fragmentvendor.VendorCommunityFragment;
+import com.triton.healthzpartners.requestpojo.ShippingAddressFetchByUserIDRequest;
+import com.triton.healthzpartners.requestpojo.VendorGetsOrderIdRequest;
+import com.triton.healthzpartners.responsepojo.ShippingAddressFetchByUserIDResponse;
+import com.triton.healthzpartners.responsepojo.VendorGetsOrderIDResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.Serializable;

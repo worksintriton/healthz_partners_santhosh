@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.interfaces;
+package com.triton.healthzpartners.interfaces;
 
 public interface OnItemCheckConfirmStatus {
     void onItemCheckConfirmStatus(int productid);

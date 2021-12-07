@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.fragmentdoctor.walkinappointments;
+package com.triton.healthzpartners.fragmentdoctor.walkinappointments;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -25,22 +25,22 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.DoctorWalkinNewAppointmentAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.doctor.DoctorDashboardActivity;
-import com.triton.healthZpartners.doctor.DoctorWalkinAppointmentsActivity;
-import com.triton.healthZpartners.interfaces.OnAppointmentCancel;
-import com.triton.healthZpartners.requestpojo.AppoinmentCancelledRequest;
-import com.triton.healthZpartners.requestpojo.DoctorNewAppointmentRequest;
-import com.triton.healthZpartners.requestpojo.NotificationSendRequest;
-import com.triton.healthZpartners.responsepojo.AppoinmentCancelledResponse;
-import com.triton.healthZpartners.responsepojo.DoctorAppointmentsResponse;
-import com.triton.healthZpartners.responsepojo.NotificationSendResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.DoctorWalkinNewAppointmentAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.doctor.DoctorDashboardActivity;
+import com.triton.healthzpartners.doctor.DoctorWalkinAppointmentsActivity;
+import com.triton.healthzpartners.interfaces.OnAppointmentCancel;
+import com.triton.healthzpartners.requestpojo.AppoinmentCancelledRequest;
+import com.triton.healthzpartners.requestpojo.DoctorNewAppointmentRequest;
+import com.triton.healthzpartners.requestpojo.NotificationSendRequest;
+import com.triton.healthzpartners.responsepojo.AppoinmentCancelledResponse;
+import com.triton.healthzpartners.responsepojo.DoctorAppointmentsResponse;
+import com.triton.healthzpartners.responsepojo.NotificationSendResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.text.SimpleDateFormat;

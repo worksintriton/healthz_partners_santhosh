@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.utils;
+package com.triton.healthzpartners.utils;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.triton.healthZpartners.R;
+import com.triton.healthzpartners.R;
 
 
 public class ConnectionDetector {

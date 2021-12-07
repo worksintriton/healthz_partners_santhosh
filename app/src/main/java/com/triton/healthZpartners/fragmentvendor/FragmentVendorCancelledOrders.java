@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.fragmentvendor;
+package com.triton.healthzpartners.fragmentvendor;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -25,21 +25,21 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.VendorCancelledOrdersAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.interfaces.OnAcceptsReturnOrder;
-import com.triton.healthZpartners.requestpojo.VendorAcceptReturnOrderRequest;
-import com.triton.healthZpartners.requestpojo.VendorGetsOrderIdRequest;
-import com.triton.healthZpartners.requestpojo.VendorNewOrderRequest;
-import com.triton.healthZpartners.responsepojo.VendorAcceptsReturnOrderResponse;
-import com.triton.healthZpartners.responsepojo.VendorGetsOrderIDResponse;
-import com.triton.healthZpartners.responsepojo.VendorNewOrderResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
-import com.triton.healthZpartners.vendor.VendorDashboardActivity;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.VendorCancelledOrdersAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.interfaces.OnAcceptsReturnOrder;
+import com.triton.healthzpartners.requestpojo.VendorAcceptReturnOrderRequest;
+import com.triton.healthzpartners.requestpojo.VendorGetsOrderIdRequest;
+import com.triton.healthzpartners.requestpojo.VendorNewOrderRequest;
+import com.triton.healthzpartners.responsepojo.VendorAcceptsReturnOrderResponse;
+import com.triton.healthzpartners.responsepojo.VendorGetsOrderIDResponse;
+import com.triton.healthzpartners.responsepojo.VendorNewOrderResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
+import com.triton.healthzpartners.vendor.VendorDashboardActivity;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.text.SimpleDateFormat;

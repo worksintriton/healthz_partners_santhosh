@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -20,11 +20,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.customer.DoctorClinicDetailsActivity;
-import com.triton.healthZpartners.customer.PetAppointment_Doctor_Date_Time_Activity;
-import com.triton.healthZpartners.responsepojo.DoctorSearchResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.customer.DoctorClinicDetailsActivity;
+import com.triton.healthzpartners.customer.PetAppointment_Doctor_Date_Time_Activity;
+import com.triton.healthzpartners.responsepojo.DoctorSearchResponse;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,35 +13,43 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.fragmentvendor.FragmentVendorDashboard;
-import com.triton.healthZpartners.interfaces.FamilyMembersDeleteListener;
-import com.triton.healthZpartners.interfaces.GotoAddFamilyMembersOldActivityListener;
-import com.triton.healthZpartners.responsepojo.FamilyMemberListResponse;
-import com.triton.healthZpartners.responsepojo.FetchProductByUserIDResponse;
-import com.triton.healthZpartners.vendor.VendorAddProductsActivity;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
 
+import com.triton.healthzpartners.interfaces.ProductDeleteListener;
+import com.triton.healthzpartners.responsepojo.ManageProductsListResponse;
+import com.triton.healthzpartners.vendor.EditManageProdcutsActivity;
+import com.triton.healthzpartners.vendor.VendorAddProductsActivity;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class VendorProductListAdapter extends  RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private final List<FetchProductByUserIDResponse.DataBean> dataBeanList;
+    String TAG = "VendorProductListAdapter";
 
     private final Context context;
 
-    FetchProductByUserIDResponse.DataBean currentItem;
+    ManageProductsListResponse.DataBean currentItem;
+    private ProductDeleteListener productDeleteListener;
 
-    private List<FetchProductByUserIDResponse.DataBean.ProductsImageBean> picBeanList;
-    public VendorProductListAdapter(Context context, List<FetchProductByUserIDResponse.DataBean> dataBeanList) {
-        this.dataBeanList = dataBeanList;
+
+    List<ManageProductsListResponse.DataBean> productList;
+    private List<ManageProductsListResponse.DataBean.ProductImgBean> picBeanList;
+    private ArrayList<ManageProductsListResponse.DataBean.ProductImgBean> productImageList;
+    private ArrayList<String> additionalDetailList;
+
+
+    public VendorProductListAdapter(Context context,  List<ManageProductsListResponse.DataBean> productList,ProductDeleteListener productDeleteListener) {
         this.context = context;
+        this.productList = productList;
+        this.productDeleteListener = productDeleteListener;
+
 
     }
 
@@ -62,18 +70,18 @@ public class VendorProductListAdapter extends  RecyclerView.Adapter<RecyclerView
     @SuppressLint({"SetTextI18n", "LogNotTimber"})
     private void initLayoutOne(ViewHolderOne holder, final int position) {
 
-        currentItem = dataBeanList.get(position);
+        currentItem = productList.get(position);
 
-        if (dataBeanList.get(position).getProduct_name() != null) {
-            holder.txt_products_title.setText(dataBeanList.get(position).getProduct_name());
+        if (productList.get(position).getProduct_name() != null) {
+            holder.txt_products_title.setText(productList.get(position).getProduct_name());
         }
         else {
 
             holder.txt_products_title.setVisibility(View.GONE);
         }
 
-        if (dataBeanList.get(position).getProduct_price() != 0) {
-            holder.txt_products_price.setText("\u20B9 "+dataBeanList.get(position).getProduct_price());
+        if (productList.get(position).getCost() != 0) {
+            holder.txt_products_price.setText("\u20B9 "+productList.get(position).getCost());
         }
         else {
 
@@ -81,22 +89,23 @@ public class VendorProductListAdapter extends  RecyclerView.Adapter<RecyclerView
         }
 
 
-        if (dataBeanList.get(position).getPet_threshold() != null) {
-            holder.txt_products_price.setText("Quantity "+dataBeanList.get(position).getPet_threshold());
+        Log.w(TAG,"getPet_threshold : "+productList.get(position).getThreshould());
+        if (productList.get(position).getThreshould() != null) {
+            holder.txt_products_quantity.setText("Quantity -  "+productList.get(position).getThreshould());
         }
         else {
 
-            holder.txt_products_price.setText("Quantity : 0");
+            holder.txt_products_quantity.setText("Quantity : 0");
         }
 
 
 
-        if (dataBeanList != null && dataBeanList.size() > 0) {
-            String TAG = "ManagePetListAdapter";
-            Log.w(TAG,"dataBeanList : "+new Gson().toJson(dataBeanList));
+        if (productList.size() > 0) {
+
+            Log.w(TAG,"dataBeanList : "+new Gson().toJson(productList));
 
 
-            picBeanList =   dataBeanList.get(position).getProducts_image();
+            picBeanList =   productList.get(position).getProduct_img();
 
             String petImagePath = null;
 
@@ -115,11 +124,12 @@ public class VendorProductListAdapter extends  RecyclerView.Adapter<RecyclerView
 
 
 
+
             Log.w(TAG,"petImagePath : "+petImagePath);
 
-            if (petImagePath != null && !petImagePath.isEmpty()) {
+            if (productList.get(position).getThumbnail_image() != null && !productList.get(position).getThumbnail_image().isEmpty()) {
                 Glide.with(context)
-                        .load(petImagePath)
+                        .load(productList.get(position).getThumbnail_image())
                         .into(holder.img_pet_imge);
             }else {
                 Glide.with(context)
@@ -137,50 +147,37 @@ public class VendorProductListAdapter extends  RecyclerView.Adapter<RecyclerView
             context.startActivity(i);
         });
 
+        holder.ll_delete.setOnClickListener(v -> {
+            productDeleteListener.productDeleteListener(productList.get(position).get_id());
+
+        });
+
+        holder.ll_edit.setOnClickListener(v -> {
+           productImageList= productList.get(position).getProduct_img();
+           additionalDetailList= productList.get(position).getAddition_detail();
+            Intent i = new Intent(context, EditManageProdcutsActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.putExtra("productid",productList.get(position).get_id());
+            i.putExtra("producttitle",productList.get(position).getProduct_name());
+            i.putExtra("productprice",productList.get(position).getCost());
+            i.putExtra("productthreshold",productList.get(position).getThreshould());
+            i.putExtra("productdesc",productList.get(position).getProduct_discription());
+            i.putExtra("productImageList",productImageList);
+            i.putExtra("productcategoryname",productList.get(position).getCat_id().getProduct_cate());
+            i.putExtra("condition",productList.get(position).getCondition());
+            i.putExtra("pricetype",productList.get(position).getPrice_type());
+            i.putExtra("additionalDetailList",additionalDetailList);
+            context.startActivity(i);
+
+        });
+
 
         //closing the setOnClickListener method
 
-        if(position == dataBeanList.size()-1){
+        if(position == productList.size()-1){
             holder.ll_main_root.setVisibility(View.VISIBLE);
         }
 
-       /* holder.cv_root.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent i = new Intent(context, PetloverPetDetailsActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                i.putExtra("id",petListResponseList.get(position).get_id());
-                i.putExtra("userid",petListResponseList.get(position).getUser_id());
-                i.putExtra("petimage",petListResponseList.get(position).getPet_img().get(0).getPet_img());
-                i.putExtra("petname",petListResponseList.get(position).getPet_name());
-                i.putExtra("pettype",petListResponseList.get(position).getPet_type());
-                i.putExtra("petbreed",petListResponseList.get(position).getPet_breed());
-                i.putExtra("petgender",petListResponseList.get(position).getPet_gender());
-                i.putExtra("petcolor",petListResponseList.get(position).getPet_color());
-                i.putExtra("petweight",petListResponseList.get(position).getPet_weight());
-                i.putExtra("petage",petListResponseList.get(position).getPet_age());
-                i.putExtra("petdob",petListResponseList.get(position).getPet_dob());
-                i.putExtra("vaccinatedstatus",petListResponseList.get(position).isVaccinated());
-                i.putExtra("vaccinateddate",petListResponseList.get(position).getLast_vaccination_date());
-                i.putExtra("defaultstatus",petListResponseList.get(position).isDefault_status());
-                i.putExtra("pet_spayed",petListResponseList.get(position).isPet_spayed());
-                i.putExtra("pet_purebred",petListResponseList.get(position).isPet_purebred());
-                i.putExtra("pet_frnd_with_dog",petListResponseList.get(position).isPet_frnd_with_dog());
-                i.putExtra("pet_frnd_with_cat",petListResponseList.get(position).isPet_frnd_with_cat());
-                i.putExtra("pet_microchipped",petListResponseList.get(position).isPet_microchipped());
-                i.putExtra("pet_tick_free",petListResponseList.get(position).isPet_tick_free());
-                i.putExtra("pet_private_part",petListResponseList.get(position).isPet_private_part());
-                i.putExtra("petbio",petListResponseList.get(position).getPetbio());
-
-                Bundle args = new Bundle();
-                //int list = petListResponseList.get(position).getPet_img().size();
-                args.putSerializable("PETLIST", (Serializable) petListResponseList.get(position).getPet_img());
-                i.putExtra("petimage",args);
-
-                context.startActivity(i);
-
-            }
-        });*/
     }
 
 
@@ -193,7 +190,7 @@ public class VendorProductListAdapter extends  RecyclerView.Adapter<RecyclerView
 
     @Override
     public int getItemCount() {
-        return dataBeanList.size();
+        return productList.size();
     }
 
 
@@ -206,6 +203,7 @@ public class VendorProductListAdapter extends  RecyclerView.Adapter<RecyclerView
         public TextView txt_deal_status,txt_products_price,txt_products_quantity,txt_products_title;
         public ImageView img_pet_imge,img_settings;
         public RelativeLayout ll_main_root;
+        public LinearLayout ll_edit,ll_delete;
 
 
         public ViewHolderOne(View itemView) {
@@ -217,6 +215,10 @@ public class VendorProductListAdapter extends  RecyclerView.Adapter<RecyclerView
             txt_deal_status = itemView.findViewById(R.id.txt_deal_status);
             ll_main_root = itemView.findViewById(R.id.ll_main_root);
             ll_main_root.setVisibility(View.GONE);
+            ll_edit = itemView.findViewById(R.id.ll_edit);
+            ll_delete = itemView.findViewById(R.id.ll_delete);
+
+
 
 
         }

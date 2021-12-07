@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -40,19 +40,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.AddFamilyImageListAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.appUtils.FileUtil;
-import com.triton.healthZpartners.requestpojo.FamilyMemberCreateRequest;
-import com.triton.healthZpartners.responsepojo.FamilyMemberCreateResponse;
-import com.triton.healthZpartners.responsepojo.FileUploadResponse;
-import com.triton.healthZpartners.responsepojo.GetFamilyMemberResponse;
-import com.triton.healthZpartners.responsepojo.PetListResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.AddFamilyImageListAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.appUtils.FileUtil;
+import com.triton.healthzpartners.requestpojo.FamilyMemberCreateRequest;
+import com.triton.healthzpartners.responsepojo.FamilyMemberCreateResponse;
+import com.triton.healthzpartners.responsepojo.FileUploadResponse;
+import com.triton.healthzpartners.responsepojo.GetFamilyMemberResponse;
+import com.triton.healthzpartners.responsepojo.PetListResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.File;

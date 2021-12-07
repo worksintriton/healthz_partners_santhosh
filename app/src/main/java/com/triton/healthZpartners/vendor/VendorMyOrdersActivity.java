@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.vendor;
+package com.triton.healthzpartners.vendor;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -32,12 +32,12 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;import com.triton.healthZpartners.fragmentvendor.myorders.FragementNewOrders;
-import com.triton.healthZpartners.fragmentvendor.myorders.FragmentCancelledOrders;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;import com.triton.healthzpartners.fragmentvendor.myorders.FragementNewOrders;
+import com.triton.healthzpartners.fragmentvendor.myorders.FragmentCancelledOrders;
 
-import com.triton.healthZpartners.fragmentvendor.myorders.FragmentCompletedOrders;
-import com.triton.healthZpartners.responsepojo.PetLoverDashboardResponse;
+import com.triton.healthzpartners.fragmentvendor.myorders.FragmentCompletedOrders;
+import com.triton.healthzpartners.responsepojo.PetLoverDashboardResponse;
 
 import java.util.ArrayList;
 import java.util.List;

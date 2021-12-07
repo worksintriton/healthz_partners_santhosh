@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.interfaces;
+package com.triton.healthzpartners.interfaces;
 
 public interface AddMoreSpecialzationRemoveListener {
     void addMoreSpecialzationRemoveListener(int position, String specValue);

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.fragmentserviceprovider;
+package com.triton.healthzpartners.fragmentserviceprovider;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -27,30 +27,27 @@ import androidx.viewpager.widget.ViewPager;
 import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
 
 
-import com.triton.healthZpartners.doctor.DoctorEditProfileActivity;
-import com.triton.healthZpartners.doctor.DoctorMyappointmentsActivity;
-import com.triton.healthZpartners.doctor.DoctorProfileScreenActivity;
-import com.triton.healthZpartners.fragmentserviceprovider.myappointments.FragmentSPCompletedAppointment;
-import com.triton.healthZpartners.fragmentserviceprovider.myappointments.FragmentSPMissedAppointment;
-import com.triton.healthZpartners.fragmentserviceprovider.myappointments.FragmentSPNewAppointment;
-import com.triton.healthZpartners.requestpojo.SPCheckStatusRequest;
-import com.triton.healthZpartners.requestpojo.SPDetailsByUserIdRequest;
-import com.triton.healthZpartners.responsepojo.SPCheckStatusResponse;
-import com.triton.healthZpartners.responsepojo.ServiceProviderRegisterFormCreateResponse;
-import com.triton.healthZpartners.serviceprovider.SPEditProfileActivity;
-import com.triton.healthZpartners.serviceprovider.SPMyCalendarNewUserActivity;
-import com.triton.healthZpartners.serviceprovider.SPMyappointmentsActivity;
-import com.triton.healthZpartners.serviceprovider.SPProfileScreenActivity;
-import com.triton.healthZpartners.serviceprovider.ServiceProviderDashboardActivity;
-import com.triton.healthZpartners.serviceprovider.ServiceProviderRegisterFormActivity;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.fragmentserviceprovider.myappointments.FragmentSPCompletedAppointment;
+import com.triton.healthzpartners.fragmentserviceprovider.myappointments.FragmentSPMissedAppointment;
+import com.triton.healthzpartners.fragmentserviceprovider.myappointments.FragmentSPNewAppointment;
+import com.triton.healthzpartners.requestpojo.SPCheckStatusRequest;
+import com.triton.healthzpartners.requestpojo.SPDetailsByUserIdRequest;
+import com.triton.healthzpartners.responsepojo.SPCheckStatusResponse;
+import com.triton.healthzpartners.responsepojo.ServiceProviderRegisterFormCreateResponse;
+import com.triton.healthzpartners.serviceprovider.SPEditProfileActivity;
+import com.triton.healthzpartners.serviceprovider.SPMyCalendarNewUserActivity;
+import com.triton.healthzpartners.serviceprovider.SPMyappointmentsActivity;
+import com.triton.healthzpartners.serviceprovider.SPProfileScreenActivity;
+import com.triton.healthzpartners.serviceprovider.ServiceProviderDashboardActivity;
+import com.triton.healthzpartners.serviceprovider.ServiceProviderRegisterFormActivity;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

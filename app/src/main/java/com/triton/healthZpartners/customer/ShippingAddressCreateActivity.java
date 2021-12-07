@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,16 +17,16 @@ import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.appUtils.NumericKeyBoardTransformationMethod;
-import com.triton.healthZpartners.requestpojo.ShippingAddressCreateRequest;
-import com.triton.healthZpartners.responsepojo.CartDetailsResponse;
-import com.triton.healthZpartners.responsepojo.ShippingAddressCreateResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.appUtils.NumericKeyBoardTransformationMethod;
+import com.triton.healthzpartners.requestpojo.ShippingAddressCreateRequest;
+import com.triton.healthzpartners.responsepojo.CartDetailsResponse;
+import com.triton.healthzpartners.responsepojo.ShippingAddressCreateResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.Serializable;

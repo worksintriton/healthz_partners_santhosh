@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -18,16 +18,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.interfaces.OnAppointmentCancel;
-import com.triton.healthZpartners.customer.PetAppointmentDetailsActivity;
-import com.triton.healthZpartners.customer.VideoCallPetLoverActivity;
-import com.triton.healthZpartners.requestpojo.PetNewAppointmentDetailsRequest;
-import com.triton.healthZpartners.responsepojo.PetAppointmentResponse;
-import com.triton.healthZpartners.responsepojo.PetNewAppointmentDetailsResponse;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.interfaces.OnAppointmentCancel;
+import com.triton.healthzpartners.customer.PetAppointmentDetailsActivity;
+import com.triton.healthzpartners.customer.VideoCallPetLoverActivity;
+import com.triton.healthzpartners.requestpojo.PetNewAppointmentDetailsRequest;
+import com.triton.healthzpartners.responsepojo.PetAppointmentResponse;
+import com.triton.healthzpartners.responsepojo.PetNewAppointmentDetailsResponse;
+import com.triton.healthzpartners.utils.RestUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

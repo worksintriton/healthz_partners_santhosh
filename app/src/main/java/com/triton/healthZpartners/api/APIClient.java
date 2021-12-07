@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.api;
+package com.triton.healthzpartners.api;
 
 import java.util.concurrent.TimeUnit;
 

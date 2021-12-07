@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,14 +18,14 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabLayout;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.adapter.ViewPagerPetloverDetailsAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.responsepojo.BreedTypeResponse;
-import com.triton.healthZpartners.responsepojo.PetListResponse;
-import com.triton.healthZpartners.responsepojo.PetTypeListResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.adapter.ViewPagerPetloverDetailsAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.responsepojo.BreedTypeResponse;
+import com.triton.healthzpartners.responsepojo.PetListResponse;
+import com.triton.healthzpartners.responsepojo.PetTypeListResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;

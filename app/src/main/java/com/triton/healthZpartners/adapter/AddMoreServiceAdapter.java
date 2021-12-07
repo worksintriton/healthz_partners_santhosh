@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 
 import android.content.Context;
@@ -13,9 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.interfaces.AddMoreServiceRemoveListener;
-import com.triton.healthZpartners.requestpojo.ServiceProviderRegisterFormCreateRequest;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.interfaces.AddMoreServiceRemoveListener;
+import com.triton.healthzpartners.requestpojo.ServiceProviderRegisterFormCreateRequest;
 
 import java.util.List;
 

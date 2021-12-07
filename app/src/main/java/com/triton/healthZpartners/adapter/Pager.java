@@ -1,13 +1,13 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.triton.healthZpartners.fragmentvendor.myorders.FragementNewOrders;
-import com.triton.healthZpartners.fragmentvendor.myorders.FragmentCancelledOrders;
-import com.triton.healthZpartners.fragmentvendor.myorders.FragmentCompletedOrders;
+import com.triton.healthzpartners.fragmentvendor.myorders.FragementNewOrders;
+import com.triton.healthzpartners.fragmentvendor.myorders.FragmentCancelledOrders;
+import com.triton.healthzpartners.fragmentvendor.myorders.FragmentCompletedOrders;
 
 import org.jetbrains.annotations.NotNull;
 

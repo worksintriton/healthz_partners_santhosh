@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.responsepojo.PetLoverDashboardResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.responsepojo.PetLoverDashboardResponse;
 
 import java.util.List;
 

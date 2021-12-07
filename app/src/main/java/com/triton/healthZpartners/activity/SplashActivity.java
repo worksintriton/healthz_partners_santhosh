@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.activity;
+package com.triton.healthzpartners.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,19 +9,19 @@ import android.os.Handler;
 import android.util.Log;
 
 
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.doctor.DoctorDashboardActivity;
-import com.triton.healthZpartners.doctor.DoctorMyOrdrersActivity;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.doctor.DoctorDashboardActivity;
+import com.triton.healthzpartners.doctor.DoctorMyOrdrersActivity;
 
-import com.triton.healthZpartners.doctor.DoctorWalkinAppointmentsActivity;
-import com.triton.healthZpartners.customer.CustomerDashboardActivity;
-import com.triton.healthZpartners.customer.PetMyOrdrersNewActivity;
-import com.triton.healthZpartners.customer.PetMyappointmentsActivity;
-import com.triton.healthZpartners.customer.PetWalkinappointmentsActivity;
-import com.triton.healthZpartners.serviceprovider.ServiceProviderDashboardActivity;
-import com.triton.healthZpartners.serviceprovider.shop.SPMyOrdrersActivity;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.vendor.VendorDashboardActivity;
+import com.triton.healthzpartners.doctor.DoctorWalkinAppointmentsActivity;
+import com.triton.healthzpartners.customer.CustomerDashboardActivity;
+import com.triton.healthzpartners.customer.PetMyOrdrersNewActivity;
+import com.triton.healthzpartners.customer.PetMyappointmentsActivity;
+import com.triton.healthzpartners.customer.PetWalkinappointmentsActivity;
+import com.triton.healthzpartners.serviceprovider.ServiceProviderDashboardActivity;
+import com.triton.healthzpartners.serviceprovider.shop.SPMyOrdrersActivity;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.vendor.VendorDashboardActivity;
 
 import java.util.HashMap;
 

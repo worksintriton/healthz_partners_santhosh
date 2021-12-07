@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.responsepojo;
+package com.triton.healthzpartners.responsepojo;
 
 public class VendorOrderUpdateResponse {
 

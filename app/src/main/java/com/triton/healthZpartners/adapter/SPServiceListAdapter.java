@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 
@@ -17,10 +17,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.interfaces.SPServiceCheckedListener;
-import com.triton.healthZpartners.requestpojo.ServiceProviderRegisterFormCreateRequest;
-import com.triton.healthZpartners.responsepojo.SPServiceListResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.interfaces.SPServiceCheckedListener;
+import com.triton.healthzpartners.requestpojo.ServiceProviderRegisterFormCreateRequest;
+import com.triton.healthzpartners.responsepojo.SPServiceListResponse;
 
 import java.util.ArrayList;
 import java.util.List;

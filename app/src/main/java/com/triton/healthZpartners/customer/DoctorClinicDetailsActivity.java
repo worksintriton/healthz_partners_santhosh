@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 
 import android.annotation.SuppressLint;
@@ -34,20 +34,20 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.DoctorClinicPetsHandledListAdapter;
-import com.triton.healthZpartners.adapter.DoctorClinicSpecTypesListAdapter;
-import com.triton.healthZpartners.adapter.ViewPagerClinicDetailsAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.DoctorDetailsRequest;
-import com.triton.healthZpartners.requestpojo.DoctorFavCreateRequest;
-import com.triton.healthZpartners.responsepojo.DoctorDetailsResponse;
-import com.triton.healthZpartners.responsepojo.SuccessResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.GridSpacingItemDecoration;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.DoctorClinicPetsHandledListAdapter;
+import com.triton.healthzpartners.adapter.DoctorClinicSpecTypesListAdapter;
+import com.triton.healthzpartners.adapter.ViewPagerClinicDetailsAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.DoctorDetailsRequest;
+import com.triton.healthzpartners.requestpojo.DoctorFavCreateRequest;
+import com.triton.healthzpartners.responsepojo.DoctorDetailsResponse;
+import com.triton.healthzpartners.responsepojo.SuccessResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.GridSpacingItemDecoration;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.HashMap;

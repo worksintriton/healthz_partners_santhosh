@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.sessionmanager;
+package com.triton.healthzpartners.sessionmanager;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

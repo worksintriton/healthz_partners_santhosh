@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -15,11 +15,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.interfaces.OnItemClickSpecialization;
-import com.triton.healthZpartners.responsepojo.DoctorMyCalendarAvlDaysResponse;
-import com.triton.healthZpartners.serviceprovider.SPMyCalendarActivity;
-import com.triton.healthZpartners.serviceprovider.SPMyCalendarTimeActivity;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.interfaces.OnItemClickSpecialization;
+import com.triton.healthzpartners.responsepojo.DoctorMyCalendarAvlDaysResponse;
+import com.triton.healthzpartners.serviceprovider.SPMyCalendarActivity;
+import com.triton.healthzpartners.serviceprovider.SPMyCalendarTimeActivity;
 
 import java.util.ArrayList;
 import java.util.List;

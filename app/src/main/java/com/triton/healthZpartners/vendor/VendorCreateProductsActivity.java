@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.vendor;
+package com.triton.healthzpartners.vendor;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -9,7 +9,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
@@ -18,7 +17,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,37 +24,30 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.canhub.cropper.CropImage;
 import com.google.android.gms.common.util.IOUtils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.adapter.AddExpAdapter;
-import com.triton.healthZpartners.adapter.AddProdDetailsListAdapter;
-import com.triton.healthZpartners.adapter.ImageListAdapter;
-import com.triton.healthZpartners.adapter.PetCurrentImageListAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.appUtils.NumericKeyBoardTransformationMethod;
-import com.triton.healthZpartners.customer.BookAppointmentActivity;
-import com.triton.healthZpartners.requestpojo.DocBusInfoUploadRequest;
-import com.triton.healthZpartners.requestpojo.PetAppointmentCreateRequest;
-import com.triton.healthZpartners.requestpojo.ProductVendorCreateRequest;
-import com.triton.healthZpartners.responsepojo.CatgoryGetListResponse;
-import com.triton.healthZpartners.responsepojo.FetctProductByCatDetailsResponse;
-import com.triton.healthZpartners.responsepojo.FileUploadResponse;
-import com.triton.healthZpartners.responsepojo.SuccessResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.adapter.AddProdDetailsListAdapter;
+import com.triton.healthzpartners.adapter.ImageListAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.appUtils.NumericKeyBoardTransformationMethod;
+import com.triton.healthzpartners.requestpojo.ProductVendorCreateRequest;
+import com.triton.healthzpartners.responsepojo.CatgoryGetListResponse;
+import com.triton.healthzpartners.responsepojo.FetctProductByCatDetailsResponse;
+import com.triton.healthzpartners.responsepojo.FileUploadResponse;
+import com.triton.healthzpartners.responsepojo.SuccessResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.File;
@@ -129,8 +120,8 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
     EditText edt_product_title;
 
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.edt_product_categprod)
-    EditText edt_product_categprod;
+    @BindView(R.id.txt_product_categprod)
+    TextView txt_product_categprod;
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.edt_product_price)
@@ -228,11 +219,11 @@ public class VendorCreateProductsActivity extends AppCompatActivity implements B
 
 
             if(producttitle != null){
-                edt_product_categprod.setText(producttitle);
+                txt_product_categprod.setText(producttitle);
             }
-            if(productdesc != null){
+           /* if(productdesc != null){
                 edt_product_descriptions.setText(productdesc);
-            }
+            }*/
 
 
             btn_update.setOnClickListener(new View.OnClickListener() {

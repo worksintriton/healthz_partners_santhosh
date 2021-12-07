@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 
 import android.content.Context;
@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.requestpojo.ServiceProviderRegisterFormCreateRequest;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.requestpojo.ServiceProviderRegisterFormCreateRequest;
 
 import java.util.List;
 

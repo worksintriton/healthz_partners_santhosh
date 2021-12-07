@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -16,11 +16,11 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.fragmentdoctor.myorders.FragmentDoctorCancelledOrders;
-import com.triton.healthZpartners.fragmentdoctor.myorders.FragmentDoctorCompletedOrders;
-import com.triton.healthZpartners.fragmentdoctor.myorders.FragmentDoctorNewOrders;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.fragmentdoctor.myorders.FragmentDoctorCancelledOrders;
+import com.triton.healthzpartners.fragmentdoctor.myorders.FragmentDoctorCompletedOrders;
+import com.triton.healthzpartners.fragmentdoctor.myorders.FragmentDoctorNewOrders;
 
 
 import org.jetbrains.annotations.NotNull;

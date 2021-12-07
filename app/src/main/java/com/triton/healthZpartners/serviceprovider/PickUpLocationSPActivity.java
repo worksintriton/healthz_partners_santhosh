@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.serviceprovider;
+package com.triton.healthzpartners.serviceprovider;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
@@ -43,12 +43,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.api.API;
-import com.triton.healthZpartners.responsepojo.GetAddressResultResponse;
-import com.triton.healthZpartners.service.GPSTracker;
-import com.triton.healthZpartners.activity.location.PlacesSearchActivity;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.api.API;
+import com.triton.healthzpartners.responsepojo.GetAddressResultResponse;
+import com.triton.healthzpartners.service.GPSTracker;
+import com.triton.healthzpartners.activity.location.PlacesSearchActivity;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

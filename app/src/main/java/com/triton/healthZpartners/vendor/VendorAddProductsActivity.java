@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.vendor;
+package com.triton.healthzpartners.vendor;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -12,13 +12,11 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,23 +30,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.adapter.CategoryTypesListAdapter;
-import com.triton.healthZpartners.adapter.PetBreedTypesListAdapter;
-import com.triton.healthZpartners.adapter.VendorAddProductsAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.adapter.CategoryTypesListAdapter;
+import com.triton.healthzpartners.adapter.VendorAddProductsAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
 
-import com.triton.healthZpartners.customer.AddNewPetActivity;
-import com.triton.healthZpartners.interfaces.CategoryTypeSelectListener;
-import com.triton.healthZpartners.requestpojo.FetctProductByCatRequest;
-import com.triton.healthZpartners.responsepojo.BreedTypeResponse;
-import com.triton.healthZpartners.responsepojo.CatgoryGetListResponse;
-import com.triton.healthZpartners.responsepojo.FetctProductByCatDetailsResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.interfaces.CategoryTypeSelectListener;
+import com.triton.healthzpartners.requestpojo.FetctProductByCatRequest;
+import com.triton.healthzpartners.responsepojo.CatgoryGetListResponse;
+import com.triton.healthzpartners.responsepojo.FetctProductByCatDetailsResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;

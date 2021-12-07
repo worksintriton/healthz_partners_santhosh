@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.serviceprovider.shop;
+package com.triton.healthzpartners.serviceprovider.shop;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,15 +19,15 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.ProductsSearchAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.ProductSearchRequest;
-import com.triton.healthZpartners.responsepojo.ProductSearchResponse;
-import com.triton.healthZpartners.serviceprovider.ServiceProviderDashboardActivity;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.ProductsSearchAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.ProductSearchRequest;
+import com.triton.healthzpartners.responsepojo.ProductSearchResponse;
+import com.triton.healthzpartners.serviceprovider.ServiceProviderDashboardActivity;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners;
+package com.triton.healthzpartners;
 
 import android.content.Context;
 

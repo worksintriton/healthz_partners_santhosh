@@ -1,11 +1,11 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.triton.healthZpartners.R;
+import com.triton.healthzpartners.R;
 
 public class DoctorNewAppointmentDetailsActivity extends AppCompatActivity implements View.OnClickListener {
 //

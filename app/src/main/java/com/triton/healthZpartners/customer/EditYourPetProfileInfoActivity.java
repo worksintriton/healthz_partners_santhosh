@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -27,19 +27,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.BreedTypeRequest;
-import com.triton.healthZpartners.requestpojo.PetEditRequest;
-import com.triton.healthZpartners.responsepojo.BreedTypeResponse;
-import com.triton.healthZpartners.responsepojo.DropDownListResponse;
-import com.triton.healthZpartners.responsepojo.PetAddImageResponse;
-import com.triton.healthZpartners.responsepojo.PetListResponse;
-import com.triton.healthZpartners.responsepojo.PetTypeListResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.BreedTypeRequest;
+import com.triton.healthzpartners.requestpojo.PetEditRequest;
+import com.triton.healthzpartners.responsepojo.BreedTypeResponse;
+import com.triton.healthzpartners.responsepojo.DropDownListResponse;
+import com.triton.healthzpartners.responsepojo.PetAddImageResponse;
+import com.triton.healthzpartners.responsepojo.PetListResponse;
+import com.triton.healthzpartners.responsepojo.PetTypeListResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.Serializable;

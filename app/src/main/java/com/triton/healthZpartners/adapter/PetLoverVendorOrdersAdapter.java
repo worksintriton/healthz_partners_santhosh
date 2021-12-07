@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,9 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.interfaces.AddandReviewListener;
-import com.triton.healthZpartners.responsepojo.PetLoverVendorOrderListResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.interfaces.AddandReviewListener;
+import com.triton.healthzpartners.responsepojo.PetLoverVendorOrderListResponse;
 
 import java.util.List;
 

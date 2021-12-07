@@ -1,10 +1,9 @@
-package com.triton.healthZpartners.fragmentvendor;
+package com.triton.healthzpartners.fragmentvendor;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.ReceiverCallNotAllowedException;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -22,64 +21,54 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
-import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.PetShopCategorySeeMoreAdapter;
-import com.triton.healthZpartners.adapter.VendorProductListAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.doctor.DoctorEditProfileActivity;
-import com.triton.healthZpartners.doctor.DoctorMyappointmentsActivity;
-import com.triton.healthZpartners.doctor.DoctorProfileScreenActivity;
-import com.triton.healthZpartners.fragmentvendor.myorders.FragementNewOrders;
-import com.triton.healthZpartners.fragmentvendor.myorders.FragmentCancelledOrders;
-import com.triton.healthZpartners.fragmentvendor.myorders.FragmentCompletedOrders;
-import com.triton.healthZpartners.requestpojo.FetchProductByUserIDRequest;
-import com.triton.healthZpartners.requestpojo.FetctProductByCatRequest;
-import com.triton.healthZpartners.requestpojo.SPCheckStatusRequest;
-import com.triton.healthZpartners.requestpojo.VendorGetsOrderIdRequest;
-import com.triton.healthZpartners.responsepojo.DoctorDetailsByUserIdResponse;
-import com.triton.healthZpartners.responsepojo.FetchProductByUserIDResponse;
-import com.triton.healthZpartners.responsepojo.FetctProductByCatResponse;
-import com.triton.healthZpartners.responsepojo.SPCheckStatusResponse;
-import com.triton.healthZpartners.responsepojo.VendorGetsOrderIDResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
-import com.triton.healthZpartners.vendor.VendorAddProductsActivity;
-import com.triton.healthZpartners.vendor.VendorDashboardActivity;
-import com.triton.healthZpartners.vendor.VendorEditProfileActivity;
-import com.triton.healthZpartners.vendor.VendorNavigationDrawer;
-import com.triton.healthZpartners.vendor.VendorProfileScreenActivity;
-import com.triton.healthZpartners.vendor.VendorRegisterFormActivity;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.VendorProductListAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.interfaces.ProductDeleteListener;
+import com.triton.healthzpartners.requestpojo.ManageProductsListRequest;
+import com.triton.healthzpartners.requestpojo.ProductVendorEditRequest;
+import com.triton.healthzpartners.requestpojo.SPCheckStatusRequest;
+import com.triton.healthzpartners.requestpojo.VendorGetsOrderIdRequest;
+import com.triton.healthzpartners.responsepojo.ManageProductsListResponse;
+import com.triton.healthzpartners.responsepojo.SPCheckStatusResponse;
+import com.triton.healthzpartners.responsepojo.SuccessResponse;
+import com.triton.healthzpartners.responsepojo.VendorGetsOrderIDResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
+import com.triton.healthzpartners.vendor.VendorAddProductsActivity;
+import com.triton.healthzpartners.vendor.VendorDashboardActivity;
+import com.triton.healthzpartners.vendor.VendorEditProfileActivity;
+import com.triton.healthzpartners.vendor.VendorProfileScreenActivity;
+import com.triton.healthzpartners.vendor.VendorRegisterFormActivity;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class FragmentVendorDashboard extends Fragment  {
+public class FragmentVendorDashboard extends Fragment implements ProductDeleteListener {
 
     private   String TAG = "FragmentVendorDashboard";
 
@@ -88,13 +77,6 @@ public class FragmentVendorDashboard extends Fragment  {
     @BindView(R.id.avi_indicator)
     AVLoadingIndicatorView avi_indicator;
 
-    @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.tablayout)
-    TabLayout tablayout;
-
-//    @SuppressLint("NonConstantResourceId")
-//    @BindView(R.id.viewPager)
-//    ViewPager viewPager;
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.edt_search)
@@ -144,6 +126,10 @@ public class FragmentVendorDashboard extends Fragment  {
     TextView txt_add_product;
 
     @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.txt_lbl_products)
+    TextView txt_lbl_products;
+
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.rl_category)
     RelativeLayout rl_category;
 
@@ -152,7 +138,8 @@ public class FragmentVendorDashboard extends Fragment  {
     private int someIndex = 0;
     private List<VendorGetsOrderIDResponse.DataBean.BussinessGalleryBean> businessgalerydetailsResponseList;
 
-     private List<FetchProductByUserIDResponse.DataBean> productList;
+    private Dialog dialog;
+    private List<ManageProductsListResponse.DataBean> productList;
 
 
     public FragmentVendorDashboard() {
@@ -228,12 +215,12 @@ public class FragmentVendorDashboard extends Fragment  {
                 searchString = s.toString();
                 if(!searchString.isEmpty()){
                     if (new ConnectionDetector(getContext()).isNetworkAvailable(getContext())) {
-                        fetctProductBYuSERidResponseCall();
+                        getlist_from_vendor_id_ResponseCall();
                     }
                 }else{
                     searchString ="";
                     if (new ConnectionDetector(getContext()).isNetworkAvailable(getContext())) {
-                        fetctProductBYuSERidResponseCall();
+                        getlist_from_vendor_id_ResponseCall();
                     }
 
                 }
@@ -247,40 +234,11 @@ public class FragmentVendorDashboard extends Fragment  {
 
     }
 
-    private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager(),3);
-        adapter.addFragment(new FragementNewOrders(), "New");
-        adapter.addFragment(new FragmentCompletedOrders(), "Completed");
-        adapter.addFragment(new FragmentCancelledOrders(), "Cancelled");
-        viewPager.setAdapter(adapter);
-    }
 
 
 
 
-    static class ViewPagerAdapter extends FragmentStatePagerAdapter {
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-        private final List<String> mFragmentTitleList = new ArrayList<>();
-        public ViewPagerAdapter(FragmentManager manager,int number) {
-            super(manager,number);
-        }
-        @Override
-        public @NotNull Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-        public void addFragment(Fragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mFragmentTitleList.get(position);
-        }
-    }
+
 
 
 
@@ -326,7 +284,7 @@ public class FragmentVendorDashboard extends Fragment  {
                                     getVendorOrderIDResponseCall();
 
                                     if (new ConnectionDetector(getContext()).isNetworkAvailable(getContext())) {
-                                        fetctProductBYuSERidResponseCall();
+                                        getlist_from_vendor_id_ResponseCall();
                                     }
 
 
@@ -549,24 +507,24 @@ public class FragmentVendorDashboard extends Fragment  {
 
 
     @SuppressLint("LogNotTimber")
-    public void fetctProductBYuSERidResponseCall(){
+    public void getlist_from_vendor_id_ResponseCall(){
         avi_indicator.setVisibility(View.VISIBLE);
         avi_indicator.smoothToShow();
         //Creating an object of our api interface
         RestApiInterface ApiService = APIClient.getClient().create(RestApiInterface.class);
-        Call<FetchProductByUserIDResponse> call = ApiService.fetchproductbyuseridResponseCall(RestUtils.getContentType(),FetchProductByUserIDRequest());
+        Call<ManageProductsListResponse> call = ApiService.getlist_from_vendor_id_ResponseCall(RestUtils.getContentType(),manageProductsListRequest());
 
         Log.w(TAG,"url  :%s"+ call.request().url().toString());
 
-        call.enqueue(new Callback<FetchProductByUserIDResponse>() {
+        call.enqueue(new Callback<ManageProductsListResponse>() {
             @Override
-            public void onResponse(@NonNull Call<FetchProductByUserIDResponse> call, @NonNull Response<FetchProductByUserIDResponse> response) {
+            public void onResponse(@NonNull Call<ManageProductsListResponse> call, @NonNull Response<ManageProductsListResponse> response) {
                 avi_indicator.smoothToHide();
 
 
                 if (response.body() != null) {
                     if(200 == response.body().getCode()){
-                        Log.w(TAG,"ShopDashboardResponse" + new Gson().toJson(response.body()));
+                        Log.w(TAG,"ManageProductsListResponse" + new Gson().toJson(response.body()));
 
                         if(response.body().getData()!= null && response.body().getData().size()>0){
                             productList = response.body().getData();
@@ -575,14 +533,16 @@ public class FragmentVendorDashboard extends Fragment  {
 
                             txt_add_product.setVisibility(View.GONE);
 
-                            rl_category.setVisibility(View.GONE);
+                            txt_lbl_products.setVisibility(View.VISIBLE);
+                            rl_category.setVisibility(View.VISIBLE);
 
                             setView(productList);
 
                         }
                         else {
 
-                            rl_category.setVisibility(View.VISIBLE);
+                            txt_lbl_products.setVisibility(View.GONE);
+                            rl_category.setVisibility(View.GONE);
 
                             txt_no_records.setVisibility(View.VISIBLE);
 
@@ -605,35 +565,124 @@ public class FragmentVendorDashboard extends Fragment  {
 
 
             @Override
-            public void onFailure(@NonNull Call<FetchProductByUserIDResponse> call, @NonNull  Throwable t) {
+            public void onFailure(@NonNull Call<ManageProductsListResponse> call, @NonNull  Throwable t) {
                 avi_indicator.smoothToHide();
-                Log.w(TAG,"FetchProductByUserIDResponse flr"+t.getMessage());
+                Log.w(TAG,"ManageProductsListResponse flr"+t.getMessage());
             }
         });
 
     }
     @SuppressLint("LogNotTimber")
-    private FetchProductByUserIDRequest FetchProductByUserIDRequest() {
+    private ManageProductsListRequest manageProductsListRequest() {
         /*
-         * cat_id : 5fec14a5ea832e2e73c1fc79
-         * skip_count : 6
+         * vendor_id : 6048589d0b3a487571a1c567
+         * search_string : CAT
          */
-
-        FetchProductByUserIDRequest FetchProductByUserIDRequest = new FetchProductByUserIDRequest();
-        FetchProductByUserIDRequest.setVendor_id(APIClient.VENDOR_ID);
-        FetchProductByUserIDRequest.setSearch_string(searchString);
-
-        Log.w(TAG,"FetchProductByUserIDRequest"+ "--->" + new Gson().toJson(FetchProductByUserIDRequest));
-        return FetchProductByUserIDRequest;
+        ManageProductsListRequest manageProductsListRequest = new ManageProductsListRequest();
+        manageProductsListRequest.setVendor_id(APIClient.VENDOR_ID);
+        manageProductsListRequest.setSearch_string(searchString);
+        Log.w(TAG,"manageProductsListRequest"+ "--->" + new Gson().toJson(manageProductsListRequest));
+        return manageProductsListRequest;
     }
-    private void setView(List<FetchProductByUserIDResponse.DataBean> data) {
+    private void setView(List<ManageProductsListResponse.DataBean> productList) {
 
         rv_productList.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        VendorProductListAdapter vendorProductListAdapter = new VendorProductListAdapter(getContext(), data);
+        VendorProductListAdapter vendorProductListAdapter = new VendorProductListAdapter(getContext(), productList,this);
         rv_productList.setAdapter(vendorProductListAdapter);
 
 
 
+    }
+
+    @Override
+    public void productDeleteListener(String productid) {
+        showStatusAlert(productid);
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void showStatusAlert(String productid) {
+
+        try {
+            dialog = new Dialog(mContext);
+            dialog.setContentView(R.layout.alert_approve_reject_layout);
+            TextView tvheader = dialog.findViewById(R.id.tvInternetNotConnected);
+            tvheader.setText(R.string.deletemsgproduct);
+            Button dialogButtonApprove = dialog.findViewById(R.id.btnApprove);
+            dialogButtonApprove.setText("Yes");
+            Button dialogButtonRejected = dialog.findViewById(R.id.btnReject);
+            dialogButtonRejected.setText("No");
+
+            dialogButtonApprove.setOnClickListener(view -> {
+                dialog.dismiss();
+                vendor_product_edit_ResponseCall(productid);
+
+
+
+            });
+            dialogButtonRejected.setOnClickListener(view -> dialog.dismiss());
+            Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.show();
+
+        } catch (WindowManager.BadTokenException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+    }
+
+
+    @SuppressLint("LogNotTimber")
+    private void vendor_product_edit_ResponseCall(String productid) {
+        avi_indicator.setVisibility(View.VISIBLE);
+        avi_indicator.smoothToShow();
+
+        RestApiInterface apiInterface = APIClient.getClient().create(RestApiInterface.class);
+        Call<SuccessResponse> call = apiInterface.vendor_product_edit_ResponseCall(RestUtils.getContentType(),productVendorEditRequest(productid));
+
+        Log.w(TAG,"url  :%s"+call.request().url().toString());
+
+        call.enqueue(new Callback<SuccessResponse>() {
+            @SuppressLint("LogNotTimber")
+            @Override
+            public void onResponse(@NotNull Call<SuccessResponse> call, @NotNull Response<SuccessResponse> response) {
+                avi_indicator.smoothToHide();
+                Log.w(TAG,"SuccessResponse"+ "--->" + new Gson().toJson(response.body()));
+
+                if (response.body() != null) {
+                    if(response.body().getCode() == 200){
+                        Toasty.success(mContext, "Product Removed Successfully", Toast.LENGTH_SHORT, true).show();
+                        getlist_from_vendor_id_ResponseCall();
+
+                    }
+                }
+
+
+
+            }
+
+            @Override
+            public void onFailure(@NotNull Call<SuccessResponse> call, @NotNull Throwable t) {
+                avi_indicator.smoothToHide();
+
+                Log.w(TAG,"SuccessResponse"+"--->" + t.getMessage());
+            }
+        });
+
+    }
+    @SuppressLint("LogNotTimber")
+    private ProductVendorEditRequest productVendorEditRequest(String productid) {
+
+        /*
+          _id : 5f05d911f3090625a91f40c7
+          delete_status:true
+         */
+        ProductVendorEditRequest productVendorEditRequest = new ProductVendorEditRequest();
+        productVendorEditRequest.set_id(productid);
+        productVendorEditRequest.setDelete_status(true);
+        Log.w(TAG,"productVendorEditRequest"+ "--->" + new Gson().toJson(productVendorEditRequest));
+        return productVendorEditRequest;
     }
 
 }

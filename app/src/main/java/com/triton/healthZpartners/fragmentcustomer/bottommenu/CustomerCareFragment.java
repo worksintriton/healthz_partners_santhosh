@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.fragmentcustomer.bottommenu;
+package com.triton.healthzpartners.fragmentcustomer.bottommenu;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -43,22 +43,22 @@ import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
+import com.triton.healthzpartners.R;
 
-import com.triton.healthZpartners.adapter.PetLoverDoctorFilterAdapter;
-import com.triton.healthZpartners.adapter.PetLoverNearByDoctorAdapter;
+import com.triton.healthzpartners.adapter.PetLoverDoctorFilterAdapter;
+import com.triton.healthzpartners.adapter.PetLoverNearByDoctorAdapter;
 
-import com.triton.healthZpartners.adapter.ViewPagerPetCareAdapter;
-import com.triton.healthZpartners.adapter.ViewPagerPetCareFilterAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.DoctorSearchRequest;
-import com.triton.healthZpartners.requestpojo.FilterDoctorRequest;
-import com.triton.healthZpartners.responsepojo.DoctorSearchResponse;
-import com.triton.healthZpartners.responsepojo.FilterDoctorResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.adapter.ViewPagerPetCareAdapter;
+import com.triton.healthzpartners.adapter.ViewPagerPetCareFilterAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.DoctorSearchRequest;
+import com.triton.healthzpartners.requestpojo.FilterDoctorRequest;
+import com.triton.healthzpartners.responsepojo.DoctorSearchResponse;
+import com.triton.healthzpartners.responsepojo.FilterDoctorResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

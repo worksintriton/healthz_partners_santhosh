@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -24,21 +24,21 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.adapter.PetMyCalendarAvailableAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.interfaces.OnItemSelectedTime;
-import com.triton.healthZpartners.requestpojo.AppointmentCheckRequest;
-import com.triton.healthZpartners.requestpojo.PetDoctorAvailableTimeRequest;
-import com.triton.healthZpartners.requestpojo.RescheduleAppointmentRequest;
-import com.triton.healthZpartners.responsepojo.AppointmentCheckResponse;
-import com.triton.healthZpartners.responsepojo.PetDoctorAvailableTimeResponse;
-import com.triton.healthZpartners.responsepojo.SuccessResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.adapter.PetMyCalendarAvailableAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.interfaces.OnItemSelectedTime;
+import com.triton.healthzpartners.requestpojo.AppointmentCheckRequest;
+import com.triton.healthzpartners.requestpojo.PetDoctorAvailableTimeRequest;
+import com.triton.healthzpartners.requestpojo.RescheduleAppointmentRequest;
+import com.triton.healthzpartners.responsepojo.AppointmentCheckResponse;
+import com.triton.healthzpartners.responsepojo.PetDoctorAvailableTimeResponse;
+import com.triton.healthzpartners.responsepojo.SuccessResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.text.SimpleDateFormat;

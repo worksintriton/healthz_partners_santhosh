@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.fragmentserviceprovider.myappointments;
+package com.triton.healthzpartners.fragmentserviceprovider.myappointments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -20,15 +20,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.SPCompletedAppointmentAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.SPAppointmentRequest;
-import com.triton.healthZpartners.responsepojo.SPAppointmentResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.SPCompletedAppointmentAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.SPAppointmentRequest;
+import com.triton.healthzpartners.responsepojo.SPAppointmentResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.HashMap;

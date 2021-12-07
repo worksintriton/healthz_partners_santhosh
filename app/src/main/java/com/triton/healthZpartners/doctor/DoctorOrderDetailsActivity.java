@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,16 +19,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.adapter.ProductDetailsAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.doctor.shop.DoctorCancelOrderActivity;
-import com.triton.healthZpartners.requestpojo.PetLoverVendorOrderDetailsRequest;
-import com.triton.healthZpartners.responsepojo.PetLoverVendorOrderDetailsResponse;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.adapter.ProductDetailsAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.doctor.shop.DoctorCancelOrderActivity;
+import com.triton.healthzpartners.requestpojo.PetLoverVendorOrderDetailsRequest;
+import com.triton.healthzpartners.responsepojo.PetLoverVendorOrderDetailsResponse;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;

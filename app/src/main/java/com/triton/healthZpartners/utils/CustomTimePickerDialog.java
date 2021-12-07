@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.utils;
+package com.triton.healthzpartners.utils;
 
 import android.app.TimePickerDialog;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.utils;
+package com.triton.healthzpartners.utils;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;

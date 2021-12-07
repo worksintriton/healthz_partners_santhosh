@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.responsepojo;
+package com.triton.healthzpartners.responsepojo;
 
 import java.io.Serializable;
 import java.util.List;

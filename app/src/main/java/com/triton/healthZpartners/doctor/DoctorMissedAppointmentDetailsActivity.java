@@ -1,11 +1,11 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 
-import com.triton.healthZpartners.R;
+import com.triton.healthzpartners.R;
 
 import butterknife.ButterKnife;
 

@@ -1,13 +1,16 @@
-package com.triton.healthZpartners.responsepojo;
+package com.triton.healthzpartners.responsepojo;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FetchProductByUserIDResponse {
 
+
     /**
      * Status : Success
      * Message : Product details list
-     * Data : [{"cat_id":{"_id":"60e6ffbafe7500511a7b419d","img_path":"http://54.212.108.156:3000/api/uploads/1625751478722.png","product_cate":"Pet Accessories","img_index":0,"show_status":true,"date_and_time":"7/8/2021, 7:08:01 PM","delete_status":false,"updatedAt":"2021-07-08T13:38:02.721Z","createdAt":"2021-07-08T13:38:02.721Z","__v":0},"product_id":"61a88aad02651d5e799071a5","products_image":[{"product_img":"http://35.164.43.170:3000/api/uploads/1638435359547.jpg"}],"thumbnail_image":"http://35.164.43.170:3000/api/uploads/1638435359547.jpg","product_name":"","product_desc":"Pet Accessories","product_price":200,"pet_threshold":"66","today_deal":false}]
+     * Data : [{"cat_id":{"_id":"5fec1424ea832e2e73c1fc78","img_path":"http://52.25.163.13:3000/api/uploads/template%20(2).jpg","product_cate":"Hair","img_index":0,"show_status":true,"date_and_time":"Sat Nov 20 2021 14:09:41 GMT+0530 (India Standard Time)","delete_status":true,"updatedAt":"2021-11-20T08:40:56.849Z","createdAt":"2020-12-30T05:46:12.099Z","__v":0},"product_id":"60ae2c0c48ffef65a41bc546","products_image":["http://54.212.108.156:3000/api/uploads/1625750185578.png"],"thumbnail_image":"http://54.212.108.156:3000/api/uploads/1625752843017.png","product_name":"Pedigree Vegetarian Adult","product_desc":"Your pet gets protein from the soybean and vegetable oils while the vitamins from vegetables (including Vitamin E) boosts your pooch's immune system. ","product_price":109,"pet_threshold":"1999","today_deal":true},{"cat_id":{"_id":"5fec1424ea832e2e73c1fc78","img_path":"http://52.25.163.13:3000/api/uploads/template%20(2).jpg","product_cate":"Hair","img_index":0,"show_status":true,"date_and_time":"Sat Nov 20 2021 14:09:41 GMT+0530 (India Standard Time)","delete_status":true,"updatedAt":"2021-11-20T08:40:56.849Z","createdAt":"2020-12-30T05:46:12.099Z","__v":0},"product_id":"60ae2d1f48ffef65a41bc547","products_image":["http://54.212.108.156:3000/api/uploads/1625748449964.png"],"thumbnail_image":"http://54.212.108.156:3000/api/uploads/1625752792943.png","product_name":"Orijen","product_desc":"Feed your dog the wholesome goodness of Orijen\u2019s Clean Protein Formula Plant-Based Dry Dog Food! This recipe is nutritionally complete and formulated ","product_price":99,"pet_threshold":"2000","today_deal":true},{"cat_id":{"_id":"5fec14a5ea832e2e73c1fc79","img_path":"http://52.25.163.13:3000/api/uploads/template%20(3).jpg","product_cate":"Pet Foods - Wet","img_index":0,"show_status":true,"date_and_time":"Thu Jul 08 2021 01:55:56 GMT+0530 (India Standard Time)","delete_status":false,"updatedAt":"2021-07-08T09:39:49.690Z","createdAt":"2020-12-30T05:48:21.363Z","__v":0},"product_id":"60b0c4ae67f25056fe286ca2","products_image":["http://54.212.108.156:3000/api/uploads/1625748318970.png"],"thumbnail_image":"http://54.212.108.156:3000/api/uploads/1625752592166.png","product_name":"Royal Canin Maxi Adult Dog Wet Food","product_desc":"Royal Canin Maxi Adult Dog Gravy Food is formulated to meet the unique nutritional needs of adult dogs of maxi breed aged between 15 months to 8 years like Labrador, Golden Retriever, German Shepherd, Great Dane, English Mastiff, Saint Bernard, etc. Royal Canin Maxi Adult Dog Gravy Food is complete and balanced nutrition for maxi breed adult dogs, who have a long growth period. This gravy food comes with small chunks that are made with human grade chicken and its by-products that make it a diet rich in protein. Royal Canin put the animal first in everything they do. Every decision they make is based on years of study done with veterinary schools, universities, and breeders. The aim is always the same, to provide precise nutritional solutions to meet the need of your pet.","product_price":200,"pet_threshold":"1999","today_deal":false},{"cat_id":{"_id":"5fec1424ea832e2e73c1fc78","img_path":"http://52.25.163.13:3000/api/uploads/template%20(2).jpg","product_cate":"Hair","img_index":0,"show_status":true,"date_and_time":"Sat Nov 20 2021 14:09:41 GMT+0530 (India Standard Time)","delete_status":true,"updatedAt":"2021-11-20T08:40:56.849Z","createdAt":"2020-12-30T05:46:12.099Z","__v":0},"product_id":"61307bbc5896366c8fcc68de","products_image":["http://54.212.108.156:3000/api/uploads/1622643072891.jpg"],"product_name":"Shopiee Food","product_desc":"Sample Food","product_price":450,"pet_threshold":"1998","today_deal":true},{"cat_id":{"_id":"5fec1424ea832e2e73c1fc78","img_path":"http://52.25.163.13:3000/api/uploads/template%20(2).jpg","product_cate":"Hair","img_index":0,"show_status":true,"date_and_time":"Sat Nov 20 2021 14:09:41 GMT+0530 (India Standard Time)","delete_status":true,"updatedAt":"2021-11-20T08:40:56.849Z","createdAt":"2020-12-30T05:46:12.099Z","__v":0},"product_id":"6130cee15896366c8fcc695d","products_image":["http://54.212.108.156:3000/api/uploads/1622530397531.jpeg"],"product_name":"Orijen Original Dry Dog Food","product_desc":"Give your dog the goodness of quality ingredients and food that is nutritionally complete. Unlock the secret to healthy and happy dog with a range of ","product_price":100,"pet_threshold":"2000","today_deal":true}]
      * Code : 200
      */
 
@@ -15,15 +18,15 @@ public class FetchProductByUserIDResponse {
     private String Message;
     private int Code;
     /**
-     * cat_id : {"_id":"60e6ffbafe7500511a7b419d","img_path":"http://54.212.108.156:3000/api/uploads/1625751478722.png","product_cate":"Pet Accessories","img_index":0,"show_status":true,"date_and_time":"7/8/2021, 7:08:01 PM","delete_status":false,"updatedAt":"2021-07-08T13:38:02.721Z","createdAt":"2021-07-08T13:38:02.721Z","__v":0}
-     * product_id : 61a88aad02651d5e799071a5
-     * products_image : [{"product_img":"http://35.164.43.170:3000/api/uploads/1638435359547.jpg"}]
-     * thumbnail_image : http://35.164.43.170:3000/api/uploads/1638435359547.jpg
-     * product_name :
-     * product_desc : Pet Accessories
-     * product_price : 200
-     * pet_threshold : 66
-     * today_deal : false
+     * cat_id : {"_id":"5fec1424ea832e2e73c1fc78","img_path":"http://52.25.163.13:3000/api/uploads/template%20(2).jpg","product_cate":"Hair","img_index":0,"show_status":true,"date_and_time":"Sat Nov 20 2021 14:09:41 GMT+0530 (India Standard Time)","delete_status":true,"updatedAt":"2021-11-20T08:40:56.849Z","createdAt":"2020-12-30T05:46:12.099Z","__v":0}
+     * product_id : 60ae2c0c48ffef65a41bc546
+     * products_image : ["http://54.212.108.156:3000/api/uploads/1625750185578.png"]
+     * thumbnail_image : http://54.212.108.156:3000/api/uploads/1625752843017.png
+     * product_name : Pedigree Vegetarian Adult
+     * product_desc : Your pet gets protein from the soybean and vegetable oils while the vitamins from vegetables (including Vitamin E) boosts your pooch's immune system.
+     * product_price : 109
+     * pet_threshold : 1999
+     * today_deal : true
      */
 
     private List<DataBean> Data;
@@ -60,17 +63,17 @@ public class FetchProductByUserIDResponse {
         this.Data = Data;
     }
 
-    public static class DataBean {
+    public static class DataBean implements Serializable {
         /**
-         * _id : 60e6ffbafe7500511a7b419d
-         * img_path : http://54.212.108.156:3000/api/uploads/1625751478722.png
-         * product_cate : Pet Accessories
+         * _id : 5fec1424ea832e2e73c1fc78
+         * img_path : http://52.25.163.13:3000/api/uploads/template%20(2).jpg
+         * product_cate : Hair
          * img_index : 0
          * show_status : true
-         * date_and_time : 7/8/2021, 7:08:01 PM
-         * delete_status : false
-         * updatedAt : 2021-07-08T13:38:02.721Z
-         * createdAt : 2021-07-08T13:38:02.721Z
+         * date_and_time : Sat Nov 20 2021 14:09:41 GMT+0530 (India Standard Time)
+         * delete_status : true
+         * updatedAt : 2021-11-20T08:40:56.849Z
+         * createdAt : 2020-12-30T05:46:12.099Z
          * __v : 0
          */
 
@@ -82,11 +85,7 @@ public class FetchProductByUserIDResponse {
         private int product_price;
         private String pet_threshold;
         private boolean today_deal;
-        /**
-         * product_img : http://35.164.43.170:3000/api/uploads/1638435359547.jpg
-         */
-
-        private List<ProductsImageBean> products_image;
+        private ArrayList<String> products_image;
 
         public CatIdBean getCat_id() {
             return cat_id;
@@ -152,11 +151,11 @@ public class FetchProductByUserIDResponse {
             this.today_deal = today_deal;
         }
 
-        public List<ProductsImageBean> getProducts_image() {
+        public ArrayList<String> getProducts_image() {
             return products_image;
         }
 
-        public void setProducts_image(List<ProductsImageBean> products_image) {
+        public void setProducts_image(ArrayList<String> products_image) {
             this.products_image = products_image;
         }
 
@@ -250,18 +249,6 @@ public class FetchProductByUserIDResponse {
 
             public void set__v(int __v) {
                 this.__v = __v;
-            }
-        }
-
-        public static class ProductsImageBean {
-            private String product_img;
-
-            public String getProduct_img() {
-                return product_img;
-            }
-
-            public void setProduct_img(String product_img) {
-                this.product_img = product_img;
             }
         }
     }

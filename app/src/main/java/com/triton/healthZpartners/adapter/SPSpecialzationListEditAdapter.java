@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,10 +13,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.interfaces.SPSpecialzationChckedListener;
-import com.triton.healthZpartners.responsepojo.SPServiceListResponse;
-import com.triton.healthZpartners.responsepojo.ServiceProviderRegisterFormCreateResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.interfaces.SPSpecialzationChckedListener;
+import com.triton.healthzpartners.responsepojo.SPServiceListResponse;
+import com.triton.healthzpartners.responsepojo.ServiceProviderRegisterFormCreateResponse;
 
 import java.util.List;
 

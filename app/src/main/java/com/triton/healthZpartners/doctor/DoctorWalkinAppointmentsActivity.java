@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,11 +19,11 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.fragmentdoctor.walkinappointments.FragmentDoctorWalkinCompletedAppointment;
-import com.triton.healthZpartners.fragmentdoctor.walkinappointments.FragmentDoctorWalkinMissedAppointment;
-import com.triton.healthZpartners.fragmentdoctor.walkinappointments.FragmentDoctorWalkinNewAppointment;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.fragmentdoctor.walkinappointments.FragmentDoctorWalkinCompletedAppointment;
+import com.triton.healthzpartners.fragmentdoctor.walkinappointments.FragmentDoctorWalkinMissedAppointment;
+import com.triton.healthzpartners.fragmentdoctor.walkinappointments.FragmentDoctorWalkinNewAppointment;
 
 import org.jetbrains.annotations.NotNull;
 

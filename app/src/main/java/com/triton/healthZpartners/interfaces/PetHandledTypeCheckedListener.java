@@ -1,6 +1,6 @@
-package com.triton.healthZpartners.interfaces;
+package com.triton.healthzpartners.interfaces;
 
-import com.triton.healthZpartners.responsepojo.DropDownListResponse;
+import com.triton.healthzpartners.responsepojo.DropDownListResponse;
 
 import java.util.List;
 

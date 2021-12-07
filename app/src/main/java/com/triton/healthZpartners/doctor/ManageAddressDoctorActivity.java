@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.doctor;
+package com.triton.healthzpartners.doctor;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -24,23 +24,23 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.activity.location.PickUpLocationDoctorActivity;
-import com.triton.healthZpartners.adapter.ManageAddressListAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.interfaces.LocationDefaultListener;
-import com.triton.healthZpartners.interfaces.LocationDeleteListener;
-import com.triton.healthZpartners.requestpojo.LocationDeleteRequest;
-import com.triton.healthZpartners.requestpojo.LocationListAddressRequest;
-import com.triton.healthZpartners.requestpojo.LocationStatusChangeRequest;
-import com.triton.healthZpartners.responsepojo.LocationDeleteResponse;
-import com.triton.healthZpartners.responsepojo.LocationListAddressResponse;
-import com.triton.healthZpartners.responsepojo.LocationStatusChangeResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.activity.location.PickUpLocationDoctorActivity;
+import com.triton.healthzpartners.adapter.ManageAddressListAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.interfaces.LocationDefaultListener;
+import com.triton.healthzpartners.interfaces.LocationDeleteListener;
+import com.triton.healthzpartners.requestpojo.LocationDeleteRequest;
+import com.triton.healthzpartners.requestpojo.LocationListAddressRequest;
+import com.triton.healthzpartners.requestpojo.LocationStatusChangeRequest;
+import com.triton.healthzpartners.responsepojo.LocationDeleteResponse;
+import com.triton.healthzpartners.responsepojo.LocationListAddressResponse;
+import com.triton.healthzpartners.responsepojo.LocationStatusChangeResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

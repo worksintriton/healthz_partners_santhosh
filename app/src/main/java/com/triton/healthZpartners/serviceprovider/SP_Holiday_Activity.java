@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.serviceprovider;
+package com.triton.healthzpartners.serviceprovider;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
@@ -28,20 +28,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.SPHolidayListAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.interfaces.OnItemDeleteHoliday;
-import com.triton.healthZpartners.requestpojo.CreateHolidayRequest;
-import com.triton.healthZpartners.requestpojo.HolidayDeleteRequest;
-import com.triton.healthZpartners.requestpojo.HolidayListRequest;
-import com.triton.healthZpartners.responsepojo.CreateHolidayResponse;
-import com.triton.healthZpartners.responsepojo.HolidayDeleteResponse;
-import com.triton.healthZpartners.responsepojo.HolidayListResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.SPHolidayListAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.interfaces.OnItemDeleteHoliday;
+import com.triton.healthzpartners.requestpojo.CreateHolidayRequest;
+import com.triton.healthzpartners.requestpojo.HolidayDeleteRequest;
+import com.triton.healthzpartners.requestpojo.HolidayListRequest;
+import com.triton.healthzpartners.responsepojo.CreateHolidayResponse;
+import com.triton.healthzpartners.responsepojo.HolidayDeleteResponse;
+import com.triton.healthzpartners.responsepojo.HolidayListResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

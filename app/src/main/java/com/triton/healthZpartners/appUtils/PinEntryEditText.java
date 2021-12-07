@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.appUtils;
+package com.triton.healthzpartners.appUtils;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -10,7 +10,7 @@ import android.view.View;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.triton.healthZpartners.R;
+import com.triton.healthzpartners.R;
 
 public class PinEntryEditText extends AppCompatEditText {
     private float mSpace = 24; //24 dp by default, space between the lines

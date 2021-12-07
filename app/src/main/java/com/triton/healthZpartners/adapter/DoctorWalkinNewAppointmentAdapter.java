@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,18 +17,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.doctor.DoctorWalkinAppointmentDetailsActivity;
-import com.triton.healthZpartners.doctor.VideoCallDoctorActivity;
-import com.triton.healthZpartners.doctor.WalkinPrescriptionActivity;
-import com.triton.healthZpartners.interfaces.OnAppointmentCancel;
-import com.triton.healthZpartners.interfaces.StartAppointmentListener;
-import com.triton.healthZpartners.requestpojo.DoctorStartAppointmentRequest;
-import com.triton.healthZpartners.responsepojo.AppointmentsUpdateResponse;
-import com.triton.healthZpartners.responsepojo.DoctorAppointmentsResponse;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.doctor.DoctorWalkinAppointmentDetailsActivity;
+import com.triton.healthzpartners.doctor.VideoCallDoctorActivity;
+import com.triton.healthzpartners.doctor.WalkinPrescriptionActivity;
+import com.triton.healthzpartners.interfaces.OnAppointmentCancel;
+import com.triton.healthzpartners.interfaces.StartAppointmentListener;
+import com.triton.healthzpartners.requestpojo.DoctorStartAppointmentRequest;
+import com.triton.healthzpartners.responsepojo.AppointmentsUpdateResponse;
+import com.triton.healthzpartners.responsepojo.DoctorAppointmentsResponse;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.text.ParseException;

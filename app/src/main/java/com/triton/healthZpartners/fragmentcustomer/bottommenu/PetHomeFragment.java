@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.fragmentcustomer.bottommenu;
+package com.triton.healthzpartners.fragmentcustomer.bottommenu;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -56,22 +56,22 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
 
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.location.PickUpLocationAllowActivity;
-import com.triton.healthZpartners.activity.location.PickUpLocationDenyActivity;
-import com.triton.healthZpartners.adapter.PetLoverDashboardProductsAdapter;
-import com.triton.healthZpartners.adapter.PetLoverDoctorAdapter;
-import com.triton.healthZpartners.adapter.PetLoverServicesAdapter;
-import com.triton.healthZpartners.adapter.ViewPagerDashboardAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.customer.CustomerDashboardActivity;
-import com.triton.healthZpartners.requestpojo.PetLoverDashboardRequest;
-import com.triton.healthZpartners.responsepojo.PetLoverDashboardResponse;
-import com.triton.healthZpartners.service.GPSTracker;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.location.PickUpLocationAllowActivity;
+import com.triton.healthzpartners.activity.location.PickUpLocationDenyActivity;
+import com.triton.healthzpartners.adapter.PetLoverDashboardProductsAdapter;
+import com.triton.healthzpartners.adapter.PetLoverDoctorAdapter;
+import com.triton.healthzpartners.adapter.PetLoverServicesAdapter;
+import com.triton.healthzpartners.adapter.ViewPagerDashboardAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.customer.CustomerDashboardActivity;
+import com.triton.healthzpartners.requestpojo.PetLoverDashboardRequest;
+import com.triton.healthzpartners.responsepojo.PetLoverDashboardResponse;
+import com.triton.healthzpartners.service.GPSTracker;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jetbrains.annotations.NotNull;

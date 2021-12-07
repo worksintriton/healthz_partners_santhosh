@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.activity;
+package com.triton.healthzpartners.activity;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -16,14 +16,14 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.appUtils.ApplicationData;
-import com.triton.healthZpartners.requestpojo.EmailOTPRequest;
-import com.triton.healthZpartners.responsepojo.EmailOTPResponse;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.appUtils.ApplicationData;
+import com.triton.healthzpartners.requestpojo.EmailOTPRequest;
+import com.triton.healthzpartners.responsepojo.EmailOTPResponse;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import butterknife.BindView;

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,11 +14,11 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.interfaces.FamilyMembersDeleteListener;
-import com.triton.healthZpartners.interfaces.GotoAddFamilyMembersOldActivityListener;
-import com.triton.healthZpartners.responsepojo.FamilyMemberListResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.interfaces.FamilyMembersDeleteListener;
+import com.triton.healthzpartners.interfaces.GotoAddFamilyMembersOldActivityListener;
+import com.triton.healthzpartners.responsepojo.FamilyMemberListResponse;
 
 import java.util.List;
 

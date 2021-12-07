@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.triton.healthZpartners.R;
+import com.triton.healthzpartners.R;
 
 public class PetVerifyEmailOtpActivity extends AppCompatActivity implements View.OnClickListener {
 

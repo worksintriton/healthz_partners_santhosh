@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,9 +14,9 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.interfaces.PetBreedTypeSelectListener;
-import com.triton.healthZpartners.responsepojo.BreedTypeResponse;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.interfaces.PetBreedTypeSelectListener;
+import com.triton.healthzpartners.responsepojo.BreedTypeResponse;
 
 import java.util.List;
 

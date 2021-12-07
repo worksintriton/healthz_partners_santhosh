@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,11 +20,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.fragmentcustomer.favourites.DoctorFavFragment;
-import com.triton.healthZpartners.fragmentcustomer.favourites.SPFavFragment;
-import com.triton.healthZpartners.fragmentcustomer.favourites.ShopFavFragment;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.fragmentcustomer.favourites.DoctorFavFragment;
+import com.triton.healthzpartners.fragmentcustomer.favourites.SPFavFragment;
+import com.triton.healthzpartners.fragmentcustomer.favourites.ShopFavFragment;
 
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.appUtils;
+package com.triton.healthzpartners.appUtils;
 
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;

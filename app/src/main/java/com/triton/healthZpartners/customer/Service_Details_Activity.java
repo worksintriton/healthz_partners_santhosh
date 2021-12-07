@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,21 +36,21 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
+import com.triton.healthzpartners.R;
 
-import com.triton.healthZpartners.adapter.SPDetails_SpecTypesListAdapter;
-import com.triton.healthZpartners.adapter.ViewPagerSPDetailsGalleryAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.SPDetailsRequest;
-import com.triton.healthZpartners.requestpojo.SPFavCreateRequest;
+import com.triton.healthzpartners.adapter.SPDetails_SpecTypesListAdapter;
+import com.triton.healthzpartners.adapter.ViewPagerSPDetailsGalleryAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.SPDetailsRequest;
+import com.triton.healthzpartners.requestpojo.SPFavCreateRequest;
 
-import com.triton.healthZpartners.responsepojo.SPDetailsRepsonse;
-import com.triton.healthZpartners.responsepojo.SPFavCreateResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.GridSpacingItemDecoration;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.responsepojo.SPDetailsRepsonse;
+import com.triton.healthzpartners.responsepojo.SPFavCreateResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.GridSpacingItemDecoration;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.HashMap;

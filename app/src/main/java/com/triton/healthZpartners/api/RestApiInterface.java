@@ -1,7 +1,7 @@
-package com.triton.healthZpartners.api;
+package com.triton.healthzpartners.api;
 
-import com.triton.healthZpartners.requestpojo.*;
-import com.triton.healthZpartners.responsepojo.*;
+import com.triton.healthzpartners.requestpojo.*;
+import com.triton.healthzpartners.responsepojo.*;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -737,6 +737,10 @@ public interface RestApiInterface {
     @POST("newproduct_detail/vendor_product_create")
     Call<SuccessResponse> vendor_product_create_ResponseCall(@Header("Content-Type") String type, @Body ProductVendorCreateRequest productVendorCreateRequest);
 
+   /*Vendor product update*/
+    @POST("newproduct_detail/edit")
+    Call<SuccessResponse> vendor_product_edit_ResponseCall(@Header("Content-Type") String type, @Body ProductVendorEditRequest productVendorEditRequest);
+
 
 
     /*communitym text list*/
@@ -844,9 +848,6 @@ public interface RestApiInterface {
     @POST("locationdetails/mobile/getlist_id1")
     Call<DefaultLocationResponse> defaultLocationResponseCall(@Header("Content-Type") String type, @Body DefaultLocationRequest defaultLocationRequest);
 
-    /*Fetch ProductBy User Id Response*/
-    @POST("product_details/mobile/getlist_from_vendor_id1")
-    Call<FetchProductByUserIDResponse> fetchproductbyuseridResponseCall(@Header("Content-Type") String type, @Body FetchProductByUserIDRequest fetchProductByUserIDRequest);
 
     /*session clear*/
     @POST("userdetails/logout")

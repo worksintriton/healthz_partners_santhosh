@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.adapter;
+package com.triton.healthzpartners.adapter;
 
 
 
@@ -13,9 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.requestpojo.PetAppointmentCreateRequest;
-import com.triton.healthZpartners.requestpojo.ProductVendorCreateRequest;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.requestpojo.ProductVendorCreateRequest;
 
 import java.util.List;
 

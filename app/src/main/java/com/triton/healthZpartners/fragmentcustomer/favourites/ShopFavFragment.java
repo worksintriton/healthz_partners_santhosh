@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.fragmentcustomer.favourites;
+package com.triton.healthzpartners.fragmentcustomer.favourites;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -21,15 +21,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.adapter.PetLoverShopNewFavAdapter;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.FetchPetloverFavListRequest;
-import com.triton.healthZpartners.responsepojo.FetchPetloverShopFavListResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.ConnectionDetector;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.adapter.PetLoverShopNewFavAdapter;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.FetchPetloverFavListRequest;
+import com.triton.healthzpartners.responsepojo.FetchPetloverShopFavListResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.ConnectionDetector;
+import com.triton.healthzpartners.utils.RestUtils;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.HashMap;

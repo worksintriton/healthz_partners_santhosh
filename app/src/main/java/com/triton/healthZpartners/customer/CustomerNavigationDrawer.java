@@ -1,4 +1,4 @@
-package com.triton.healthZpartners.customer;
+package com.triton.healthzpartners.customer;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -36,18 +36,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
-import com.triton.healthZpartners.R;
-import com.triton.healthZpartners.activity.LoginActivity;
-import com.triton.healthZpartners.activity.NotificationActivity;
-import com.triton.healthZpartners.activity.SoSActivity;
-import com.triton.healthZpartners.activity.location.ManageAddressActivity;
-import com.triton.healthZpartners.api.APIClient;
-import com.triton.healthZpartners.api.RestApiInterface;
-import com.triton.healthZpartners.requestpojo.DefaultLocationRequest;
-import com.triton.healthZpartners.responsepojo.PetLoverDashboardResponse;
-import com.triton.healthZpartners.responsepojo.SuccessResponse;
-import com.triton.healthZpartners.sessionmanager.SessionManager;
-import com.triton.healthZpartners.utils.RestUtils;
+import com.triton.healthzpartners.R;
+import com.triton.healthzpartners.activity.LoginActivity;
+import com.triton.healthzpartners.activity.NotificationActivity;
+import com.triton.healthzpartners.activity.SoSActivity;
+import com.triton.healthzpartners.activity.location.ManageAddressActivity;
+import com.triton.healthzpartners.api.APIClient;
+import com.triton.healthzpartners.api.RestApiInterface;
+import com.triton.healthzpartners.requestpojo.DefaultLocationRequest;
+import com.triton.healthzpartners.responsepojo.PetLoverDashboardResponse;
+import com.triton.healthzpartners.responsepojo.SuccessResponse;
+import com.triton.healthzpartners.sessionmanager.SessionManager;
+import com.triton.healthzpartners.utils.RestUtils;
 
 import java.util.HashMap;
 import java.util.List;

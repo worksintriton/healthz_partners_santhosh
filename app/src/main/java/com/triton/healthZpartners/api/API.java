@@ -1,9 +1,9 @@
-package com.triton.healthZpartners.api;
+package com.triton.healthzpartners.api;
 
 
-import com.triton.healthZpartners.responsepojo.AddressResultsResponse;
-import com.triton.healthZpartners.responsepojo.GetAddressResultResponse;
-import com.triton.healthZpartners.responsepojo.PlacesResultsResponse;
+import com.triton.healthzpartners.responsepojo.AddressResultsResponse;
+import com.triton.healthzpartners.responsepojo.GetAddressResultResponse;
+import com.triton.healthzpartners.responsepojo.PlacesResultsResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -15,7 +15,7 @@ public interface API {
 
     String BASE_URL = "https://maps.googleapis.com";
    // String key = "AIzaSyCVeEuZcqrs9phnrk1aNSpiJ57hb-V8hhE";
-   public static String MAP_KEY = "AIzaSyAlvAK3lZepIaApTDbDZUNfO0dBmuP6h4A";
+   public static String MAP_KEY = "AIzaSyDap8qav1flUsql0VWUYkjgB0noN0o_U1Y";
 
     @GET("/maps/api/place/autocomplete/json")
     Call<PlacesResultsResponse> getCityResults(@Query("input") String input, @Query("key") String key);

@@ -153,6 +153,9 @@
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_prescription_details.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_profile_screen.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_pet_lover_edit_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_sign_up.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_splash.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_verify_otp.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_patient_santhosh/app/src/main/res/drawable-v24/button_bg.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_patient_santhosh/app/src/main/res/drawable-v24/cb_selector.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_patient_santhosh/app/src/main/res/drawable-v24/cb_selectors.xml" value="0.21614583333333334" />
@@ -334,7 +337,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>

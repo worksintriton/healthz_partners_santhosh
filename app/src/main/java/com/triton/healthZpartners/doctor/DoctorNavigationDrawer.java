@@ -314,7 +314,7 @@ public class DoctorNavigationDrawer extends AppCompatActivity implements View.On
         ll_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ManageAddressActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ManageAddressDoctorActivity.class);
                 intent.putExtra("fromactivity",TAG);
                 startActivity(intent);
 

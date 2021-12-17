@@ -161,6 +161,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
 
         Log.w(TAG,"firstname : "+firstname+" lastname : "+lastname+" useremail : "+useremail+" user_email_verification : "+user_email_verification);
+
+        Log.w(TAG,"UserType : "+UserType+" UserTypeValue : "+UserTypeValue);
         if(firstname != null){
             edt_firstname.setText(firstname);
         }if(lastname != null){
@@ -432,7 +434,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             intent.putExtra("otp", response.body().getData().getOtp());
                             intent.putExtra("firstname", edt_firstname.getText().toString());
                             intent.putExtra("lastname", edt_lastname.getText().toString());
-                            intent.putExtra("UserType", 1);
+                            intent.putExtra("UserTypeValue", UserTypeValue);
+                            intent.putExtra("UserType", UserType);
                             startActivity(intent);
                         }
 

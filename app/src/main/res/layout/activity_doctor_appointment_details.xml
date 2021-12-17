@@ -328,7 +328,7 @@
                         android:ellipsize="end"
                         android:fontFamily="@font/montserrat_bold"
                         android:maxLines="1"
-                        android:text="Patient Details"
+                        android:text="Member Details"
                         android:textColor="@color/black"
                         android:textSize="16sp" />
 
@@ -342,7 +342,7 @@
                             android:layout_width="@dimen/width_appoitmentdetails"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat"
-                            android:text="@string/pet_name_details"
+                            android:text="Member Name"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
@@ -1000,6 +1000,7 @@
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/montserrat"
+                android:lineSpacingExtra="8sp"
                 android:maxLines="2"
                 android:text="@string/desc_dummy"
                 android:textColor="@color/new_sec_txt_color"
@@ -1039,6 +1040,7 @@
                     android:drawablePadding="10dp"
                     android:ellipsize="end"
                     android:fontFamily="@font/montserrat"
+                    android:lineSpacingExtra="8sp"
                     android:maxLines="3"
                     android:text="@string/desc_dummy"
                     android:textColor="@color/new_sec_txt_color"

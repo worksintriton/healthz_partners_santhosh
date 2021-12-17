@@ -171,7 +171,21 @@ public class VerifyEmailOtpActivity extends AppCompatActivity implements View.On
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
+        super.onBackPressed();
+        if(fromactivity!=null){
+
+            if(fromactivity.equals("SignUpActivity")){
+
+                Intent intent = new Intent(VerifyEmailOtpActivity.this,SignUpActivity.class);
+                intent.putExtra("verified","verified");
+                intent.putExtra("useremail",useremail);
+                intent.putExtra("firstname",firstname);
+                intent.putExtra("lastname",lastname);
+                intent.putExtra("UserType",UserType);
+                intent.putExtra("UserTypeValue",UserTypeValue);
+                startActivity(intent);
+            }
+        }
 
     }
 

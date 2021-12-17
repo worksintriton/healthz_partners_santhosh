@@ -61,17 +61,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginStart="20dp"
                 android:background="@drawable/new_rounded_corner_btn"
                 android:fontFamily="@font/futuramediumbt"
                 android:padding="10dp"
                 android:text="@string/view_profile"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="14sp"
-                android:layout_marginStart="20dp"/>
-
-
-
+                android:textSize="14sp" />
 
 
         </LinearLayout>

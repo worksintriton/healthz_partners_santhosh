@@ -591,7 +591,7 @@
     <string name="shop_name">Shop Name</string>
     <string name="successfullycancelled">Successfully Cancelled</string>
     <string name="turn_off">Turn off</string>
-    <string name="version">Version 10.12.2021 2nd Build</string>
+    <string name="version">16.12.2021.1</string>
     <string name="tablet_name">Tablet Name</string>
     <string name="consumption">Consumption</string>
     <string name="seems_there_is_a_connectivity_issue_please_check_your_internet_connection_and_try_again">Seems there is a connectivity issue. Please check your internet connection and try again</string>
@@ -638,7 +638,7 @@
     <string name="select_family_members">Select Family Members</string>
     <string name="patient_details">Patient Details</string>
     <string name="relation">Relation</string>
-    <string name="patient_name">Patient Name</string>
+    <string name="patient_name">Member Name</string>
     <string name="image_upload">Image Upload</string>
     <string name="edit_your_family">Edit Family Members</string>
     <string name="pregrant">Pregrant</string>
@@ -690,7 +690,7 @@
     <string name="service_charge_amount">Service Charge Amount</string>
     <string name="healthz_in">Healthz.in</string>
     <string name="view_profile">View Profile</string>
-    <string name="you_dont_have_any_appointments">You dont have any appointments</string>
+    <string name="you_dont_have_any_appointments">You don\'t have any appointments</string>
 
     <string name="about_service_provider">About Service Provider</string>
     <string name="business_no">Business Number</string>

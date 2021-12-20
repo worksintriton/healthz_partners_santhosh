@@ -120,6 +120,7 @@
     <color name="border_line_opaqe">#999999</color>
     <color name="green_colour">#26A46C</color>
     <color name="neutralgray">#9098B1</color>
+    <color name="hzred">#DE1F26</color>
 
 
 </resources>

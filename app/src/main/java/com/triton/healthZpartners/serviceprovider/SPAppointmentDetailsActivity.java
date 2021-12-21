@@ -70,6 +70,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
 public class SPAppointmentDetailsActivity extends AppCompatActivity implements View.OnClickListener, OnAppointmentSuccessfullyCancel, BottomNavigationView.OnNavigationItemSelectedListener {
 
     private String TAG = "SPAppointmentDetailsActivity";
@@ -263,6 +264,9 @@ public class SPAppointmentDetailsActivity extends AppCompatActivity implements V
     @BindView(R.id.ll_btn)
     LinearLayout ll_btn;
 
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.ll_bgnd)
+    LinearLayout ll_bgnd;
 
     TextView txt_no_records_coupon;
     RecyclerView rv_successfully_cancelled;
@@ -668,6 +672,13 @@ public class SPAppointmentDetailsActivity extends AppCompatActivity implements V
 
         });
 
+        Log.w(TAG, "from-->" + from);
+
+        if(from!=null&&from.equals("SPCompletedAppointmentAdapter")){
+
+            ll_bgnd.setBackgroundResource(R.drawable.custom_bgm);
+
+        }
 
     }
 

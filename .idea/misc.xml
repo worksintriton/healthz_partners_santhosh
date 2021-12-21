@@ -150,9 +150,10 @@
         <entry key="..\:/Users/santh/Documents/GitHub/HealthzPartnerAndroid/app/src/main/res/layout/adapter_vendor_product_list.xml" value="0.22" />
         <entry key="..\:/Users/santh/Documents/GitHub/HealthzPartnerAndroid/app/src/main/res/layout/fragment_vendor_dashboard.xml" value="0.2" />
         <entry key="..\:/Users/santh/Documents/GitHub/HealthzPartnerAndroid/app/src/main/res/menu/navigation_menu_drawer_vendor.xml" value="0.2" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable/custom_bgm.xml" value="0.290625" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable/layout_bg.xml" value="0.290625" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/drawable/rectangular_curved_corner_with_bgnd.xml" value="0.290625" />
-        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_appointment_details.xml" value="0.2" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_appointment_details.xml" value="0.264" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_dashboard.xml" value="0.2" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_myappointments.xml" value="0.2" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_prescription_details.xml" value="0.27447916666666666" />
@@ -165,6 +166,7 @@
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_prescription.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_prescription_details.xml" value="0.2" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_sign_up.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_sp_appointment_details.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_splash.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_vendor_add_products.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/santh/Documents/GitHub/healthz_partners_santhosh/app/src/main/res/layout/activity_vendor_create_products.xml" value="0.27447916666666666" />

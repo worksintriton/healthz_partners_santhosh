@@ -121,6 +121,7 @@
     <color name="green_colour">#26A46C</color>
     <color name="neutralgray">#9098B1</color>
     <color name="hzred">#DE1F26</color>
+    <color name="custom_bgm">#E3F7EE</color>
 
 
 </resources>

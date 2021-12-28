@@ -9,13 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:orientation="vertical"
-        android:background="@color/green">
+        android:background="@color/green_colour"
+        android:orientation="vertical">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_header"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/green"
+            android:background="@color/green_colour"
             app:contentInsetLeft="0dp"
             app:contentInsetStart="0dp"
             app:popupTheme="@style/AppTheme.PopupOverlay"
@@ -40,14 +41,13 @@
                 android:text="@string/manage_products"
                 android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="end"
-                android:layout_marginStart="10dp">
-
+                android:layout_marginStart="10dp"
+                android:gravity="end">
 
 
                 <ImageView
@@ -62,25 +62,25 @@
                     android:id="@+id/img_profile"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/account"
-                    tools:ignore="ContentDescription"
                     android:layout_marginStart="20dp"
-                    android:layout_marginEnd="10dp" />
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/account"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
 
 
         </androidx.appcompat.widget.Toolbar>
 
         <RelativeLayout
+            android:id="@+id/rl_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/new_rounded_corner_btn_white"
-            android:padding="10dp"
-            android:layout_marginBottom="20dp"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="30dp"
-            android:id="@+id/rl_category">
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/new_rounded_corner_btn_white"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/img_search"
@@ -114,9 +114,7 @@
                 tools:ignore="Autofill,LabelFor,TextFields" />
 
 
-
         </RelativeLayout>
-
 
 
     </LinearLayout>

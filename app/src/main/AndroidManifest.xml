@@ -511,6 +511,12 @@
             android:windowSoftInputMode="adjustPan" />
 
         <activity
+            android:name=".activity.SliderAfterSplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EntryAppTheme"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
             android:name="com.triton.healthzpartners.doctor.DoctorMyappointmentsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
@@ -1015,7 +1021,7 @@
         <activity
             android:name="com.triton.healthzpartners.serviceprovider.ManageAddressSPActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan" />
 
         <activity

@@ -53,7 +53,9 @@ public class VerifyEmailOtpActivity extends AppCompatActivity implements View.On
     @BindView(R.id.txt_resend)
     TextView txt_resend;
 
-
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.txt_lbl_verifyphnno)
+    TextView txt_lbl_verifyphnno;
 
     private final String TAG = "VerifyEmailOtpActivity";
     private CountDownTimer timer;
@@ -86,6 +88,8 @@ public class VerifyEmailOtpActivity extends AppCompatActivity implements View.On
         ButterKnife.bind(this);
 
         avi_indicator.setVisibility(View.GONE);
+
+        txt_lbl_verifyphnno.setText("Email Verification");
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {

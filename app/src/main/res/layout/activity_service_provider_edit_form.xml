@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
-        android:background="@color/green"
+        android:background="@color/green_colour"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -587,7 +587,7 @@
                     android:ellipsize="end"
                     android:focusable="false"
                     android:fontFamily="@font/montserrat"
-                    android:hint="@string/clinic_address"
+                    android:hint="@string/businessaddr"
                     android:inputType="none"
                     android:maxLength="250"
                     android:maxLines="1"
@@ -615,7 +615,7 @@
                         android:background="@drawable/button_blue_rounded_corner"
                         android:fontFamily="@font/montserrat"
                         android:gravity="start"
-                        android:text="@string/clinic_address"
+                        android:text="@string/businessaddr"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="10sp"

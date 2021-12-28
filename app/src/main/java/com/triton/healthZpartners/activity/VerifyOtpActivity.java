@@ -67,6 +67,9 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
     @BindView(R.id.txt_resend)
     TextView txt_resend;
 
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.txt_lbl_verifyphnno)
+    TextView txt_lbl_verifyphnno;
 
     private ApplicationData applicationData;
     private String phonenumber;
@@ -103,6 +106,8 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
         avi_indicator.setVisibility(View.GONE);
 
         btn_verifyotp.setOnClickListener(this);
+
+        txt_lbl_verifyphnno.setText("Phone Verification");
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {

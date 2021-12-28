@@ -224,7 +224,7 @@
                                     android:layout_width="@dimen/width_appoitmentdetails"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/futuramediumbt"
-                                    android:text="@string/patient_name"
+                                    android:text="Patient Name"
                                     android:textColor="@color/black"
                                     android:textSize="14sp" />
 
@@ -736,6 +736,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="end"
+        android:alpha="0.8"
         android:background="@color/green_colour"
         android:orientation="vertical">
 

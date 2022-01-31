@@ -1282,7 +1282,7 @@ public class DoctorAppointmentsResponse {
             private int consultancy_fees;
             private boolean calender_status;
             private int comments;
-            private int rating;
+            private String rating;
             private int doctor_exp;
             private String updatedAt;
             private String createdAt;
@@ -1505,11 +1505,11 @@ public class DoctorAppointmentsResponse {
                 this.comments = comments;
             }
 
-            public int getRating() {
+            public String getRating() {
                 return rating;
             }
 
-            public void setRating(int rating) {
+            public void setRating(String rating) {
                 this.rating = rating;
             }
 

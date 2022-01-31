@@ -115,25 +115,40 @@
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/drawable/rounded_cornerwithcolor.xml" value="0.2703125" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_customer_dashboard.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_appointment_details.xml" value="0.1" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_business_info.xml" value="0.15715579710144928" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_my_calendar.xml" value="0.15896739130434784" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_doctor_myappointments.xml" value="0.25416666666666665" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_edit_doctor_business_info.xml" value="0.15715579710144928" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_pet_myappointments.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_petappointment_details.xml" value="0.1453804347826087" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_service_book_appointment.xml" value="0.1453804347826087" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_service_provider_edit_form.xml" value="0.15534420289855072" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_service_provider_register_form.xml" value="0.2" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_sign_up.xml" value="0.12360688956433637" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/activity_verify_otp.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/adapter_doctor_completed_appointment.xml" value="0.1453804347826087" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/adapter_doctor_missed_appointment.xml" value="0.25416666666666665" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/adapter_doctor_mycalendar_available_cardview.xml" value="0.15896739130434784" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/adapter_doctor_new_appointment.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/adapter_pet_new_appointment.xml" value="0.25416666666666665" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/adapter_sp_add_more_service.xml" value="0.14447463768115942" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/adapter_sp_service_list.xml" value="0.14447463768115942" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/adapter_specialization_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/add_education_details_model.xml" value="0.2504528985507246" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/alert_add_sp_amout_layout.xml" value="0.12360688956433637" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/customer_toolbar_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/doctor_toolbar_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/fragment_customer_home.xml" value="0.1453804347826087" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/fragment_customer_shop.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/fragment_doctor_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/fragment_sp_dashboard.xml" value="0.15896739130434784" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/navigation_drawer_layout_customer.xml" value="0.1453804347826087" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/navigation_drawer_layout_doctor.xml" value="0.25416666666666665" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/spinner_item.xml" value="0.2504528985507246" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/toolbar_layout_doctor_footer_new_shaped.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/toolbar_layout_petlover_footer_new_shaped.xml" value="0.25416666666666665" />
+        <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/layout/toolbar_layout_sp_header.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/menu/bottom_navigation_cutomer.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/menu/bottom_navigation_doctor.xml" value="0.25416666666666665" />
         <entry key="..\:/TritonAppsGIt/healthz_partners_santhosh/app/src/main/res/menu/menu_navigation_doctor.xml" value="0.25416666666666665" />
@@ -392,7 +407,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>

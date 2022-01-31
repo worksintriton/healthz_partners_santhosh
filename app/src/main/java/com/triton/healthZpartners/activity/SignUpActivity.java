@@ -361,7 +361,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                     if (200 == response.body().getCode()) {
 
-                        Toasty.success(getApplicationContext(),response.body().getMessage(), Toast.LENGTH_SHORT, true).show();
+                       // Toasty.success(getApplicationContext(),response.body().getMessage(), Toast.LENGTH_SHORT, true).show();
 
                         if(response.body().getData() != null) {
                             Intent intent = new Intent(SignUpActivity.this, VerifyOtpActivity.class);
@@ -390,7 +390,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             public void onFailure(@NonNull Call<UserStatusUpdateResponse> call,@NonNull Throwable t) {
                 avi_indicator.smoothToHide();
                 Log.e("OTP", "--->" + t.getMessage());
-                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 

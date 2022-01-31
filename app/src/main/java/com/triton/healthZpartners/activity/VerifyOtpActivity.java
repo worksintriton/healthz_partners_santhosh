@@ -7,9 +7,11 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +40,8 @@ import com.triton.healthzpartners.utils.RestUtils;
 import com.triton.healthzpartners.vendor.VendorDashboardActivity;
 import com.triton.healthzpartners.vendor.VendorRegisterFormActivity;
 import com.wang.avi.AVLoadingIndicatorView;
+
+import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -71,6 +75,14 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
     @BindView(R.id.txt_lbl_verifyphnno)
     TextView txt_lbl_verifyphnno;
 
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.txt_timer_count)
+    TextView txt_timer_count;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.llresendotp)
+    LinearLayout llresendotp;
+
     private ApplicationData applicationData;
     private String phonenumber;
     private int otp;
@@ -91,6 +103,8 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
     String enteredotp , responseotp;
     boolean can_proceed = true;
 
+    private CountDownTimer timer;
+
 
     @SuppressLint("LogNotTimber")
     @Override
@@ -99,6 +113,7 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_verify_otp);
 
         ButterKnife.bind(this);
+        applicationData = (ApplicationData) getApplication();
 
         Log.w(TAG,"onCreate-->");
 
@@ -195,6 +210,38 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
         });
 */
 
+        startTimer();
+
+    }
+
+
+    private void startTimer() {
+        isOTPExpired = false;
+        long timer_milliseconds = 120000;
+        timer = new CountDownTimer(timer_milliseconds, 1000) {
+            @SuppressLint({"DefaultLocale", "SetTextI18n"})
+            @Override
+            public void onTick(long millisUntilFinished) {
+                llresendotp.setVisibility(View.GONE);
+                txt_timer_count.setVisibility(View.VISIBLE);
+
+                applicationData.setTimer_milliseconds(millisUntilFinished);
+                txt_timer_count.setText(getResources().getString(R.string.resendotp)+" " + String.format("%02d : %02d ",
+                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
+                        TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                                TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+
+            }
+
+            @Override
+            public void onFinish() {
+                isOTPExpired = true;
+                txt_timer_count.setVisibility(View.GONE);
+                llresendotp.setVisibility(View.VISIBLE);
+                timer.cancel();
+            }
+        };
+        timer.start();
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -238,6 +285,8 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
             can_proceed = false;
 
             Toasty.warning(getApplicationContext(), "Incorrect OTP", Toast.LENGTH_SHORT, true).show();
+        }else if(enteredotp.equalsIgnoreCase(responseotp)){
+            can_proceed = true;
         }
 
         if (can_proceed) {
@@ -274,7 +323,7 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void resendOtpResponseCall() {
-   /*     txt_resend.setVisibility(View.GONE);*/
+        llresendotp.setVisibility(View.GONE);
         avi_indicator.setVisibility(View.VISIBLE);
         avi_indicator.smoothToShow();
         RestApiInterface apiInterface = APIClient.getClient().create(RestApiInterface.class);
@@ -289,6 +338,7 @@ public class VerifyOtpActivity extends AppCompatActivity implements View.OnClick
                 if (response.body() != null) {
                     if (200 == response.body().getCode()) {
                         otp_view.setOTP("");
+                        startTimer();
                         Toasty.success(getApplicationContext(),response.body().getMessage(), Toast.LENGTH_SHORT, true).show();
                         if(response.body().getData().getUser_Details() != null) {
                             otp = response.body().getData().getUser_Details().getOtp();

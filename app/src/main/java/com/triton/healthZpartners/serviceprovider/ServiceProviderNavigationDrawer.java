@@ -490,7 +490,8 @@ public class ServiceProviderNavigationDrawer extends AppCompatActivity implement
 
     private void gotoManageServices() {
 
-        Intent i = new Intent(ServiceProviderNavigationDrawer.this, SPProfileScreenActivity.class);
+        Intent i = new Intent(ServiceProviderNavigationDrawer.this, ServiceProviderEditFormActivity.class);
+        i.putExtra("fromactivity",TAG);
         startActivity(i);
     }
 

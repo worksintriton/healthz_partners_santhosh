@@ -212,12 +212,12 @@
         <activity
             android:name="com.triton.healthzpartners.activity.SignUpActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/EntryAppTheme"
+            android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.triton.healthzpartners.activity.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/EntryAppTheme"
+            android:theme="@style/BaseAppTheme"
             android:windowSoftInputMode="adjustPan" />
 
         <activity
@@ -636,7 +636,7 @@
         <activity
             android:name="com.triton.healthzpartners.serviceprovider.SPVerifyEmailOtpActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
+            android:theme="@style/EntryAppTheme"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.triton.healthzpartners.serviceprovider.SPMyCalendarNewUserActivity"

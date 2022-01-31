@@ -770,6 +770,7 @@ public class EditManageProdcutsActivity extends AppCompatActivity {
         productVendorEditRequest.setUser_id(APIClient.VENDOR_ID);
       productVendorEditRequest.setDate_and_time(currentDateandTime);
         productVendorEditRequest.setMobile_type("Android");
+        Log.w(TAG,"productVendorEditRequest"+ "--->" + new Gson().toJson(productVendorEditRequest));
         return productVendorEditRequest;
     }
 

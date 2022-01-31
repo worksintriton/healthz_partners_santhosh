@@ -1,4 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="version">31.01.2022.v1</string>
     <string name="app_name">Healthz Partners</string>
     <string name="verify_otp">Verify OTP</string>
     <string name="emailorphonenumber">Phone Number</string>
@@ -56,6 +58,7 @@
     <string name="err_msg_type_of_petbreedtype">Select the pet breed type</string>
     <string name="err_msg_type_of_communicationtype">Select the communication type</string>
     <string name="err_msg_type_of_petgendertype">Select the pet gender type</string>
+    <string name="err_msg_type_of_time">Select the time type</string>
     <string name="err_msg_type_of_petcolortype">Select the pet color type</string>
     <string name="err_msg_type_of_cattype">Select the category type</string>
 
@@ -591,7 +594,7 @@
     <string name="shop_name">Shop Name</string>
     <string name="successfullycancelled">Successfully Cancelled</string>
     <string name="turn_off">Turn off</string>
-    <string name="version">27.12.2021.1</string>
+
     <string name="tablet_name">Tablet Name</string>
     <string name="consumption">Consumption</string>
     <string name="seems_there_is_a_connectivity_issue_please_check_your_internet_connection_and_try_again">Seems there is a connectivity issue. Please check your internet connection and try again</string>
@@ -605,7 +608,7 @@
     <string name="enter_your_otp_code_here">Enter your OTP code here</string>
     <string name="verify">Verify</string>
     <string name="didn_t_you_received_any_code">Didn’t you received any code?</string>
-    <string name="resent_new_code">Resent new code</string>
+    <string name="resent_new_code">Resend New Code</string>
     <string name="create_your_account">Create your Account</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
